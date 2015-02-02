@@ -1,0 +1,8 @@
+% Header file
+% author: marcobecerrap
+% date: January-2015
+
+\usepackage{cite} % Citation Package
+\usepackage{natbib} % Citation style
+\usepackage{graphicx} % Graphics Package
+%\usepackage[utf8]{inputenc} % Special characters (e.g. spanish accents).
