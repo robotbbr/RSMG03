@@ -19,10 +19,81 @@
 \pagestyle{plain}
 \pagenumbering{arabic}
 % Abstract
-\input{010_Introduction.tex} % Intro & Motivation (Open areas proposed in the literatures)
+%\input{010_Introduction.tex} % Intro & Motivation (Open areas proposed in the literatures)
 % Outcome
-\input{020_RelatedWork.tex} % "Related Work" Literature rev (separated areas, in my case AR + ASP + KRR(incomplete) + Semantic Map)
-\input{030_ResearchProblem.tex} % (Mike --> Model & Methodology) % Research Problem (Analysis) (Problem Definition -> Rafee)
+%\input{020_RelatedWork.tex} % "Related Work" Literature rev (separated areas, in my case AR + ASP + KRR(incomplete) + Semantic Map)
+
+%================================================
+%================================================
+%================================================
+\chapter{Related Work}
+
+% 0 - GENERALITIES
+% Perception
+% Symbol ground
+% Anchoring
+% Frame Problem
+
+\section{Activity recognition}
+
+Activity recognition is an important research area in the context of automated perception. 
+It has many applications as surveillance, inspection, verification, generation of automated reports, etc. 
+The main goal is to automatically analyse the ongoing activities from an unknown sensory source (a video sequence in most of the cases).
+Activities play a relevant role in the interpretation of a scene, not only in physical terms, but also symbolically as they can usually be associated with a meaning or an interpretation.
+
+The problem has been studied first in psychology. In \citep{Heider1944_Experimental}, an animation film was created using only polygons to demonstrate how the motion of abstract entities can be interpreted by a human observer.
+
+The problem has been studied in AI from different areas, principally in computer vision or as a knowledge processing problem. 
+Early work in computer vision can be traced back to the 1960-70s, as part of the effort to mimic human-like intelligence using visual perception components. In \citet{Johansson1973_VisualPer} locomotion of living organisms is studied using visual marks and then describes a study on interpretation of motion using visual dot markers mounted on a moving body, the patterns are described numerically, but also
+
+
+
+
+The main difference between computer vision and image processing was a desire to recover the three-dimensional structure of the world from images, and to use this as a stepping stone towards full scene understanding \citep{Winston1975_PsyCV}. 
+
+
+In the early 1970s, simple motion patterns of dots were studied to describe and recognize complex motion patterns (e.g. walking, shaking hands), \citep{Johansson1973_VisualPer}. 
+Object recognition was treated in \citep{Barrow1971_RelatDesc} by decomposing an image in regions and describe the relations between them. 
+Finally, in this decade, the \textit{block's world} problem was proposed as a test scenario for artificial intelligent systems, particularly regarding planning, knowledge representation and reasoning. 
+One important characteristic of the problem is the requirement of a symbolic scene representation to do some reasoning. 
+The block's world was also used with physical systems as the robot \textit{Shakey}, \citep{Nilsson84_Shakey}.
+
+
+
+
+
+% COMPLETE - AR approaches (CV & KRR)
+In the context of Artificial Intelligence it has been treated as a Computer Visioandverification, in aabout the problem of interpretation and understanding of a scene from sensory information and also using domain knowledge. 
+It is mostly a perceptual action, however reasoning plays an important role too.
+
+% Check the surveys to get the whole image
+
+
+
+% 1 - ACTIVITY RECOGNITION PROBLEM
+% Historic origins
+% Approaches (camera, wearable device, ubiquitous computing)
+% Main branches (single layer, multpiple layer)
+% Hierarchical approaches
+
+% 1.5 ACTIVITY RECOGNITION WITH A MOBILE ROBOT
+A robot can be roughly conceived as a physical entity capable of sensing and performing actions in the world.
+With this in mind, it seems clear that a robot, with sufficient sensing capabilities, is a good candidate to perform the task.
+
+
+% 2 - ANSWER SET PROGRAMMING
+% General background
+% Related work to AR
+
+
+% 3 - ASP + Robots -> ROSoClingo
+% 
+%================================================
+%================================================
+%================================================
+
+
+%\input{030_ResearchProblem.tex} % (Mike --> Model & Methodology) % Research Problem (Analysis) (Problem Definition -> Rafee)
 %\input{040_Methodology.tex}% * Methodology (Here goes the strategy to face the problem, THE PROPOSAL!!)
 %\input{050_Evaluation.tex}% Evaluation (Pros + Cons, Possible failures, etc.)
 %\input{060_WorkPlan.tex}% * Work Plan (Research Goals+- --> Paul Engelfield)
@@ -37,6 +108,8 @@
 % Bibliography
 \clearpage
 \bibliographystyle{abbrvnat}
-\bibliography{Bibliography.bib}
+\bibliography{/home/kilgore/Dropbox/Public/Docs/mabp_bibliography.bib}
+%\bibliography{Bibliography.bib}
+
 
 \end{document}

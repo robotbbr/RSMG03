@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.11.11)  3 FEB 2015 17:04
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.11.11)  5 FEB 2015 10:30
 entering extended mode
  %&-line parsing enabled.
 **Main.tex
@@ -134,37 +134,43 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 ]
-(./010_Introduction.tex
 Chapter 1.
 [1
 
-]) (./020_RelatedWork.tex [2]
-Chapter 2.
-) (./030_ResearchProblem.tex [3
+] [2] (./Main.bbl
+Underfull \hbox (badness 8038) in paragraph at lines 19--26
+[]\OT1/cmr/m/n/12 G. Jo-hans-son.  Vi-sual per-cep-tion of bi-o-log-i-cal mo-ti
+on and a
+ []
 
-]
-Chapter 3.
-) [4
 
-] (./Main.bbl
+Underfull \hbox (badness 3118) in paragraph at lines 19--26
+\OT1/cmr/m/n/12 model for its anal-y-sis.  \OT1/cmr/m/it/12 Per-cep-tion & Psy-
+chophysics\OT1/cmr/m/n/12 , 14(2):201--
+ []
 
-Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
-) [5
+Underfull \hbox (badness 1762) in paragraph at lines 19--26
+\OT1/cmr/m/n/12 211, 1973.  ISSN 0031-5117.  doi: 10.3758/BF03212378.  URL
+ []
+
+) [3
 
 
 ] (./Main.aux) ) 
 Here is how much of TeX's memory you used:
- 1369 strings out of 495061
- 16715 string characters out of 1182620
- 68775 words of memory out of 3000000
- 4567 multiletter control sequences out of 15000+50000
- 7895 words of font info for 28 fonts, out of 3000000 for 9000
+ 1379 strings out of 495061
+ 16994 string characters out of 1182620
+ 68941 words of memory out of 3000000
+ 4584 multiletter control sequences out of 15000+50000
+ 8411 words of font info for 30 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,4n,19p,678b,118s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,4n,20p,273b,155s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12
-.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on Main.pdf (7 pages, 39795 bytes).
+.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
+hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-
+texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Main.pdf (5 pages, 61975 bytes).
 PDF statistics:
  34 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
