@@ -34,52 +34,114 @@
 % Anchoring
 % Frame Problem
 
-\section{Activity recognition}
+\section{General antecedents - Perception in AI}
+
+Perception, as a cognitive process, has been studied widely in Psychology.  
+Some of these studies refer on how information is processed and which parts of it are essential to make sense properly of a sensory input.
+In \citep{Heider1944_Experimental}, an animated film was created using only moving polygons to demonstrate how the motion of abstract entities can be interpreted by a human observer.
+In \citep{Johansson1973_VisualPer}, locomotion patterns of living organisms using visual marks are studied. 
+By this mean, the emphasis was put in the motion pattern created by the marks rather than in the moving body, whose dimensions and shape were unknown.
+
+
+In Artificial Intelligence, perception has been treated mostly by the computer vision research community.
+Earlier works can be traced back to the 1960s, as part of the effort to mimic human-like intelligence using visual perception components. The main difference between computer vision and image processing has been the desire to recover the three-dimensional structure of the world from images, and to use this as a stepping stone towards full scene understanding \citep{Winston1975_PsyCV}. 
+
+One of the earlier works in 3D reconstruction from a single image is found in \citep{Roberts1963_PhDThesis}.
+The developed system as able to reconstruct geometrical bodies with flat surfaces by recognizing the borders of the bodies in the scene and later analysing the shades of their visible surfaces.
+% TODO: Need to add Adolfo Guzman Arenas work here. +-
+In the late 1960s, the \textit{block's world} was used as a test scenario for intelligent systems, particularly regarding knowledge representation, reasoning and planning.
+In the block's world, the actual state $A$ and a desired future state $B$ of the environment are given.
+The goal is to autonomously generate a plan to transform $A$ into $B$ by the manipulation of the blocks in scene.
+One important characteristic of the problem is the requirement of a symbolic representation.
+The problem was used as a test case for the robot Shakey \citep{Nilsson84_Shakey}.
+In \citep{Barrow1971_RelatDesc} object recognition was studied by decomposing an image into regions and describing the spatial relations between them, in a more qualitative, rather than the traditional quantitative, approach.
+
+%Finally, during the 1980s an approach to perception with emphasis in action feedback became popular
+%TODO: Complete Active Perception.
+
+%TODO: Need to mention QSR.
+%TODO: Need to mention KRR (ASP, DL, Ontologies, Naive Ph, etc.).
+
+
+\section{Activity Recognition} % Emphasis in the taxomony of the area
 
 Activity recognition is an important research area in the context of automated perception. 
-It has many applications as surveillance, inspection, verification, generation of automated reports, etc. 
-The main goal is to automatically analyse the ongoing activities from an unknown sensory source (a video sequence in most of the cases).
-Activities play a relevant role in the interpretation of a scene, not only in physical terms, but also symbolically as they can usually be associated with a meaning or an interpretation.
+It has many applications as surveillance, inspection, verification, generation of automated reports, etc.
+The main goal is to automatically analyse the ongoing activities from a sensory source (a video sequence in most of the cases).
 
-The problem has been studied first in psychology. In \citep{Heider1944_Experimental}, an animation film was created using only polygons to demonstrate how the motion of abstract entities can be interpreted by a human observer.
+Activities play a relevant role in the interpretation of a scene, not only in physical terms (space and time), but also symbolically as they can usually be associated with a meaning and a domain. 
 
-The problem has been studied in AI from different areas, principally in computer vision or as a knowledge processing problem. 
-Early work in computer vision can be traced back to the 1960-70s, as part of the effort to mimic human-like intelligence using visual perception components. In \citet{Johansson1973_VisualPer} locomotion of living organisms is studied using visual marks and then describes a study on interpretation of motion using visual dot markers mounted on a moving body, the patterns are described numerically, but also
+Human activities are difficult to classify because they cover a broad range of situations in different contexts, and they depend on many parameters.
+Regarding their complexity, activities can be treated as hierarchical entities because high-level activities are usually composed of simpler actions.
+In \citep{Turaga2008_MaRecHuAcSurv}, two non-exclusive categories are used: actions and activities.
+The first one is used for simple actions performed preferably by a individual, and activities are treated as a complex sequence of actions performed by several individuals. In \citep{Aggarwal11_HumanActivity}, a four layers categorization is proposed:
+
+\begin{description}
+\item[Gestures] Elementary movements of a person's body part, and are the atomic components describing a meaningful motion of a person. 
+E.g. `stretching an arm', `raising a leg'.
+\item[Actions] Single person activities that may be composed of multiple gestures organized temporally. 
+E.g. `walking', `waving'.
+\item[Interacions] Human activities that involve two or more persons and/or objects. 
+E.g. `Two persons fighting', `a person eating an apple'.
+\item[Group activities] The activities performed by conceptual groups of multiple persons and/or objects. 
+E.g. `a football team playing a match', `a group of students making an exam'.
+\end{description}
+
+The research in activity recognition goes in different directions depending on many factors as specific domains (e.g. robotics, gaming), features of interest in the scene (e.g. abnormality detection, verification), sensory capabilities of the system (e.g. computer vision, pervasive). It usually reflects interest in specific parts of the problem as sensing, scene reconstruction, representation of activities, pattern recognition, reasoning, etc.
+
+In \citep{Aggarwal11_HumanActivity} a taxonomy is proposed to organize the research in the area, Fig. \ref{fig:taxonomy}.  
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{fig/img_Aggarwal_Taxonomy.pdf}
+\caption{The taxonomy of research in activity recognition described in \cite{Aggarwal11_HumanActivity}.}
+\label{fig:taxonomy}
+\end{figure}
+
+\subsection{Single-layered approaches}
+These approaches are based in the representation and recognition of activities using raw sensory data\footnote{The original survey \citep{Aggarwal11_HumanActivity} describes single layered approaches as image-based approaches, but it leaves out the systems with other sensing capabilities (e.g. 3D sensors, sonars). However, they can be included too if it is clear that the representation and recognition of activities is based in the processing of raw sensory data.}.
+%They are suitable for recognition of gestures and actions with sequential characteristics.
+
+\subsubsection{Continuous approaches\footnote{Space-time aproaches in \citep{Aggarwal11_HumanActivity}}} % BEFORE: Space-Time approaches
+The activities are represented continuously  by the sensory data projected in time. The dimension of the data will depend on the sensing capabilities of the system (e.g. XYT for video).
+
+Continuous approaches can also be classified depending on the features that are used to describe activities: volumes, trajectories and local point descriptors.
+
+
+\subsubsection{Sequential approaches} % TODO: Go deeper.
+In these approaches the goal is to interpret a sequence of observations.
+
+Sequential approaches can be classified depending on the used recognition methodology as exemplar-based and model-based.
+
+
+\subsection{Hierarchical approaches}
+They describe high-level activities in terms of simpler ones, building multiple layers that are suitable to represent complex activities.
+
+Hierarchical approaches can be classified regarding the used recognition methodology as statistical, syntactical and description-based.
+
+\subsection{Statistical}
+They are based in the construction of statistical state-based models concatenated hierarchically (e.g. layered hidden Markov models) to represent and recognize high-level human activities.
+
+\subsubsection{Syntactic}
+A grammar syntax is used to model sequential activities (e.g. stochastic context-free grammar). By this mean, a high level activity is represented as a string of atomic level activities that takes part.
+
+\subsubsection{Description-based}
+Activities are represented by the description of sub-events and their spatial, temporal and logical structures.
 
 
 
-
-The main difference between computer vision and image processing was a desire to recover the three-dimensional structure of the world from images, and to use this as a stepping stone towards full scene understanding \citep{Winston1975_PsyCV}. 
-
-
-In the early 1970s, simple motion patterns of dots were studied to describe and recognize complex motion patterns (e.g. walking, shaking hands), \citep{Johansson1973_VisualPer}. 
-Object recognition was treated in \citep{Barrow1971_RelatDesc} by decomposing an image in regions and describe the relations between them. 
-Finally, in this decade, the \textit{block's world} problem was proposed as a test scenario for artificial intelligent systems, particularly regarding planning, knowledge representation and reasoning. 
-One important characteristic of the problem is the requirement of a symbolic scene representation to do some reasoning. 
-The block's world was also used with physical systems as the robot \textit{Shakey}, \citep{Nilsson84_Shakey}.
-
-
-
-
-
-% COMPLETE - AR approaches (CV & KRR)
-In the context of Artificial Intelligence it has been treated as a Computer Visioandverification, in aabout the problem of interpretation and understanding of a scene from sensory information and also using domain knowledge. 
-It is mostly a perceptual action, however reasoning plays an important role too.
-
-% Check the surveys to get the whole image
-
-
-
-% 1 - ACTIVITY RECOGNITION PROBLEM
+% 2 - ACTIVITY RECOGNITION PROBLEM
 % Historic origins
 % Approaches (camera, wearable device, ubiquitous computing)
 % Main branches (single layer, multpiple layer)
 % Hierarchical approaches
 
+%\section{Activity Recognition (robots, ASP, QSR)}
 % 1.5 ACTIVITY RECOGNITION WITH A MOBILE ROBOT
-A robot can be roughly conceived as a physical entity capable of sensing and performing actions in the world.
-With this in mind, it seems clear that a robot, with sufficient sensing capabilities, is a good candidate to perform the task.
+%A robot can be roughly conceived as a physical entity capable of sensing and performing actions in the world.
+%With this in mind, it seems clear that a robot, with sufficient sensing capabilities, is a good candidate to perform the task.
 
+%\subsection{ASP}
 
 % 2 - ANSWER SET PROGRAMMING
 % General background

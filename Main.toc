@@ -1,2 +1,10 @@
 \contentsline {chapter}{\numberline {1}Related Work}{1}
-\contentsline {section}{\numberline {1.1}Activity recognition}{1}
+\contentsline {section}{\numberline {1.1}General antecedents - Perception in AI}{1}
+\contentsline {section}{\numberline {1.2}Activity Recognition}{2}
+\contentsline {subsection}{\numberline {1.2.1}Single-layered approaches}{3}
+\contentsline {subsubsection}{Continuous approaches\let \reserved@d =[\def \par }{3}
+\contentsline {subsubsection}{Sequential approaches}{3}
+\contentsline {subsection}{\numberline {1.2.2}Hierarchical approaches}{4}
+\contentsline {subsection}{\numberline {1.2.3}Statistical}{4}
+\contentsline {subsubsection}{Syntactic}{4}
+\contentsline {subsubsection}{Description-based}{4}

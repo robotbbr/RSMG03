@@ -1,9 +1,15 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aggarwal and Ryoo(2011)]{Aggarwal11_HumanActivity}
+J.~Aggarwal and M.~S. Ryoo.
+\newblock Human activity analysis: A review.
+\newblock \emph{ACM Computing Surveys (CSUR)}, 43\penalty0 (3):\penalty0 16,
+  2011.
 
 \bibitem[Barrow and Popplestone(1971)]{Barrow1971_RelatDesc}
 H.~Barrow and R.~Popplestone.
@@ -28,6 +34,19 @@ G.~Johansson.
 N.~Nilsson.
 \newblock Shakey the robot.
 \newblock Tech Note 323, AI Center, SRI International, 1984.
+
+\bibitem[Roberts(1963)]{Roberts1963_PhDThesis}
+L.~G. Roberts.
+\newblock \emph{Machine Perception of Three-Dimensional Solids}.
+\newblock PhD thesis, Massachusetts Institute of Technology, June 1963.
+
+\bibitem[Turaga et~al.(2008)Turaga, Chellappa, Subrahmanian, and
+  Udrea]{Turaga2008_MaRecHuAcSurv}
+P.~K. Turaga, R.~Chellappa, V.~S. Subrahmanian, and O.~Udrea.
+\newblock Machine recognition of human activities: {A} survey.
+\newblock \emph{IEEE Trans. Circuits and Systems for Video Technology},
+  18\penalty0 (11):\penalty0 1473--1488, Nov. 2008.
+\newblock URL \url{http://dx.doi.org/10.1109/TCSVT.2008.2005594}.
 
 \bibitem[Winston and Horn(1975)]{Winston1975_PsyCV}
 P.~H. Winston and B.~Horn.
