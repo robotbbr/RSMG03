@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.11.11)  6 FEB 2015 09:07
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.11.11)  6 FEB 2015 10:32
 entering extended mode
  %&-line parsing enabled.
 **Main.tex
@@ -133,14 +133,14 @@ Runaway argument?
 <to be read again> 
                    \par 
 l.5 ...uous approaches\let \reserved@d =[\def \par
-                                                   }{3}
+                                                   }{4}
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 ! Extra }, or forgotten \endgroup.
 l.5 ...us approaches\let \reserved@d =[\def \par }
-                                                  {3}
+                                                  {4}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -167,14 +167,14 @@ File: fig/img_Aggarwal_Taxonomy.pdf Graphic file (type pdf)
 
 <use fig/img_Aggarwal_Taxonomy.pdf>
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 102.
+(Font)              <7> on input line 103.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 102.
+(Font)              <5> on input line 103.
 
 ! Argument of \@sect has an extra }.
 <inserted text> 
                 \par 
-l.105 ...hes in \citep{Aggarwal11_HumanActivity}}}
+l.114 ...es' in \citep{Aggarwal11_HumanActivity}}}
                                                    % BEFORE: Space-Time appr...
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -189,52 +189,61 @@ r \ETC.
 ! Paragraph ended before \@sect was complete.
 <to be read again> 
                    \par 
-l.105 ...hes in \citep{Aggarwal11_HumanActivity}}}
+l.114 ...es' in \citep{Aggarwal11_HumanActivity}}}
                                                    % BEFORE: Space-Time appr...
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-[3 <./fig/img_Aggarwal_Taxonomy.pdf>] [4] (./Main.bbl
-Underfull \hbox (badness 8038) in paragraph at lines 25--32
+[3 <./fig/img_Aggarwal_Taxonomy.pdf>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 124.
+
+
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
+ [4] [5] (./Main.bbl
+Underfull \hbox (badness 8038) in paragraph at lines 33--40
 []\OT1/cmr/m/n/12 G. Jo-hans-son.  Vi-sual per-cep-tion of bi-o-log-i-cal mo-ti
 on and a
  []
 
 
-Underfull \hbox (badness 3118) in paragraph at lines 25--32
+Underfull \hbox (badness 3118) in paragraph at lines 33--40
 \OT1/cmr/m/n/12 model for its anal-y-sis.  \OT1/cmr/m/it/12 Per-cep-tion & Psy-
 chophysics\OT1/cmr/m/n/12 , 14(2):201--
  []
 
 
-Underfull \hbox (badness 1762) in paragraph at lines 25--32
+Underfull \hbox (badness 1762) in paragraph at lines 33--40
 \OT1/cmr/m/n/12 211, 1973.  ISSN 0031-5117.  doi: 10.3758/BF03212378.  URL
  []
 
-) [5
+) [6
 
 
 ] (./Main.aux) ) 
 Here is how much of TeX's memory you used:
- 1399 strings out of 495061
- 17512 string characters out of 1182620
- 70087 words of memory out of 3000000
- 4602 multiletter control sequences out of 15000+50000
+ 1419 strings out of 495061
+ 17887 string characters out of 1182620
+ 70122 words of memory out of 3000000
+ 4619 multiletter control sequences out of 15000+50000
  9016 words of font info for 32 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,8n,30p,506b,207s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,8n,30p,458b,207s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12
 .pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/
 share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-
 texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/font
 s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/publi
 c/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
-/cmti12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb
->
-Output written on Main.pdf (7 pages, 123506 bytes).
+/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb
+></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Main.pdf (8 pages, 134742 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

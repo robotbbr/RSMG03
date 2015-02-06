@@ -1,4 +1,4 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{9}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -15,6 +15,14 @@ J.~Aggarwal and M.~S. Ryoo.
 H.~Barrow and R.~Popplestone.
 \newblock Relational descriptions in picture processing.
 \newblock In \emph{Machine Intelligence 6}, page 377, 1971.
+
+\bibitem[Bobick and Davis(2001)]{Bobick2001_RecHuMovTemp}
+A.~Bobick and J.~Davis.
+\newblock The recognition of human movement using temporal templates.
+\newblock \emph{Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 23\penalty0 (3):\penalty0 257--267, Mar 2001.
+\newblock ISSN 0162-8828.
+\newblock \doi{10.1109/34.910878}.
 
 \bibitem[Heider and Simmel(1944)]{Heider1944_Experimental}
 F.~Heider and M.~Simmel.

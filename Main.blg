@@ -2,44 +2,44 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: Main.aux
 The style file: abbrvnat.bst
 Database file #1: /home/kilgore/Dropbox/Public/Docs/mabp_bibliography.bib.bib
-You've used 8 entries,
+You've used 9 entries,
             2773 wiz_defined-function locations,
-            664 strings with 6073 characters,
-and the built_in function-call counts, 3433 in all, are:
-= -- 326
-> -- 153
-< -- 10
-+ -- 53
-- -- 45
-* -- 249
-:= -- 537
-add.period$ -- 32
-call.type$ -- 8
-change.case$ -- 37
-chr.to.int$ -- 8
-cite$ -- 16
-duplicate$ -- 172
-empty$ -- 285
-format.name$ -- 61
-if$ -- 729
+            675 strings with 6310 characters,
+and the built_in function-call counts, 3908 in all, are:
+= -- 373
+> -- 174
+< -- 11
++ -- 60
+- -- 51
+* -- 290
+:= -- 610
+add.period$ -- 37
+call.type$ -- 9
+change.case$ -- 42
+chr.to.int$ -- 9
+cite$ -- 18
+duplicate$ -- 192
+empty$ -- 325
+format.name$ -- 70
+if$ -- 831
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 7
-newline$ -- 55
-num.names$ -- 32
-pop$ -- 66
+missing$ -- 8
+newline$ -- 62
+num.names$ -- 36
+pop$ -- 72
 preamble$ -- 1
-purify$ -- 31
+purify$ -- 35
 quote$ -- 0
-skip$ -- 135
+skip$ -- 150
 stack$ -- 0
-substring$ -- 112
-swap$ -- 27
+substring$ -- 135
+swap$ -- 29
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 83
+type$ -- 94
 warning$ -- 0
-while$ -- 32
+while$ -- 36
 width$ -- 0
-write$ -- 126
+write$ -- 143

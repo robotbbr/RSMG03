@@ -48,7 +48,7 @@ Earlier works can be traced back to the 1960s, as part of the effort to mimic hu
 
 One of the earlier works in 3D reconstruction from a single image is found in \citep{Roberts1963_PhDThesis}.
 The developed system as able to reconstruct geometrical bodies with flat surfaces by recognizing the borders of the bodies in the scene and later analysing the shades of their visible surfaces.
-% TODO: Need to add Adolfo Guzman Arenas work here. +-
+%TODO Need to add Adolfo Guzman Arenas work here. +-
 In the late 1960s, the \textit{block's world} was used as a test scenario for intelligent systems, particularly regarding knowledge representation, reasoning and planning.
 In the block's world, the actual state $A$ and a desired future state $B$ of the environment are given.
 The goal is to autonomously generate a plan to transform $A$ into $B$ by the manipulation of the blocks in scene.
@@ -57,10 +57,10 @@ The problem was used as a test case for the robot Shakey \citep{Nilsson84_Shakey
 In \citep{Barrow1971_RelatDesc} object recognition was studied by decomposing an image into regions and describing the spatial relations between them, in a more qualitative, rather than the traditional quantitative, approach.
 
 %Finally, during the 1980s an approach to perception with emphasis in action feedback became popular
-%TODO: Complete Active Perception.
+%TODO Complete Active Perception.
 
-%TODO: Need to mention QSR.
-%TODO: Need to mention KRR (ASP, DL, Ontologies, Naive Ph, etc.).
+%TODO Need to mention QSR.
+%TODO Need to mention KRR (ASP, DL, Ontologies, Naive Ph, etc.).
 
 
 \section{Activity Recognition} % Emphasis in the taxomony of the area
@@ -99,13 +99,34 @@ In \citep{Aggarwal11_HumanActivity} a taxonomy is proposed to organize the resea
 \end{figure}
 
 \subsection{Single-layered approaches}
-These approaches are based in the representation and recognition of activities using raw sensory data\footnote{The original survey \citep{Aggarwal11_HumanActivity} describes single layered approaches as image-based approaches, but it leaves out the systems with other sensing capabilities (e.g. 3D sensors, sonars). However, they can be included too if it is clear that the representation and recognition of activities is based in the processing of raw sensory data.}.
-%They are suitable for recognition of gestures and actions with sequential characteristics.
+The representation and recognition of activities is performed using raw sensory data\footnote{The original survey \citep{Aggarwal11_HumanActivity} describes single layered approaches as image-based approaches, but it leaves out the systems with other sensing capabilities (e.g. 3D sensors, sonars). 
+However, they can be included too if it is clear that the representation and recognition of activities is based in the processing of raw sensory data.}. 
+Sensory data is processed to obtain particular descriptive features of the scene which are compared with known activity patterns. 
+These patterns can be obtained in a supervised or unsupervised fashion (e.g. common occurrences of a specific action). 
+Most of them are based in computer vision and machine learning techniques.
 
-\subsubsection{Continuous approaches\footnote{Space-time aproaches in \citep{Aggarwal11_HumanActivity}}} % BEFORE: Space-Time approaches
-The activities are represented continuously  by the sensory data projected in time. The dimension of the data will depend on the sensing capabilities of the system (e.g. XYT for video).
+Single-layered approaches are suitable for recognition of short-term and simple activities as gestures, movements of the body or simple interaction with an object. 
+This is because the amount of collected data, which is going to be processed, grows very easily and long-term activities would require the processing of larger amounts of data. 
+Also, because activities are not always performed in the same way, even by the same person; the shorter the activity, the more accuracy that will be attained.  
+An finally, because they are dependant on the conditions of the sensors and from the environment (e.g. different light conditions, a particular point of view) and noise should be considered.
 
-Continuous approaches can also be classified depending on the features that are used to describe activities: volumes, trajectories and local point descriptors.
+
+\subsubsection{Continuous approaches\footnote{`Space-time approaches' in \citep{Aggarwal11_HumanActivity}}} % BEFORE: Space-Time approaches
+The activities are recognized by analysing continuously sensory data projected in time. 
+A volume (or hyper-volume) is built from the sensory data and particular features are extracted and compared with known patterns.
+The dimension of the data will depend on the sensing capabilities of the system; for example, video analysis would require 3 dimensions $(X,Y,T)$ and a RGBD camera would be able to use 4 dimensions $(X,Y,Z,T)$, etc. %TODO Consider RGB values..., what happens with other dimensions, e.g. temperature?
+
+In \citep{Bobick2001_RecHuMovTemp} a video signal of aerobics exercises is analysed by attaching to every pixel a vector indicating the precence of motion and the recency of motion in a sequence. The vector sequences are compared in time with known pattern of exercises. The system was able to recognize the activities in real time, and with a linear temporal temporal variance. 
+In \citep{Ke2007_SpTmpShapeAR} activity recognition is performed by
+
+Continuous approaches can also be classified depending on the features that are used to describe activities: 
+\begin{itemize}
+\item Volumes: 
+\item Trajectories:
+\item Point descriptors:
+\end{itemize}
+
+
 
 
 \subsubsection{Sequential approaches} % TODO: Go deeper.
@@ -123,7 +144,8 @@ Hierarchical approaches can be classified regarding the used recognition methodo
 They are based in the construction of statistical state-based models concatenated hierarchically (e.g. layered hidden Markov models) to represent and recognize high-level human activities.
 
 \subsubsection{Syntactic}
-A grammar syntax is used to model sequential activities (e.g. stochastic context-free grammar). By this mean, a high level activity is represented as a string of atomic level activities that takes part.
+A grammar syntax is used to model sequential activities (e.g. stochastic context-free grammar). 
+By this mean, a high level activity is represented as a string of atomic level activities that takes part.
 
 \subsubsection{Description-based}
 Activities are represented by the description of sub-events and their spatial, temporal and logical structures.
