@@ -19,7 +19,7 @@
 \pagestyle{plain}
 \pagenumbering{arabic}
 % Abstract
-%\input{010_Introduction.tex} % Intro & Motivation (Open areas proposed in the literatures)
+\input{010_Introduction.tex} % Intro & Motivation (Open areas proposed in the literatures)
 % Outcome
 %\input{020_RelatedWork.tex} % "Related Work" Literature rev (separated areas, in my case AR + ASP + KRR(incomplete) + Semantic Map)
 
@@ -112,27 +112,35 @@ An finally, because they are dependant on the conditions of the sensors and from
 
 
 \subsubsection{Continuous approaches\footnote{`Space-time approaches' in \citep{Aggarwal11_HumanActivity}}} % BEFORE: Space-Time approaches
+
 The activities are recognized by analysing continuously sensory data projected in time. 
 A volume (or hyper-volume) is built from the sensory data and particular features are extracted and compared with known patterns.
 The dimension of the data will depend on the sensing capabilities of the system; for example, video analysis would require 3 dimensions $(X,Y,T)$ and a RGBD camera would be able to use 4 dimensions $(X,Y,Z,T)$, etc. %TODO Consider RGB values..., what happens with other dimensions, e.g. temperature?
+Continuous approaches can also be classified depending on the features that are used to describe activities (volumes, trajectories, point descriptors, etc.).
 
-In \citep{Bobick2001_RecHuMovTemp} a video signal of aerobics exercises is analysed by attaching to every pixel a vector indicating the precence of motion and the recency of motion in a sequence. The vector sequences are compared in time with known pattern of exercises. The system was able to recognize the activities in real time, and with a linear temporal temporal variance. 
-In \citep{Ke2007_SpTmpShapeAR} activity recognition is performed by
+In \citep{Bobick2001_RecHuMovTemp} a video signal of aerobics exercises is analysed by attaching to every pixel a vector indicating the precence of motion and the recency of motion in a sequence. 
+The vector sequences are compared in time with known pattern of exercises. 
+The system was able to recognize the activities in real time, and with a linear temporal temporal variance. 
 
-Continuous approaches can also be classified depending on the features that are used to describe activities: 
-\begin{itemize}
-\item Volumes: 
-\item Trajectories:
-\item Point descriptors:
-\end{itemize}
-
+In \citep{Ke2007_SpTmpShapeAR} activity recognition is performed by extracting from a video signal sequences that are similar to the known activity pattern, using a shape-based representation. 
+Then a volume is built by concatenating the video frames in time. Similar neighbour regions are then clustered to create a volume. 
+Finally the shapes of the volumes are compared to known patterns of activities.
 
 
+\subsubsection{Sequential approaches} %TODO Go deeper.
+Sequential approaches look to recognize activities by analysing a sequence of extracted features. First the sensory data is processed to extract particular features, which will be concatenated in time. Then sequential methods are applied to to search for sequences that coul eventually match with the pattern of a known activities. In case of that the sequence is corrupted, a probabilistic approach can be applied to decide the occurrence of the activity.
 
-\subsubsection{Sequential approaches} % TODO: Go deeper.
-In these approaches the goal is to interpret a sequence of observations.
+Sequential approaches can be classified depending on the used recognition methodology in exemplar-based and model-based. 
 
-Sequential approaches can be classified depending on the used recognition methodology as exemplar-based and model-based.
+In exemplar-based sequential approaches a sequence in time is created by extracting particular features from the incoming sensory data. In \citep{Veeraraghavan2006_FuncSpcAct} high-level actions are treated as a sequence in time of atomic actions. The same activity performed in two different occasions can create two different sequences because of an execution in a different speed. The authors develop a method to learn the the pattern time variances in the activity sequence to be able to recognize activities performed at different speeds, or with eventual pauses.
+
+The second one, creates a sequence in time of states, which might be separated in time, and  creates a statistical model to test the belonging of that pattern to a known class of activity. Hidden Markov models (HMMs) and Dynamic Bayesian networks (DBNs) are widely used in this approach. The activity is modelled in terms of hidden states and then transition probabilities are trained. The model will reflect the similarity of a sequence of states with a probability value. These methods can be robust in realistic cases where the sequence of states is corrupted or incomplete.
+
+The first work to use probabilistic graphical models to recognize activities is \citep{Yamato1992_RecHA_HMM}. They transformed a sequence of images into an image feature vector sequence, and then into a symbol sequence by vector quantization. They used a set of HMMs to model the activities to be recognized and dataset to optimize the parameters of the model. Their results reflect a good and reliable performance of HMMs to model human activities. 
+
+
+
+
 
 
 \subsection{Hierarchical approaches}
@@ -153,12 +161,11 @@ Activities are represented by the description of sub-events and their spatial, t
 
 
 % 2 - ACTIVITY RECOGNITION PROBLEM
-% Historic origins
 % Approaches (camera, wearable device, ubiquitous computing)
 % Main branches (single layer, multpiple layer)
 % Hierarchical approaches
 
-%\section{Activity Recognition (robots, ASP, QSR)}
+%\section{Activity Recognition (robots, ASP, QSR, 3D)}
 % 1.5 ACTIVITY RECOGNITION WITH A MOBILE ROBOT
 %A robot can be roughly conceived as a physical entity capable of sensing and performing actions in the world.
 %With this in mind, it seems clear that a robot, with sufficient sensing capabilities, is a good candidate to perform the task.

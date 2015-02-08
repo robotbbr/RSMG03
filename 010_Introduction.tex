@@ -4,33 +4,66 @@
 % > Robots in everyday environments are important.
 % > This environment is hard.
 % > Robots needs cognitive skills: understand the environment.
-One of the main goals in AI is having robots working autonomously in everyday environments. A robot in this kind of situation is expected to perceive, understand and interact with his environment. However, the environment is dynamic, non-structured and non-deterministic, which makes difficult for a robot to fulfil assigned tasks. To be able to sort these obstacles, robots need to be provided with cognitive skills, in particular the capacity to perceive the environment to interpret and understand it. %glsdef_{cognition}
+One of the main goals in AI is having robots working autonomously in everyday environments. 
+A robot in this kind of situation is expected to perceive, understand and interact with his environment. 
+However, the environment is dynamic, non-structured and non-deterministic, which makes difficult for a robot to fulfil the assigned tasks. To be able to sort these obstacles, robots need to be provided with cognitive skills. %TODO Expand %glsdef_{cognition}
 
 % GENERALITIES ABOUT HUMAN ACTIVITIES
 % > Activities are important part of the scenes and they are necessary to be able to understand the scene
 % > Activities are entities with a spatio-temporal & symbolic (semantic, hierarchical) characteristics
-Everyday environments have many valuable features that a robot needs to understand, among them are human activities. They are a manifestation of human behaviour that can be associated to a concept. They are important for a robot in order to be able to understand the role of humans and the interactions with objects and the environment in a particular scene.
+Everyday environments have many valuable features that a robot needs to understand, among them are human activities. 
+They are a meaningful manifestation of human behaviour. %TODO Expand the definition of activity.
+They are important for a robot in order to be able to understand the role of humans in a particular environment, and the occurring interactions with objects and with the environment.
 
 %\section{Research Problem}
 \section{Human activity analysis with a mobile robot}
 % ACTIVITY RECOGNITION
 % > AR as a field
 % > Robot case, advantages and disadvantages of using a robot
-Activity recognition is the research field in charge of the automatic analysis of human activities. The problem has been treated from different perspectives, principally by analysing video sequences, but also by using a multi-layered and hierarchical approach. The area is still active and the use of a robot has not been fully exploited.
+Activity recognition is the research field that studies the automatic detection and analysis of human activities from the information acquired from sensors \citep{Aggarwal14_HumActRec3DRev}. 
+In the AI context, it is closely related with perception and knowledge processing. 
+The problem of activity recognition has been treated from different perspectives, however, computer vision has been the most popular approach to use.
 
-Robots are capable of performing activity recognition and they have some advantages over fixed cameras. They are active observers, i.e. they can change the point of view and be selective on the areas in the environment that are more interesting to observe. On the other hand, they have some disadvantages as well. They don't have omnipresence so they will loose information. They also may have erratic data from the sensors due to movement, different environmental conditions, etc. The robots are also expected to work in real-time, so a quick deliberation would be desirable.
+% Robots in AR (general)
+In principle, robots with appropriate sensing capabilities can perform activity recognition. 
+Moreover, they have some advantages over the use of fixed cameras or wearable devices as they are able to interact with the environment. 
+They are active observers, i.e. they can change their point of view on scene and be selective in the areas of the environment that are more interesting. 
+On the other hand, they have some disadvantages as well. 
+They don't have omnipresence, so they are not able to sense the environment and will loose information. 
+Also, their sensory data may be noisy or blurry due to movement, erratic hardware, changing environmental conditions, etc. 
+Finally, robots are expected to work in real-time, so online activity recognition would be desirable, however, this puts time constraints in the deliberation process.
 
 % RESEARCH PROBLEM
 % > Talk about AR with a robot in cases with incomplete information
 % > Generalities of the problem 
 % > Example case of a sequence
-Due to their nature, robots are susceptible to handle erratic or incomplete data. However, it is important to explore alternatives to tackle these problems due to the potential advantages of robots. This is the motivation for this project, the study of activity recognition performed with a mobile robot and focusing in the cases where complete information from the environment is not available.
+%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO
 
-% Maybe discuss about applications.
+%Persentation of the project
+The target problem in this project is the study of activity recognition performed with a robot. 
+Particularly in the case where there is not complete information from the environment to have a clear match between the observations and the activity patterns. 
+Here, an interpretation can still be made using previous experience and domain knowledge. 
+Even, if a totally certain interpretation of the scene is not possible, a partial one can still be done with a list of the most probable situations to be happening. 
+This also can be used by a robot to decide to perform new observations of the scene to improve its reasoning conclusions. 
+The chosen technique to do this is Answer Set Programming (ASP).
+
+%TODO Write paragraph about ASP
+%Answer Set Programming is a logical p
+
 % Quick draft of the proposal.
-% Still need to discuss advantages and disadvantages of the problem, and of the proposed "solution".
 
-%\section{Approaches}
-% 
+\section{Test case: ``The library scenario''} %TODO Add images.
+
+The School of Computer Science at the University of Birmingham have a library, mostly used by students.
+An attendant is in charge of the book loans and retrievals, and also to help users using the facility.
+The physical scenario is basically a big room. It has some cabinets (where bibliographic material is stored), a reception, some tables and chairs and a printing desk. It only has one entrance. 
+
+Users mostly use the facility to study, to consult material, to print, to work in team, to do work in PC or simply as a rest area.
+Because of the rules of the library and nature of the scenario, the amount of activities is restricted by the domain.
+However, some other activities could appear as using a cellphone, talking, packaging things inside a backpack, etc.
+The objects involved in the scenario is relatively small (books, tables, chairs, laptops, cabinets, etc.).
+
+
+
 
 

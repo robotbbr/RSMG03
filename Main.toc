@@ -1,10 +1,13 @@
-\contentsline {chapter}{\numberline {1}Related Work}{1}
-\contentsline {section}{\numberline {1.1}General antecedents - Perception in AI}{1}
-\contentsline {section}{\numberline {1.2}Activity Recognition}{2}
-\contentsline {subsection}{\numberline {1.2.1}Single-layered approaches}{3}
-\contentsline {subsubsection}{Continuous approaches\let \reserved@d =[\def \par }{4}
-\contentsline {subsubsection}{Sequential approaches}{4}
-\contentsline {subsection}{\numberline {1.2.2}Hierarchical approaches}{4}
-\contentsline {subsection}{\numberline {1.2.3}Statistical}{4}
-\contentsline {subsubsection}{Syntactic}{5}
-\contentsline {subsubsection}{Description-based}{5}
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Human activity analysis with a mobile robot}{1}
+\contentsline {section}{\numberline {1.2}Test case: ``The library scenario''}{2}
+\contentsline {chapter}{\numberline {2}Related Work}{3}
+\contentsline {section}{\numberline {2.1}General antecedents - Perception in AI}{3}
+\contentsline {section}{\numberline {2.2}Activity Recognition}{4}
+\contentsline {subsection}{\numberline {2.2.1}Single-layered approaches}{5}
+\contentsline {subsubsection}{Continuous approaches\let \reserved@d =[\def \par }{6}
+\contentsline {subsubsection}{Sequential approaches}{6}
+\contentsline {subsection}{\numberline {2.2.2}Hierarchical approaches}{7}
+\contentsline {subsection}{\numberline {2.2.3}Statistical}{7}
+\contentsline {subsubsection}{Syntactic}{7}
+\contentsline {subsubsection}{Description-based}{7}

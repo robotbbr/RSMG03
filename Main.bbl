@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,17 @@ J.~Aggarwal and M.~S. Ryoo.
 \newblock Human activity analysis: A review.
 \newblock \emph{ACM Computing Surveys (CSUR)}, 43\penalty0 (3):\penalty0 16,
   2011.
+
+\bibitem[Aggarwal and Xia(2014)]{Aggarwal14_HumActRec3DRev}
+J.~Aggarwal and L.~Xia.
+\newblock Human activity recognition from 3d data: A review.
+\newblock \emph{Pattern Recognition Letters}, 48\penalty0 (0):\penalty0 70 --
+  80, 2014.
+\newblock ISSN 0167-8655.
+\newblock \doi{http://dx.doi.org/10.1016/j.patrec.2014.04.011}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0167865514001299}.
+\newblock Celebrating the life and work of Maria Petrou.
 
 \bibitem[Barrow and Popplestone(1971)]{Barrow1971_RelatDesc}
 H.~Barrow and R.~Popplestone.
@@ -38,6 +49,12 @@ G.~Johansson.
 \newblock \doi{10.3758/BF03212378}.
 \newblock URL \url{http://dx.doi.org/10.3758/BF03212378}.
 
+\bibitem[Ke et~al.(2007)Ke, Sukthankar, and Hebert]{Ke2007_SpTmpShapeAR}
+Y.~Ke, R.~Sukthankar, and M.~Hebert.
+\newblock Spatio-temporal shape and flow correlation for action recognition.
+\newblock In \emph{CVPR}. IEEE Computer Society, 2007.
+\newblock URL \url{http://dblp.uni-trier.de/db/conf/cvpr/cvpr2007.html#KeSH07}.
+
 \bibitem[Nilsson(1984)]{Nilsson84_Shakey}
 N.~Nilsson.
 \newblock Shakey the robot.
@@ -56,6 +73,14 @@ P.~K. Turaga, R.~Chellappa, V.~S. Subrahmanian, and O.~Udrea.
   18\penalty0 (11):\penalty0 1473--1488, Nov. 2008.
 \newblock URL \url{http://dx.doi.org/10.1109/TCSVT.2008.2005594}.
 
+\bibitem[Veeraraghavan et~al.(2006)Veeraraghavan, Chellappa, and
+  Roy-Chowdhury]{Veeraraghavan2006_FuncSpcAct}
+A.~Veeraraghavan, R.~Chellappa, and A.~Roy-Chowdhury.
+\newblock The function space of an activity.
+\newblock In \emph{Computer Vision and Pattern Recognition, 2006 IEEE Computer
+  Society Conference on}, volume~1, pages 959--968, 2006.
+\newblock \doi{10.1109/CVPR.2006.304}.
+
 \bibitem[Winston and Horn(1975)]{Winston1975_PsyCV}
 P.~H. Winston and B.~Horn.
 \newblock \emph{The psychology of computer vision}.
@@ -63,5 +88,14 @@ P.~H. Winston and B.~Horn.
 \newblock ISBN 0-07-071048-1.
 \newblock URL \url{http://opac.inria.fr/record=b1083572}.
 \newblock Includes index.
+
+\bibitem[Yamato et~al.(1992)Yamato, Ohya, and Ishii]{Yamato1992_RecHA_HMM}
+J.~Yamato, J.~Ohya, and K.~Ishii.
+\newblock Recognizing human action in time-sequential images using hidden
+  markov model.
+\newblock In \emph{Computer Vision and Pattern Recognition, 1992. Proceedings
+  CVPR '92., 1992 IEEE Computer Society Conference on}, pages 379--385, Jun
+  1992.
+\newblock \doi{10.1109/CVPR.1992.223161}.
 
 \end{thebibliography}
