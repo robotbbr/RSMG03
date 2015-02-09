@@ -20,6 +20,7 @@
 \pagenumbering{arabic}
 % Abstract
 \input{010_Introduction.tex} % Intro & Motivation (Open areas proposed in the literatures)
+
 % Outcome
 %\input{020_RelatedWork.tex} % "Related Work" Literature rev (separated areas, in my case AR + ASP + KRR(incomplete) + Semantic Map)
 
@@ -28,33 +29,50 @@
 %================================================
 \chapter{Related Work}
 
+%TODO Intro to the chapter
+The general problem to study in this project is activity recognition with a mobile robot. 
+In this chapter, relevant related work is reviewed.
+
+In humans, activity recognition is a cognitive skill that can be considered mainly into perception. 
+The basis to understand it relies first in Psychology, because it provides the concepts and the evidence of how the mind is constituted (\ref{ch_LitRev_Perception}). 
+The next step is to look at the possibilities to mimic a cognitive process into a machine, this problem has been studied widely in Artificial Intelligence. %TODO Add cross reference
+In particular, activity recognition has been studied in Computer Vision. %TODO Add cross reference
+Finally, the problem has to landed to a robotic stage, making emphasis on the advantages and disadvantages of a robotic platform. %TODO Add cross ref
+
 % 0 - GENERALITIES
 % Perception
 % Symbol ground
 % Anchoring
 % Frame Problem
 
-\section{General antecedents - Perception in AI}
+\section{General antecedents - Perception in AI} \label{ch_LitRev_Perception}
 
 Perception, as a cognitive process, has been studied widely in Psychology.  
-Some of these studies refer on how information is processed and which parts of it are essential to make sense properly of a sensory input.
-In \citep{Heider1944_Experimental}, an animated film was created using only moving polygons to demonstrate how the motion of abstract entities can be interpreted by a human observer.
-In \citep{Johansson1973_VisualPer}, locomotion patterns of living organisms using visual marks are studied. 
-By this mean, the emphasis was put in the motion pattern created by the marks rather than in the moving body, whose dimensions and shape were unknown.
+Part of the interest is about how sensory information is processed by the brain, and which parts of it are essential.
+Also relevant is the domain knowledge that the subject has about a particular context.
+Together, the sensory input and the domain knowledge are used to interpret a scene.
 
+%TODO Other interesting examples to discuss later: Plato's Cave, 5 blind men and the elephant, Flatland
+
+Sensory input is important for perception, however, not all the data is equally important to interpret a particular scene and conclusions can still be made, even with partial data.
+In \citep{Heider1944_Experimental}, an animated film was created using only moving polygons to demonstrate how the motion of abstract entities could be interpreted by human observers in meaningful ways.
+In \citep{Johansson1973_VisualPer}, locomotion patterns of living organisms using visual marks were studied. 
+By this mean, the emphasis was put in the qualitative motion description of the marks rather than in the qualitative motion description of the moving body.
 
 In Artificial Intelligence, perception has been treated mostly by the computer vision research community.
 Earlier works can be traced back to the 1960s, as part of the effort to mimic human-like intelligence using visual perception components. The main difference between computer vision and image processing has been the desire to recover the three-dimensional structure of the world from images, and to use this as a stepping stone towards full scene understanding \citep{Winston1975_PsyCV}. 
 
+
 One of the earlier works in 3D reconstruction from a single image is found in \citep{Roberts1963_PhDThesis}.
-The developed system as able to reconstruct geometrical bodies with flat surfaces by recognizing the borders of the bodies in the scene and later analysing the shades of their visible surfaces.
-%TODO Need to add Adolfo Guzman Arenas work here. +-
-In the late 1960s, the \textit{block's world} was used as a test scenario for intelligent systems, particularly regarding knowledge representation, reasoning and planning.
-In the block's world, the actual state $A$ and a desired future state $B$ of the environment are given.
-The goal is to autonomously generate a plan to transform $A$ into $B$ by the manipulation of the blocks in scene.
-One important characteristic of the problem is the requirement of a symbolic representation.
-The problem was used as a test case for the robot Shakey \citep{Nilsson84_Shakey}.
+The developed system was able to reconstruct geometrical bodies with flat surfaces by recognizing the borders of the bodies in the scene and later analysing the shades of their visible surfaces.
+%TODO Maybe include Adolfo Guzman Arenas work here. +-
 In \citep{Barrow1971_RelatDesc} object recognition was studied by decomposing an image into regions and describing the spatial relations between them, in a more qualitative, rather than the traditional quantitative, approach.
+
+Since the early 1970s, the \textit{block's world} was used as a test scenario for intelligent systems, particularly regarding knowledge representation, reasoning and planning.
+In the block's world, an initial state $A$ and a desired state $B$  of the environment are given.
+The goal is to autonomously generate a plan to transform $A$ into $B$ by the manipulation of the blocks.
+One important characteristic of the problem is that requires a symbolic representation of the scene.
+The problem was used as a test case for the robot Shakey \citep{Nilsson84_Shakey}.
 
 %Finally, during the 1980s an approach to perception with emphasis in action feedback became popular
 %TODO Complete Active Perception.
@@ -67,12 +85,12 @@ In \citep{Barrow1971_RelatDesc} object recognition was studied by decomposing an
 
 Activity recognition is an important research area in the context of automated perception. 
 It has many applications as surveillance, inspection, verification, generation of automated reports, etc.
-The main goal is to automatically analyse the ongoing activities from a sensory source (a video sequence in most of the cases).
+%The main goal is to automatically analyse the ongoing activities from a sensory source (a video sequence in most of the cases).
 
-Activities play a relevant role in the interpretation of a scene, not only in physical terms (space and time), but also symbolically as they can usually be associated with a meaning and a domain. 
+%Activities can be understood in physical terms (space and time), but also symbolically as they can usually be associated with a meaning and a context. 
 
-Human activities are difficult to classify because they cover a broad range of situations in different contexts, and they depend on many parameters.
-Regarding their complexity, activities can be treated as hierarchical entities because high-level activities are usually composed of simpler actions.
+%Human activities are difficult to classify because they cover a broad range of situations and they depend on different parameters.
+%Regarding their complexity, activities can be treated as hierarchical entities because high-level activities are usually composed of simpler actions.
 In \citep{Turaga2008_MaRecHuAcSurv}, two non-exclusive categories are used: actions and activities.
 The first one is used for simple actions performed preferably by a individual, and activities are treated as a complex sequence of actions performed by several individuals. In \citep{Aggarwal11_HumanActivity}, a four layers categorization is proposed:
 
