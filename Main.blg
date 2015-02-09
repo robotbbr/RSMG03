@@ -5,45 +5,45 @@ Database file #1: /home/kilgore/Dropbox/Public/Docs/mabp_bibliography.bib.bib
 A bad cross reference---entry "Ke2007_SpTmpShapeAR"
 refers to entry "conf/cvpr/2007", which doesn't exist
 Warning--I didn't find a database entry for "conf/cvpr/2007"
-You've used 13 entries,
+You've used 12 entries,
             2773 wiz_defined-function locations,
-            714 strings with 7464 characters,
-and the built_in function-call counts, 6140 in all, are:
-= -- 584
-> -- 285
+            704 strings with 7185 characters,
+and the built_in function-call counts, 5550 in all, are:
+= -- 530
+> -- 246
 < -- 15
-+ -- 97
-- -- 84
-* -- 468
-:= -- 932
-add.period$ -- 57
-call.type$ -- 13
-change.case$ -- 65
-chr.to.int$ -- 13
-cite$ -- 26
-duplicate$ -- 302
-empty$ -- 514
-format.name$ -- 109
-if$ -- 1330
++ -- 84
+- -- 72
+* -- 408
+:= -- 841
+add.period$ -- 53
+call.type$ -- 12
+change.case$ -- 58
+chr.to.int$ -- 12
+cite$ -- 24
+duplicate$ -- 281
+empty$ -- 471
+format.name$ -- 96
+if$ -- 1210
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 12
-newline$ -- 89
-num.names$ -- 52
-pop$ -- 117
+missing$ -- 11
+newline$ -- 83
+num.names$ -- 48
+pop$ -- 106
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 48
 quote$ -- 0
-skip$ -- 236
+skip$ -- 221
 stack$ -- 0
-substring$ -- 220
-swap$ -- 56
+substring$ -- 187
+swap$ -- 54
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 138
+type$ -- 127
 warning$ -- 0
-while$ -- 53
+while$ -- 48
 width$ -- 0
-write$ -- 210
+write$ -- 195
 (There was 1 error message)

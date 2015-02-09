@@ -1,4 +1,4 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -64,14 +64,6 @@ N.~Nilsson.
 L.~G. Roberts.
 \newblock \emph{Machine Perception of Three-Dimensional Solids}.
 \newblock PhD thesis, Massachusetts Institute of Technology, June 1963.
-
-\bibitem[Turaga et~al.(2008)Turaga, Chellappa, Subrahmanian, and
-  Udrea]{Turaga2008_MaRecHuAcSurv}
-P.~K. Turaga, R.~Chellappa, V.~S. Subrahmanian, and O.~Udrea.
-\newblock Machine recognition of human activities: {A} survey.
-\newblock \emph{IEEE Trans. Circuits and Systems for Video Technology},
-  18\penalty0 (11):\penalty0 1473--1488, Nov. 2008.
-\newblock URL \url{http://dx.doi.org/10.1109/TCSVT.2008.2005594}.
 
 \bibitem[Veeraraghavan et~al.(2006)Veeraraghavan, Chellappa, and
   Roy-Chowdhury]{Veeraraghavan2006_FuncSpcAct}

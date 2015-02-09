@@ -81,52 +81,45 @@ The problem was used as a test case for the robot Shakey \citep{Nilsson84_Shakey
 %TODO Need to mention KRR (ASP, DL, Ontologies, Naive Ph, etc.).
 
 
-\section{Activity Recognition} % Emphasis in the taxomony of the area
+\section{Activity Recognition} 
+% Emphasis in the taxomony of the area. I will only describe the taxonomy and give examples. I need to finish with describing the branch that fits better the "robotics" approach, and that will be the next section.
 
 Activity recognition is an important research area in the context of automated perception. 
 It has many applications as surveillance, inspection, verification, generation of automated reports, etc.
-%The main goal is to automatically analyse the ongoing activities from a sensory source (a video sequence in most of the cases).
+The application will dictate the approach to follow and the kind on sensors that will be required.
 
-%Activities can be understood in physical terms (space and time), but also symbolically as they can usually be associated with a meaning and a context. 
+First, regarding sensing, two approaches can be followed, environmental and/or pervasive. 
+The first one observes the scene from the distance as it happens with a CCTV camera or a robot. 
+The pervasive approach relies on wearable devices to detect the activity of a person from a first person point of view.
 
-%Human activities are difficult to classify because they cover a broad range of situations and they depend on different parameters.
-%Regarding their complexity, activities can be treated as hierarchical entities because high-level activities are usually composed of simpler actions.
-In \citep{Turaga2008_MaRecHuAcSurv}, two non-exclusive categories are used: actions and activities.
-The first one is used for simple actions performed preferably by a individual, and activities are treated as a complex sequence of actions performed by several individuals. In \citep{Aggarwal11_HumanActivity}, a four layers categorization is proposed:
-
-\begin{description}
-\item[Gestures] Elementary movements of a person's body part, and are the atomic components describing a meaningful motion of a person. 
-E.g. `stretching an arm', `raising a leg'.
-\item[Actions] Single person activities that may be composed of multiple gestures organized temporally. 
-E.g. `walking', `waving'.
-\item[Interacions] Human activities that involve two or more persons and/or objects. 
-E.g. `Two persons fighting', `a person eating an apple'.
-\item[Group activities] The activities performed by conceptual groups of multiple persons and/or objects. 
-E.g. `a football team playing a match', `a group of students making an exam'.
-\end{description}
-
-The research in activity recognition goes in different directions depending on many factors as specific domains (e.g. robotics, gaming), features of interest in the scene (e.g. abnormality detection, verification), sensory capabilities of the system (e.g. computer vision, pervasive). It usually reflects interest in specific parts of the problem as sensing, scene reconstruction, representation of activities, pattern recognition, reasoning, etc.
-
-In \citep{Aggarwal11_HumanActivity} a taxonomy is proposed to organize the research in the area, Fig. \ref{fig:taxonomy}.  
+Another possible classification of activity recognition systems focuses on how information is processed.
+In \citep{Aggarwal11_HumanActivity} a taxonomy is proposed as shown in Fig. \ref{fig:taxonomy}.  
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{fig/img_Aggarwal_Taxonomy.pdf}
+\includegraphics[width=\textwidth]{fig/img_Aggarwal_Taxonomy2.pdf}
 \caption{The taxonomy of research in activity recognition described in \cite{Aggarwal11_HumanActivity}.}
 \label{fig:taxonomy}
 \end{figure}
 
 \subsection{Single-layered approaches}
-The representation and recognition of activities is performed using raw sensory data\footnote{The original survey \citep{Aggarwal11_HumanActivity} describes single layered approaches as image-based approaches, but it leaves out the systems with other sensing capabilities (e.g. 3D sensors, sonars). 
-However, they can be included too if it is clear that the representation and recognition of activities is based in the processing of raw sensory data.}. 
-Sensory data is processed to obtain particular descriptive features of the scene which are compared with known activity patterns. 
-These patterns can be obtained in a supervised or unsupervised fashion (e.g. common occurrences of a specific action). 
-Most of them are based in computer vision and machine learning techniques.
+They represent activities in terms of raw sensory data\footnote{The original survey \citep{Aggarwal11_HumanActivity} describes single layered approaches as image-based approaches, but it leaves out the systems with other sensing capabilities (e.g. 3D sensors, sonars, GPS, etc.).
+However, they can be included too the activities are represented in terms of raw sensory data patterns.}, because of this, the activity descriptions are trained from datasets.
 
-Single-layered approaches are suitable for recognition of short-term and simple activities as gestures, movements of the body or simple interaction with an object. 
-This is because the amount of collected data, which is going to be processed, grows very easily and long-term activities would require the processing of larger amounts of data. 
-Also, because activities are not always performed in the same way, even by the same person; the shorter the activity, the more accuracy that will be attained.  
-An finally, because they are dependant on the conditions of the sensors and from the environment (e.g. different light conditions, a particular point of view) and noise should be considered.
+%Sensory data is processed to obtain particular descriptive features of the scene which are compared with known activity patterns. 
+%These patterns can be obtained in a supervised or unsupervised fashion (e.g. common occurrences of a specific action). 
+%Most of them are based in computer vision and machine learning techniques.
+
+Single-layered approaches are suitable to recognize short-term and simple activities as gestures, movements of the body or simple interactions with objects. 
+This is mainly because the amount of sensory data grows very easily and long-term activities would require to process larger amounts of data. 
+Also, because activities are not always performed in the same way, even by the same individual; the shorter the activity, the more accuracy that will be attained.
+An finally, because they are dependant on the sensors and on the environmental conditions (e.g. lighting, point of view).
+
+
+
+%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
+NEED TO UNDERSTAND HMMs & DBNss
+%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
 
 
 \subsubsection{Continuous approaches\footnote{`Space-time approaches' in \citep{Aggarwal11_HumanActivity}}} % BEFORE: Space-Time approaches
