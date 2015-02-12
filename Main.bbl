@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{16}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -22,6 +22,14 @@ J.~Aggarwal and L.~Xia.
   \url{http://www.sciencedirect.com/science/article/pii/S0167865514001299}.
 \newblock Celebrating the life and work of Maria Petrou.
 
+\bibitem[Allen(1983)]{Allen83_MaintainingKnowledgeTemporal}
+J.~F. Allen.
+\newblock Maintaining knowledge about temporal intervals.
+\newblock \emph{Commun. ACM}, 26\penalty0 (11):\penalty0 832--843, Nov. 1983.
+\newblock ISSN 0001-0782.
+\newblock \doi{10.1145/182.358434}.
+\newblock URL \url{http://doi.acm.org/10.1145/182.358434}.
+
 \bibitem[Barrow and Popplestone(1971)]{Barrow1971_RelatDesc}
 H.~Barrow and R.~Popplestone.
 \newblock Relational descriptions in picture processing.
@@ -35,10 +43,27 @@ A.~Bobick and J.~Davis.
 \newblock ISSN 0162-8828.
 \newblock \doi{10.1109/34.910878}.
 
+\bibitem[Darrell and Pentland(1993)]{Darrell1993_STGestures}
+T.~Darrell and A.~Pentland.
+\newblock Space-time gestures.
+\newblock In \emph{Computer Vision and Pattern Recognition, 1993. Proceedings
+  CVPR '93., 1993 IEEE Computer Society Conference on}, pages 335--340, Jun
+  1993.
+\newblock \doi{10.1109/CVPR.1993.341109}.
+
 \bibitem[Heider and Simmel(1944)]{Heider1944_Experimental}
 F.~Heider and M.~Simmel.
 \newblock An experimental study of apparent behavior.
 \newblock \emph{The American Journal of Psychology}, pages 243--259, 1944.
+
+\bibitem[Ivanov and Bobick(2000)]{Ivanov2000_RecVisActSCFG}
+Y.~Ivanov and A.~Bobick.
+\newblock Recognition of visual activities and interactions by stochastic
+  parsing.
+\newblock \emph{Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 22\penalty0 (8):\penalty0 852--872, Aug 2000.
+\newblock ISSN 0162-8828.
+\newblock \doi{10.1109/34.868686}.
 
 \bibitem[Johansson(1973)]{Johansson1973_VisualPer}
 G.~Johansson.
@@ -55,23 +80,29 @@ Y.~Ke, R.~Sukthankar, and M.~Hebert.
 \newblock In \emph{CVPR}. IEEE Computer Society, 2007.
 \newblock URL \url{http://dblp.uni-trier.de/db/conf/cvpr/cvpr2007.html#KeSH07}.
 
+\bibitem[King(2014)]{King2014Psychology}
+L.~King.
+\newblock \emph{The science of psychology : an appreciative view}.
+\newblock McGraw-Hill Education, New York, NY, 2014.
+\newblock ISBN 0078035406.
+
 \bibitem[Nilsson(1984)]{Nilsson84_Shakey}
 N.~Nilsson.
 \newblock Shakey the robot.
 \newblock Tech Note 323, AI Center, SRI International, 1984.
 
+\bibitem[Oliver et~al.(2002)Oliver, Horvitz, and
+  Garg]{Oliver2002_LayRepHumActRec}
+N.~Oliver, E.~Horvitz, and A.~Garg.
+\newblock Layered representations for human activity recognition.
+\newblock In \emph{Multimodal Interfaces, 2002. Proceedings. Fourth IEEE
+  International Conference on}, pages 3--8, 2002.
+\newblock \doi{10.1109/ICMI.2002.1166960}.
+
 \bibitem[Roberts(1963)]{Roberts1963_PhDThesis}
 L.~G. Roberts.
 \newblock \emph{Machine Perception of Three-Dimensional Solids}.
 \newblock PhD thesis, Massachusetts Institute of Technology, June 1963.
-
-\bibitem[Veeraraghavan et~al.(2006)Veeraraghavan, Chellappa, and
-  Roy-Chowdhury]{Veeraraghavan2006_FuncSpcAct}
-A.~Veeraraghavan, R.~Chellappa, and A.~Roy-Chowdhury.
-\newblock The function space of an activity.
-\newblock In \emph{Computer Vision and Pattern Recognition, 2006 IEEE Computer
-  Society Conference on}, volume~1, pages 959--968, 2006.
-\newblock \doi{10.1109/CVPR.2006.304}.
 
 \bibitem[Winston and Horn(1975)]{Winston1975_PsyCV}
 P.~H. Winston and B.~Horn.

@@ -47,12 +47,13 @@ Finally, the problem has to landed to a robotic stage, making emphasis on the ad
 
 \section{General antecedents - Perception in AI} \label{ch_LitRev_Perception}
 
-Perception, as a cognitive process, has been studied widely in Psychology.  
+Perception, as a cognitive process, has been studied widely in Psychology.
+It refers to the process of organizing and interpreting sensory information so that it has a meaning \citep{King2014Psychology}.
 Part of the interest is about how sensory information is processed by the brain, and which parts of it are essential.
 Also relevant is the domain knowledge that the subject has about a particular context.
 Together, the sensory input and the domain knowledge are used to interpret a scene.
 
-%TODO Other interesting examples to discuss later: Plato's Cave, 5 blind men and the elephant, Flatland
+%TODO Other interesting examples to discuss later: Plato's Cave, 5 blind men and the elephant, Flatland, Metamorfosis.
 
 Sensory input is important for perception, however, not all the data is equally important to interpret a particular scene and conclusions can still be made, even with partial data.
 In \citep{Heider1944_Experimental}, an animated film was created using only moving polygons to demonstrate how the motion of abstract entities could be interpreted by human observers in meaningful ways.
@@ -103,7 +104,7 @@ In \citep{Aggarwal11_HumanActivity} a taxonomy is proposed as shown in Fig. \ref
 \end{figure}
 
 \subsection{Single-layered approaches}
-They represent activities in terms of raw sensory data\footnote{The original survey \citep{Aggarwal11_HumanActivity} describes single layered approaches as image-based approaches, but it leaves out the systems with other sensing capabilities (e.g. 3D sensors, sonars, GPS, etc.).
+They represent activities in terms of raw sensory data\footnote{The originaking science psychologyl survey \citep{Aggarwal11_HumanActivity} describes single layered approaches as image-based approaches, but it leaves out the systems with other sensing capabilities (e.g. 3D sensors, sonars, GPS, etc.).
 However, they can be included too the activities are represented in terms of raw sensory data patterns.}, because of this, the activity descriptions are trained from datasets.
 
 %Sensory data is processed to obtain particular descriptive features of the scene which are compared with known activity patterns. 
@@ -116,58 +117,94 @@ Also, because activities are not always performed in the same way, even by the s
 An finally, because they are dependant on the sensors and on the environmental conditions (e.g. lighting, point of view).
 
 
-
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
-NEED TO UNDERSTAND HMMs & DBNss
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
-
-
 \subsubsection{Continuous approaches\footnote{`Space-time approaches' in \citep{Aggarwal11_HumanActivity}}} % BEFORE: Space-Time approaches
 
-The activities are recognized by analysing continuously sensory data projected in time. 
-A volume (or hyper-volume) is built from the sensory data and particular features are extracted and compared with known patterns.
-The dimension of the data will depend on the sensing capabilities of the system; for example, video analysis would require 3 dimensions $(X,Y,T)$ and a RGBD camera would be able to use 4 dimensions $(X,Y,Z,T)$, etc. %TODO Consider RGB values..., what happens with other dimensions, e.g. temperature?
-Continuous approaches can also be classified depending on the features that are used to describe activities (volumes, trajectories, point descriptors, etc.).
+The activities are recognized by analysing continuous sensory data and compare it with an activity pattern.
 
-In \citep{Bobick2001_RecHuMovTemp} a video signal of aerobics exercises is analysed by attaching to every pixel a vector indicating the precence of motion and the recency of motion in a sequence. 
-The vector sequences are compared in time with known pattern of exercises. 
-The system was able to recognize the activities in real time, and with a linear temporal temporal variance. 
+An activity is represented as a block of data along time where the activity was performed, and it is considered as a whole.
+A volume (or hyper-volume) is built by concatenating the sensor readings in time.
+The dimension of the data will depend on the sensing capabilities of the system; for example, a video stream would require 3 dimensions $(X,Y,T)$ and a RGBD camera would be able to use 4 dimensions $(X,Y,Z,T)$, etc. %TODO Consider RGB values..., what happens with other dimensions, e.g. temperature?
+The sensory input is compared with the activity patterns to measure similarity.
+If a threshold is fulfilled, then the activity is labelled.
 
-In \citep{Ke2007_SpTmpShapeAR} activity recognition is performed by extracting from a video signal sequences that are similar to the known activity pattern, using a shape-based representation. 
-Then a volume is built by concatenating the video frames in time. Similar neighbour regions are then clustered to create a volume. 
-Finally the shapes of the volumes are compared to known patterns of activities.
+The advantages of this approach is that it is relatively fast and doesn't require domain knowledge. 
+However, it is very dependant of the sensory input, the continuity of the data, how the activity is performed and of the point of view where the scene is being observed. %TODO HOMEWORK: What about interpolating the data in incomplete situations.
 
+There are many examples of this approach.
+In \citep{Bobick2001_RecHuMovTemp} a video stream of aerobics exercises was analysed by attaching to every pixel a vector indicating the presence and recency of motion. 
+Then the stream was compared online with previously described activities to look for matching. 
+In \citep{Ke2007_SpTmpShapeAR}, volumes were built by attaching similar regions of adjacent frames.
+Then, the problem was transformed in an object matching problem by comparing the shapes of the volumes (sensory stream and activity patterns).
 
 \subsubsection{Sequential approaches} %TODO Go deeper.
-Sequential approaches look to recognize activities by analysing a sequence of extracted features. First the sensory data is processed to extract particular features, which will be concatenated in time. Then sequential methods are applied to to search for sequences that coul eventually match with the pattern of a known activities. In case of that the sequence is corrupted, a probabilistic approach can be applied to decide the occurrence of the activity.
 
-Sequential approaches can be classified depending on the used recognition methodology in exemplar-based and model-based. 
+Sequential approaches represent activities as a sequence of states. 
+A state is a vector of features observed in the scene in a specific time.
+Finally, the sequence is analysed depending on the activity representation.
+There are two approaches: exemplar-based and model-based.
 
-In exemplar-based sequential approaches a sequence in time is created by extracting particular features from the incoming sensory data. In \citep{Veeraraghavan2006_FuncSpcAct} high-level actions are treated as a sequence in time of atomic actions. The same activity performed in two different occasions can create two different sequences because of an execution in a different speed. The authors develop a method to learn the the pattern time variances in the activity sequence to be able to recognize activities performed at different speeds, or with eventual pauses.
+In exemplar-based approaches, activities, or a class of them, are represented as a sequence of states. 
+Then the sensory input is compared in similarity with the patterns.
+An example can be found in \citep{Darrell1993_STGestures}, where states are built from view models.
+Templates of activities are from sequences of states associated with a physical change (e.g. rotation and scale).
+The dynamics of articulated objects in scene were recognized using the dynamic time warping algorithm (DTW) to the sequence of states.
 
-The second one, creates a sequence in time of states, which might be separated in time, and  creates a statistical model to test the belonging of that pattern to a known class of activity. Hidden Markov models (HMMs) and Dynamic Bayesian networks (DBNs) are widely used in this approach. The activity is modelled in terms of hidden states and then transition probabilities are trained. The model will reflect the similarity of a sequence of states with a probability value. These methods can be robust in realistic cases where the sequence of states is corrupted or incomplete.
+In model based approaches, the sequence of states is compared with a set of probabilistic models of activities. The models are built assuming a temporal dependence between the states, so the transitions are modelled probabilistically using hidden Markov models (HMM) or dynamic bayesian networks (DBN).
 
-The first work to use probabilistic graphical models to recognize activities is \citep{Yamato1992_RecHA_HMM}. They transformed a sequence of images into an image feature vector sequence, and then into a symbol sequence by vector quantization. They used a set of HMMs to model the activities to be recognized and dataset to optimize the parameters of the model. Their results reflect a good and reliable performance of HMMs to model human activities. 
-
-
+The first work to use HMM to recognize activities was \citep{Yamato1992_RecHA_HMM}. They transformed a video stream into a sequence of vectors of image features. Then every vector was transformed to a symbol using vector quantization. Finally, a set of HMMs were created to model the activities, and their parameters were optimized. 
 
 
-
+%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
+%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
 
 \subsection{Hierarchical approaches}
-They describe high-level activities in terms of simpler ones, building multiple layers that are suitable to represent complex activities.
+Hierarchical approaches for activity recognition refer to those where complex activities are represented in terms of simpler ones. 
+Multiple layers are defined to represent activities in different levels of complexity.
+Low level activities can be recognized using single-layered approaches. 
 
-Hierarchical approaches can be classified regarding the used recognition methodology as statistical, syntactical and description-based.
+Hierarchical approaches are also adequate to represent activities symbolically by using the multi-layered organization to describe semantic relations.
+By these means, hierarchical approaches are less dependant to training data and they can integrate domain knowledge more easily.
+
+Hierarchical approaches can be categorized, regarding the applied methodology for recognition as statistical, syntactical and description-based. %TODO Expand.
+
 
 \subsection{Statistical}
-They are based in the construction of statistical state-based models concatenated hierarchically (e.g. layered hidden Markov models) to represent and recognize high-level human activities.
+They are based in the hierarchical construction of statistical state-based models, such as HMMs or DBNs.
+
+First the set of activities to work with is defined and organized hierarchically.
+Complex activities are defined in terms of simpler ones and so on until everything can be synthesized to atomic actions.
+In this way, many layers are created, from atomic actions to complex activities.
+In the bottom level, atomic actions are recognized from sensory data using single-layered sequential approaches. 
+As a result, a sequence of feature vectors is transformed into a sequence of atomic actions.
+This sequence is the input for the next layer, which now will be treated as a new sequence of observations, and the same approach to recognize atomic actions from the first layer will be applied in the second one, and so on.
+
+In \citep{Oliver2002_LayRepHumActRec}, the authors present layered hidden Markov models (LHMMs) for online activity recognition using data from video, sound and keyboard data. 
+They divide their system in three layers: the first one is in charge of recognizing features from every source, the second layer trigger short events from the scene, and the last layer is used for longer activities. 
+The hierarchical approach showed an improved performance when compared to single-layered systems.
+The training data is used more efficiently and it's more easy to add more detail on specific activities.
+
+Some disadvantages of the statistical approaches is their difficulty to model the temporal structure of events (e.g. $A$ occurred `during'/`before'/`after' $B$) and also, because of their sequential nature, is hard to handle multiple concurrent tasks.
 
 \subsubsection{Syntactic}
-A grammar syntax is used to model sequential activities (e.g. stochastic context-free grammar). 
-By this mean, a high level activity is represented as a string of atomic level activities that takes part.
+In the syntactical approach, activities are represented symbolically as a set of production rules generating a string of atomic actions which is later recognized using parsing techniques.
+Atomic actions are obtained with a single-layered approach, however, in higher layers, recognition is performed symbolically.
+Context-free grammars (CFGs) and stochastic context-free grammars (SCFGs) are some of the techniques that have been used to recognize high level activities.
+
+One limitation of this approach is the difficulty to handle concurrent activities, and also to consider unexpected events that are not integrated in the grammar.
+
+An example can be found in \citep{Ivanov2000_RecVisActSCFG}.
+The authors aim to recognize complex activities in sequences of video.
+Two layers are defined; in the lower level, atomic actions are recognized using HMMs, and in the upper one uses SCFGs.
+The approach showed to be able to handle longer time activity constraints and more robust to uncertain detections in the lower level.
+
 
 \subsubsection{Description-based}
-Activities are represented by the description of sub-events and their spatial, temporal and logical structures.
+This approach represent activities as a hierarchy of events, making emphasis in their spatial, temporal and logical structures.
+
+A complex activity is modelled from de occurrence of its sub-events that satisfies certain relations.
+The temporal relation between sub-events is usually considered in the representation using Allen's calculus \citep{Allen83_MaintainingKnowledgeTemporal}.
+Atomic actions are obtained from
+
 
 
 
