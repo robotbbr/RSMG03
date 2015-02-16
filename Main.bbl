@@ -1,4 +1,4 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{27}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -64,6 +64,12 @@ M.~Fisher.
 \newblock In F.~van Harmelen, V.~Lifschitz, and B.~Porter, editors,
   \emph{Handbook of Knowledge Representation}, pages 513--550. Elsevier,
   Amsterdam, 2008.
+
+\bibitem[Gebser(2013)]{Gebser2013_ASP}
+M.~Gebser.
+\newblock \emph{Answer set solving in practice}.
+\newblock Morgan \& Claypool Publishers, San Rafael, 2013.
+\newblock ISBN 1608459713.
 
 \bibitem[Heider and Simmel(1944)]{Heider1944_Experimental}
 F.~Heider and M.~Simmel.
@@ -150,6 +156,14 @@ M.~Sridhar.
 M.~Sridhar, A.~G. Cohn, and D.~C. Hogg.
 \newblock Unsupervised learning of event classes from video.
 \newblock In \emph{Proc. AAAI}, pages 1631--1638. AAAI Press, 2010.
+
+\bibitem[Turaga et~al.(2008)Turaga, Chellappa, Subrahmanian, and
+  Udrea]{Turaga2008_MaRecHuAcSurv}
+P.~K. Turaga, R.~Chellappa, V.~S. Subrahmanian, and O.~Udrea.
+\newblock Machine recognition of human activities: {A} survey.
+\newblock \emph{IEEE Trans. Circuits and Systems for Video Technology},
+  18\penalty0 (11):\penalty0 1473--1488, Nov. 2008.
+\newblock URL \url{http://dx.doi.org/10.1109/TCSVT.2008.2005594}.
 
 \bibitem[Winston and Horn(1975)]{Winston1975_PsyCV}
 P.~H. Winston and B.~Horn.
