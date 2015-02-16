@@ -8,6 +8,13 @@
 \contentsline {subsubsection}{Continuous approaches\let \reserved@d =[\def \par }{5}
 \contentsline {subsubsection}{Sequential approaches}{6}
 \contentsline {subsection}{\numberline {2.2.2}Hierarchical approaches}{6}
-\contentsline {subsection}{\numberline {2.2.3}Statistical}{7}
+\contentsline {subsubsection}{Statistical}{7}
 \contentsline {subsubsection}{Syntactic}{7}
 \contentsline {subsubsection}{Description-based}{8}
+\contentsline {section}{\numberline {2.3}Description-based activity recognition and mobile robotics}{8}
+\contentsline {subsection}{\numberline {2.3.1}Description-based activity recognition}{9}
+\contentsline {subsubsection}{Representation}{9}
+\contentsline {subsubsection}{Reasoning}{10}
+\contentsline {subsection}{\numberline {2.3.2}robotics}{10}
+\contentsline {subsection}{\numberline {2.3.3}Activity recognition with mobile robotics}{10}
+\contentsline {section}{\numberline {2.4}Answer Set Programming}{10}

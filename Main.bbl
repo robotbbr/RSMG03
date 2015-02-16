@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -43,6 +43,13 @@ A.~Bobick and J.~Davis.
 \newblock ISSN 0162-8828.
 \newblock \doi{10.1109/34.910878}.
 
+\bibitem[Cohn and Renz(2007)]{Cohn2008_QSRR}
+A.~G. Cohn and J.~Renz.
+\newblock {Q}ualitative {S}patial {R}epresentation and {R}easoning.
+\newblock In F.~van Harmelen, V.~Lifschitz, and B.~Porter, editors,
+  \emph{{H}andbook of {K}nowledge {R}epresentation}, pages 551--596.
+  {E}lsevier, Oxford, 2007.
+
 \bibitem[Darrell and Pentland(1993)]{Darrell1993_STGestures}
 T.~Darrell and A.~Pentland.
 \newblock Space-time gestures.
@@ -50,6 +57,13 @@ T.~Darrell and A.~Pentland.
   CVPR '93., 1993 IEEE Computer Society Conference on}, pages 335--340, Jun
   1993.
 \newblock \doi{10.1109/CVPR.1993.341109}.
+
+\bibitem[Fisher(2008)]{Fisher2008_TempRepReas}
+M.~Fisher.
+\newblock Temporal representation and reasoning.
+\newblock In F.~van Harmelen, V.~Lifschitz, and B.~Porter, editors,
+  \emph{Handbook of Knowledge Representation}, pages 513--550. Elsevier,
+  Amsterdam, 2008.
 
 \bibitem[Heider and Simmel(1944)]{Heider1944_Experimental}
 F.~Heider and M.~Simmel.
@@ -86,6 +100,20 @@ L.~King.
 \newblock McGraw-Hill Education, New York, NY, 2014.
 \newblock ISBN 0078035406.
 
+\bibitem[Moszkowski(1983)]{Moszkowski1983_RDC}
+B.~C. Moszkowski.
+\newblock \emph{Reasoning About Digital Circuits}.
+\newblock PhD thesis, Stanford, CA, USA, 1983.
+\newblock AAI8329756.
+
+\bibitem[Nevatia et~al.(2004)Nevatia, Hobbs, and
+  Bolles]{Nevatia2004_OntoVidEvRep}
+R.~Nevatia, J.~Hobbs, and B.~Bolles.
+\newblock An ontology for video event representation.
+\newblock In \emph{Computer Vision and Pattern Recognition Workshop, 2004.
+  CVPRW '04. Conference on}, pages 119--119, June 2004.
+\newblock \doi{10.1109/CVPR.2004.27}.
+
 \bibitem[Nilsson(1984)]{Nilsson84_Shakey}
 N.~Nilsson.
 \newblock Shakey the robot.
@@ -104,6 +132,25 @@ L.~G. Roberts.
 \newblock \emph{Machine Perception of Three-Dimensional Solids}.
 \newblock PhD thesis, Massachusetts Institute of Technology, June 1963.
 
+\bibitem[Ryoo and Aggarwal(2006)]{Ryoo2006_RecHuAcCFG}
+M.~Ryoo and J.~Aggarwal.
+\newblock Recognition of composite human activities through context-free
+  grammar based representation.
+\newblock In \emph{Computer Vision and Pattern Recognition, 2006 IEEE Computer
+  Society Conference on}, volume~2, pages 1709--1718, 2006.
+\newblock \doi{10.1109/CVPR.2006.242}.
+
+\bibitem[Sridhar(2010)]{Sridhar10_PhD_UnsupervisedLearningEvent}
+M.~Sridhar.
+\newblock \emph{Unsupervised Learning of Event Classes from Video}.
+\newblock PhD thesis, University of Leeds, 2010.
+
+\bibitem[Sridhar et~al.(2010)Sridhar, Cohn, and
+  Hogg]{Sridhar10_UnsupervisedLearning}
+M.~Sridhar, A.~G. Cohn, and D.~C. Hogg.
+\newblock Unsupervised learning of event classes from video.
+\newblock In \emph{Proc. AAAI}, pages 1631--1638. AAAI Press, 2010.
+
 \bibitem[Winston and Horn(1975)]{Winston1975_PsyCV}
 P.~H. Winston and B.~Horn.
 \newblock \emph{The psychology of computer vision}.
@@ -120,5 +167,20 @@ J.~Yamato, J.~Ohya, and K.~Ishii.
   CVPR '92., 1992 IEEE Computer Society Conference on}, pages 379--385, Jun
   1992.
 \newblock \doi{10.1109/CVPR.1992.223161}.
+
+\bibitem[Young and Hawes(2013)]{Young13_PredcitingSituatedBehaviour}
+J.~Young and N.~Hawes.
+\newblock Predicting situated behaviour using sequences of abstract spatial
+  relations.
+\newblock In \emph{Proceedings of the AAAI 2013 Fall Symposium How Should
+  Intelligence be Abstracted in AI Research: MDPs, Symbolic Representations,
+  Artificial Neural Networks, or \_\_\_\_\_?}, 2013.
+
+\bibitem[Young and Hawes(2014)]{Young14_EffectsTraining}
+J.~Young and N.~Hawes.
+\newblock Effects of training data variation and temporal representation in a
+  qsr-based action prediction system.
+\newblock In \emph{AAAI Spring Symposium 2014 on Qualitative Representations
+  for Robots}, Stanford University in Palo Alto, California, US, March 2014.
 
 \end{thebibliography}
