@@ -128,9 +128,6 @@ In model based approaches, the sequence of states is compared with a set of prob
 The first work to use HMM to recognize activities was \citep{Yamato1992_RecHA_HMM}. They transformed a video stream into a sequence of vectors of image features. Then every vector was transformed to a symbol using vector quantization. Finally, a set of HMMs were created to model the activities, and their parameters were optimized. 
 
 
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
-
 \subsection{Hierarchical approaches}
 Hierarchical approaches for activity recognition refer to those where complex activities are represented in terms of simpler ones. 
 Multiple layers are defined to represent activities in different levels of complexity.
@@ -245,8 +242,8 @@ This work presents a study of activity prediction.
 The results show that qualitative representations are more easy to treat general cases of activities and require less training data. 
 Some drawbacks are that the system posses global information from the environment, and the domain is restricted.
 
-In
-
+%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
+%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
 
 \subsubsection{Reasoning}
 
@@ -278,19 +275,74 @@ While a large A robot is an ideal system to perform
 
 \section{Answer Set Programming} % Because is one of the main contributions, I put it appart.
 
-Answer set programming (ASP) is an approach to declarative problem solving, combining a rich and simple modelling language with high performance solving capacities. It has its roots in deductive databases, logic programming (with negation), logic-based knwoledge representation and (nonmonotomic) reasoning, and constraint solving (satisfiability testing) \citep{Gebser2013_ASP}.
+Answer set programming (ASP) is form of declarative programming oriented towards difficult, primarly NP-hard, search problems.
+As an outgrowth of research on the use of non-monotonic reasoning in knowledge representation, it is particularly useful in knowledge intensive applications \citep{Lifschitz2008_WhatASP}. 
+It combines a rich and simple modelling language with high performance solving capacities. 
+It has its roots in deductive databases, logic programming (with negation), logic-based knwoledge representation and (non-monotonic) reasoning, and constraint solving (satisfiability testing).
 
-A rule is expressed in ASP as:
+The basic idea in ASP is to express a problem in a logical format so that the models og this representation provide solutions to the original problem. The resulting models are refered as \textit{answer sets} \citep{Gebser2013_ASP}. A rule is expressed in ASP as:
 
 \begin{equation*}
 L_{0} \, \textit{or} \, \dots \, \textit{or} \, L_{k} \longleftarrow \, L_{k+1} , \ldots , L_{m} , \, \textit{not} \, L_{m+1} , \ldots , \, \textit{not} \, L_{n},
 \end{equation*}
 
+each $L_{i}$ is a literal in the sense of classical logic. The above rule means that if $L_{k+1},\ldots,L_{m}$ are true and if $L_{m+1},\ldots,L_{n}$ can be assumed to be false, then at least one $L_{0},\ldots,L_{k}$ must be true \citep{Gelf88a}. The symbol \textit{not} is called \textit{negation as failure}.
+
+Monotonicity refers to the property of a logic system where adding more rules won't produce a reduction in the set of conclusions of the system. 
+Non-monotonicity allows to a conclusion reduction when more rules are added \citep{Poole2010_AIbook}. 
+This concept is important in systems with incoming knowledge, in dynamic and non deterministic scenarios.
+Also, allows the assumption of truth states, or belief states and a posterior revision of them when more rules are known.
+It is clear, that this is a desired property, in a logic system, to handle uncertain and incomplete information.
+
+Negation as a failure symbol \textit{not} $L_i$ it is often read as ``it is not believed that $L_i$ is true". 
+However, this does not imply that $L_i$ is believed to be false, \textit{not} $L_i$ is a statement about belief \citep{Gelfond2014_KRRbook}.
+
+\subsection{ASP as a knowledge representation language}
+
+ASP is well suited for modelling problems in the area of Knowledge Representation and Reasoning involving incomplete, inconsistent and changing information \citep{Schaub13_ASPBoCo}. Some of its properties, in this context, are \citep{Todorova2006_CKASP}:
+
+\begin{description}
+\item[Restricted monotonicity] ASP can behave monotonically which addition of literals about certain predicates.
+\item[Language independence] The results of a program are not dependant on the ASP solver.
+\item[Sort-ignorable] The sorts can be ignored through language tolerance. %TODO Check
+\item[Knowledge extension] Knowledge can be extended by \textit{filtering}, i.e. updating the belief state \citep{Amir2003_LogFil}.
+\end{description}
+
+ASP has been particularly applied to reasoning satisfiability problems.
+However, other problems can be treated too by ASP, as: model enumeration, intersection or unioning, as well as multi-criteria and -objective optimization. 
+Formally, ASP allows for solving all search problems in $NP$ and $NP^{NP}$ in a uniform way. 
+Hence, ASP is a\citep{Schaub13_ASPBoCo}.
+
+% Solvers
+\subsubsection{ASP implementations}
+Since the inception of the concept in the 1980s \citep{Gelf88a} many implementations of ASP have been created.
+The majority of them uses the syntax of the language \textit{Lparse}, also called \textit{AnsProlog*}. 
+However, \textit{DVL}, one of the most prominent ASP solvers uses a different syntax.
+
+Here is a list of some of the more relevant solvers:
+
+\begin{description}
+\item[clasp]
+\end{description}
+
+% ASP & Robotics
+
+\subsection{ASP and robotics}
+Regarding
 
 
 
 
-\subsection{Situations, events and fluents}
+
+
+
+
+
+
+
+
+
+%\subsection{Situations, events and fluents}
 
 
 

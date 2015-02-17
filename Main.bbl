@@ -1,4 +1,4 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{34}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -29,6 +29,13 @@ J.~F. Allen.
 \newblock ISSN 0001-0782.
 \newblock \doi{10.1145/182.358434}.
 \newblock URL \url{http://doi.acm.org/10.1145/182.358434}.
+
+\bibitem[Amir and Russell(2003)]{Amir2003_LogFil}
+E.~Amir and S.~J. Russell.
+\newblock Logical filtering.
+\newblock In G.~Gottlob and T.~Walsh, editors, \emph{Proceedings of the
+  Eighteenth International Joint Conference on Artificial Intelligence}, pages
+  75--82, San Francisco, 2003. Morgan Kaufmann.
 
 \bibitem[Barrow and Popplestone(1971)]{Barrow1971_RelatDesc}
 H.~Barrow and R.~Popplestone.
@@ -71,6 +78,19 @@ M.~Gebser.
 \newblock Morgan \& Claypool Publishers, San Rafael, 2013.
 \newblock ISBN 1608459713.
 
+\bibitem[Gelfond(2014)]{Gelfond2014_KRRbook}
+M.~Gelfond.
+\newblock \emph{Knowledge representation, reasoning, and the design of
+  intelligent agents : the answer-set programming approach}.
+\newblock Cambridge University Press, New York, NY, 2014.
+\newblock ISBN 1107029562.
+
+\bibitem[Gelfond and Lifschitz(1988)]{Gelf88a}
+M.~Gelfond and V.~Lifschitz.
+\newblock The stable model semantics for logic programming.
+\newblock In \emph{5th Conference on Logic Programming}, pages 1070--1080.
+  Seattle, 1988.
+
 \bibitem[Heider and Simmel(1944)]{Heider1944_Experimental}
 F.~Heider and M.~Simmel.
 \newblock An experimental study of apparent behavior.
@@ -106,6 +126,20 @@ L.~King.
 \newblock McGraw-Hill Education, New York, NY, 2014.
 \newblock ISBN 0078035406.
 
+\bibitem[Lifschitz(2008)]{Lifschitz2008_WhatASP}
+V.~Lifschitz.
+\newblock What is answer set programming?
+\newblock In D.~Fox and C.~P. Gomes, editors, \emph{AAAI}, pages 1594--1597.
+  AAAI Press, 2008.
+\newblock ISBN 978-1-57735-368-3.
+\newblock URL \url{http://www.aaai.org/Library/AAAI/2008/aaai08-270.php}.
+
+\bibitem[Maximova-Todorova(2003)]{Todorova2006_CKASP}
+Y.~Maximova-Todorova.
+\newblock {Representing commonsense knowledge using Answer Set Programming}.
+\newblock Master's thesis, Universidad de las Am\'{e}ricas Puebla, Puebla,
+  Mexico, 2003.
+
 \bibitem[Moszkowski(1983)]{Moszkowski1983_RDC}
 B.~C. Moszkowski.
 \newblock \emph{Reasoning About Digital Circuits}.
@@ -133,6 +167,12 @@ N.~Oliver, E.~Horvitz, and A.~Garg.
   International Conference on}, pages 3--8, 2002.
 \newblock \doi{10.1109/ICMI.2002.1166960}.
 
+\bibitem[Poole(2010)]{Poole2010_AIbook}
+D.~Poole.
+\newblock \emph{Artificial intelligence foundations of computational agents}.
+\newblock Cambridge University Press, New York, 2010.
+\newblock ISBN 0521519004.
+
 \bibitem[Roberts(1963)]{Roberts1963_PhDThesis}
 L.~G. Roberts.
 \newblock \emph{Machine Perception of Three-Dimensional Solids}.
@@ -145,6 +185,15 @@ M.~Ryoo and J.~Aggarwal.
 \newblock In \emph{Computer Vision and Pattern Recognition, 2006 IEEE Computer
   Society Conference on}, volume~2, pages 1709--1718, 2006.
 \newblock \doi{10.1109/CVPR.2006.242}.
+
+\bibitem[Schaub(2013)]{Schaub13_ASPBoCo}
+T.~Schaub.
+\newblock Answer set programming: Boolean constraint solving for knowledge
+  representation and reasoning.
+\newblock In C.~Schulte, editor, \emph{CP}, volume 8124 of \emph{Lecture Notes
+  in Computer Science}, pages 3--4. Springer, 2013.
+\newblock ISBN 978-3-642-40626-3.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-642-40627-0}.
 
 \bibitem[Sridhar(2010)]{Sridhar10_PhD_UnsupervisedLearningEvent}
 M.~Sridhar.
