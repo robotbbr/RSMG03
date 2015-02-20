@@ -18,7 +18,9 @@
 \contentsline {subsection}{\numberline {2.3.2}Mobile robotics}{10}
 \contentsline {section}{\numberline {2.4}Answer Set Programming}{10}
 \contentsline {subsection}{\numberline {2.4.1}ASP as a knowledge representation language}{11}
-\contentsline {subsection}{\numberline {2.4.2}ASP Solvers}{12}
+\contentsline {subsubsection}{ASP implementations}{12}
+\contentsline {subsection}{\numberline {2.4.2}ASP and robotics}{12}
+\contentsline {subsection}{\numberline {2.4.3}ASP Solvers}{12}
 \contentsline {section}{\numberline {2.5}Semantic Mapping}{12}
 \contentsline {chapter}{\numberline {3}Research Problem}{13}
 \contentsline {section}{\numberline {3.1}Problem}{13}

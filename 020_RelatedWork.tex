@@ -257,12 +257,39 @@ Some drawbacks are that the system posses global information from the environmen
 % Event recognition
 
 % Henry Kautz
+% Benjamin Kuipers
 
 
 \subsection{Mobile robotics}
-While a large A robot is an ideal system to perform 
+A robot is an ideal system to perform activity recognition. 
+This is, indeed, a desirable skill for an autonomous robot that will share an environment with people.
+The robot needs to be \textit{aware} of the surrounding humans.
+As described in section \ref{ch_LitRev_Perception}, even though AI, robotics and computer vision are relatively recent research fields, the interest in perception and particularly in automatic human analysis have been there since the very beginning.
+
+Activity recognition with a mobile robot offers many potential advantages compared with other systems, however, there are some limitations and challenges to be considered too.
+The range of action for a robotic system in this context will depend on many factors as sensing and processing capacities, knowledge accessibility, etc.
+Positively, the mobility of a robot can potentially help to improve its perception capacity by participating in the scene, taking data from different points of view and interacting with the environment, this has been stated as \textit{active perception}. \citep{Bajcsy88_ActivePerception}.
+
+On the other hand, some challenges arise by using a mobile robot:
+\begin{description}
+\item[sensing] Sensing data is usually corrupted because of hardware limitations, presence of statistical noise, discretization by the digitalization process, unstable or moving sensors, unpredictable environment conditions, etc.
+The collected data is restricted by the location of robot (there is no omni-presence) and as a consequence the robot will only gather information from the visible parts of the environment, loosing the rest of it.
+\item[storage and processing] %Depending on the problem and the followed approach, activity recognition can become a demanding processing task.
+Sensory data can grow very easily and its storage and processing becomes a challenge.
+Knowledge bases may grow very easily too, the massive amount of possible instances, relations and categories forces to restrict the scope of knowledge bases to specific domains. %\citep{Panton2006Cyc20yrs}.
+The algorithms' complexity is usually high for the required techniques (e.g. pattern recognition, logic programming, etc.). 
+\item[time] Time constraints are relevant in robotic systems as, for many interesting applications, the data cannot be post-processed, i.e. real-time response is required.
+\end{description}
+
+This section presents some previous robotic systems that are relevant to the scope of this project.
 
 % Michael Karg
+In \citep{}
+
+
+
+
+
 % Dondrup (lincoln)
 % Group at TUM
 % Karinne Ramirez
@@ -271,16 +298,37 @@ While a large A robot is an ideal system to perform
 
 
 
+
+\subsubsection{Activities}
+
+The problem 
+
+\subsubsection{Objects}
+\subsubsection{}
+
+
+
+
+
+
+
 % Aggarwal
 
 \section{Answer Set Programming} % Because is one of the main contributions, I put it appart.
 
-Answer set programming (ASP) is form of declarative programming oriented towards difficult, primarly NP-hard, search problems.
+Answer set programming (ASP) is form of declarative programming oriented towards difficult, primary NP-hard, search problems.
 As an outgrowth of research on the use of non-monotonic reasoning in knowledge representation, it is particularly useful in knowledge intensive applications \citep{Lifschitz2008_WhatASP}. 
-It combines a rich and simple modelling language with high performance solving capacities. 
-It has its roots in deductive databases, logic programming (with negation), logic-based knwoledge representation and (non-monotonic) reasoning, and constraint solving (satisfiability testing).
 
-The basic idea in ASP is to express a problem in a logical format so that the models og this representation provide solutions to the original problem. The resulting models are refered as \textit{answer sets} \citep{Gebser2013_ASP}. A rule is expressed in ASP as:
+%It combines a rich and simple modelling language with high performance solving capacities. 
+It has its roots in deductive databases, logic programming (with negation), logic-based knowledge representation and (non-monotonic) reasoning, and constraint solving (satisfiability testing).
+
+The basic idea in ASP is to express a problem in a logical format so that the models of its representation provide solutions to the original problem. 
+The resulting models are referred as \textit{answer sets} \citep{Gebser2013_ASP}. 
+
+
+%TODO add diagram declarative problem solving.
+
+A rule is expressed in ASP as:
 
 \begin{equation*}
 L_{0} \, \textit{or} \, \dots \, \textit{or} \, L_{k} \longleftarrow \, L_{k+1} , \ldots , L_{m} , \, \textit{not} \, L_{m+1} , \ldots , \, \textit{not} \, L_{n},
@@ -288,7 +336,7 @@ L_{0} \, \textit{or} \, \dots \, \textit{or} \, L_{k} \longleftarrow \, L_{k+1} 
 
 each $L_{i}$ is a literal in the sense of classical logic. The above rule means that if $L_{k+1},\ldots,L_{m}$ are true and if $L_{m+1},\ldots,L_{n}$ can be assumed to be false, then at least one $L_{0},\ldots,L_{k}$ must be true \citep{Gelf88a}. The symbol \textit{not} is called \textit{negation as failure}.
 
-Monotonicity refers to the property of a logic system where adding more rules won't produce a reduction in the set of conclusions of the system. 
+Monotonicity refers to the property of a logic programming system that, when more rules are added, it won't produce a reduction in the set of conclusions of the system. 
 Non-monotonicity allows to a conclusion reduction when more rules are added \citep{Poole2010_AIbook}. 
 This concept is important in systems with incoming knowledge, in dynamic and non deterministic scenarios.
 Also, allows the assumption of truth states, or belief states and a posterior revision of them when more rules are known.
@@ -296,6 +344,14 @@ It is clear, that this is a desired property, in a logic system, to handle uncer
 
 Negation as a failure symbol \textit{not} $L_i$ it is often read as ``it is not believed that $L_i$ is true". 
 However, this does not imply that $L_i$ is believed to be false, \textit{not} $L_i$ is a statement about belief \citep{Gelfond2014_KRRbook}.
+
+\subsection{ASP as a declarative problem solving technique}
+
+In declarative programming, in stead of coding the method to solve a problem, the idea is to describe the problem and leave the computer to find the solution.
+
+
+
+
 
 \subsection{ASP as a knowledge representation language}
 
@@ -311,18 +367,45 @@ ASP is well suited for modelling problems in the area of Knowledge Representatio
 ASP has been particularly applied to reasoning satisfiability problems.
 However, other problems can be treated too by ASP, as: model enumeration, intersection or unioning, as well as multi-criteria and -objective optimization. 
 Formally, ASP allows for solving all search problems in $NP$ and $NP^{NP}$ in a uniform way. 
-Hence, ASP is a\citep{Schaub13_ASPBoCo}.
+%Hence, ASP is a\citep{Schaub13_ASPBoCo}.
+
+
+
+
 
 % Solvers
 \subsubsection{ASP implementations}
+ASP implementations work n two steps:
+
+\begin{enumerate}
+\item A \textbf[grounder] builds an intermittent representation of the problem files by generating all possible values of the variables.
+\item A \textbf{solver} that reads the grounded file and generates the answer sets (solutions).
+
+
+
+
+\end{enumerate}
+
 Since the inception of the concept in the 1980s \citep{Gelf88a} many implementations of ASP have been created.
+
+
+
+
+
+
+
+
+
+
+
+
 The majority of them uses the syntax of the language \textit{Lparse}, also called \textit{AnsProlog*}. 
 However, \textit{DVL}, one of the most prominent ASP solvers uses a different syntax.
 
-Here is a list of some of the more relevant solvers:
+Here is a list of some of the more relevant toolkits available:
 
 \begin{description}
-\item[clasp]
+\item[potassco] Created and maintained by the University of Potsdam, potasscobeen developed and \citep{gekakaosscsc11a}.
 \end{description}
 
 % ASP & Robotics

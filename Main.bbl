@@ -11,17 +11,6 @@ J.~Aggarwal and M.~S. Ryoo.
 \newblock \emph{ACM Computing Surveys (CSUR)}, 43\penalty0 (3):\penalty0 16,
   2011.
 
-\bibitem[Aggarwal and Xia(2014)]{Aggarwal14_HumActRec3DRev}
-J.~Aggarwal and L.~Xia.
-\newblock Human activity recognition from 3d data: A review.
-\newblock \emph{Pattern Recognition Letters}, 48\penalty0 (0):\penalty0 70 --
-  80, 2014.
-\newblock ISSN 0167-8655.
-\newblock \doi{http://dx.doi.org/10.1016/j.patrec.2014.04.011}.
-\newblock URL
-  \url{http://www.sciencedirect.com/science/article/pii/S0167865514001299}.
-\newblock Celebrating the life and work of Maria Petrou.
-
 \bibitem[Allen(1983)]{Allen83_MaintainingKnowledgeTemporal}
 J.~F. Allen.
 \newblock Maintaining knowledge about temporal intervals.
@@ -36,6 +25,12 @@ E.~Amir and S.~J. Russell.
 \newblock In G.~Gottlob and T.~Walsh, editors, \emph{Proceedings of the
   Eighteenth International Joint Conference on Artificial Intelligence}, pages
   75--82, San Francisco, 2003. Morgan Kaufmann.
+
+\bibitem[Bajcsy(1988)]{Bajcsy88_ActivePerception}
+R.~Bajcsy.
+\newblock Active perception.
+\newblock \emph{IEEE Journal on Computer Vision}, 76\penalty0 (8):\penalty0
+  996--1006, Aug. 1988.
 
 \bibitem[Barrow and Popplestone(1971)]{Barrow1971_RelatDesc}
 H.~Barrow and R.~Popplestone.
@@ -77,6 +72,12 @@ M.~Gebser.
 \newblock \emph{Answer set solving in practice}.
 \newblock Morgan \& Claypool Publishers, San Rafael, 2013.
 \newblock ISBN 1608459713.
+
+\bibitem[Gebser et~al.(2011)Gebser, Kaminski, Kaufmann, Ostrowski, Schaub, and
+  Schneider]{gekakaosscsc11a}
+M.~Gebser, R.~Kaminski, B.~Kaufmann, M.~Ostrowski, T.~Schaub, and M.~Schneider.
+\newblock Potassco: The {P}otsdam answer set solving collection.
+\newblock \emph{AI Communications}, 24\penalty0 (2):\penalty0 107--124, 2011.
 
 \bibitem[Gelfond(2014)]{Gelfond2014_KRRbook}
 M.~Gelfond.
@@ -205,14 +206,6 @@ M.~Sridhar.
 M.~Sridhar, A.~G. Cohn, and D.~C. Hogg.
 \newblock Unsupervised learning of event classes from video.
 \newblock In \emph{Proc. AAAI}, pages 1631--1638. AAAI Press, 2010.
-
-\bibitem[Turaga et~al.(2008)Turaga, Chellappa, Subrahmanian, and
-  Udrea]{Turaga2008_MaRecHuAcSurv}
-P.~K. Turaga, R.~Chellappa, V.~S. Subrahmanian, and O.~Udrea.
-\newblock Machine recognition of human activities: {A} survey.
-\newblock \emph{IEEE Trans. Circuits and Systems for Video Technology},
-  18\penalty0 (11):\penalty0 1473--1488, Nov. 2008.
-\newblock URL \url{http://dx.doi.org/10.1109/TCSVT.2008.2005594}.
 
 \bibitem[Winston and Horn(1975)]{Winston1975_PsyCV}
 P.~H. Winston and B.~Horn.
