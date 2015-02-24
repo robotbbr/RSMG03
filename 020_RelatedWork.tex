@@ -245,9 +245,9 @@ Some drawbacks are that the system posses global information from the environmen
 %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
 %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
 
-\subsubsection{Reasoning}
+%\subsubsection{Reasoning}
 
-% Mohan & JL Wyatt
+% Mohan Sridharan & JL Wyatt
 % Shiqui Zhang
 
 % Alessandro Saffiotti 
@@ -283,36 +283,68 @@ The algorithms' complexity is usually high for the required techniques (e.g. pat
 
 This section presents some previous robotic systems that are relevant to the scope of this project.
 
-% Michael Karg
-In \citep{}
+\subsubsection{Activity recognition from a robotics perspective}
+
+During the early years of robotics, much of the effort in the field was put in designing reliable motion planning and control techniques, e.g. \citep{Moravec1983_StanfordCMUCarts,brook-1985:robuslayer:TR}. 
+Meanwhile, new advances were also made in fields as computer vision (e.g. optical flow, visual tracking, etc.), knowledge representation and reasoning (e.g. qualitative reasoning, frame languages), and machine learning (e.g. HMMs, decision trees, etc.).
+It was until the late 80's and early 90's that robots started facing realistic and non-controlled environments.
+
+One of the first works in activity recognition with a mobile robot can be found in \citep{Kortenkamp1996_RIG,Bonasso96recognizingand}. 
+The authors used a monochromatic stereo-vision system mounted on top of a mobile robot for gesture recognition.
+They implemented an active approach by dividing the scene in cubic volumes.
+Volumes with similar motion vectors are merged and they are chained to a known human model to produce a linked representation of the human.
+The angles of the linked representation are compared to a set of previously defined gestures, to label the execution of the gesture.
+This work only uses a static representation of gestures within a single layer, and was tested in a scenario where a human points regions of interest to a robot, and the robot gives a response.
+The authors point the the consideration of the temporal dimension, group activity recognition and integration with speech recognition as interesting research directions.
+
+As mobile robots started to be used in everyday environments, human robot interaction became more relevant. 
+For example, in \citep{Burgard98_ExpMuseumRobot} the authors focused in the problem of motion planning in human environments (a museum). 
+However, they point the relevance of human-robot interaction, a robot is not an isolated agent, and humans provide important information about the environment and to be able to complete the task (e.g. giving a tour). 
+In future work, the same group studied the problem of human tracking from a mobile platform using particle filters \citep{Schulz01_TrackingMultipleMoving,Schulz03_PeopleTrackSJPDAF} and motion behaviour recognition using the EM algorithm \citep{BennewitzBT02,bennewitz2004active}.
+The authors point interesting research open areas in group tracking (instead of individual tracking), particularly the necessity of a flexible approach to handle individual and group tracks of humans and objects at the same time.
+Also, as motion patterns have been learnt in a particular environment, an interesting problem is to be able to reuse this knowledge in different scenarios where people show similar behaviours, i.e. a portable gait recognition system.
+
+Human activity recognition also plays a central role in the problem of human robot cooperation.
+In this context, to achieve cooperation, a robot needs to  be aware of its human partner and integrate itself to the common task in a non-obstructive way.
+With this in mind, a robot needs to be able to observe and also to communicate with his human partner.
+This requires a sensory approach of activity recognition, but also a high level treatment of the problem, to integrate the context of speech to the task execution.
+In \citep{Lalle2010_HRI} the authors present an apprentice robotic system that uses speech and gesture recognition to learn new tasks from a human demonstrator. 
+A Spoken Language Programming system (SLP) was developed \citep{Dominey2007_RTCBA} to map sentences to actions, to allow verbal commands for the robot.
+The task for the robot is to assist a human to build a table by passing and holding material.
+SLP enables the system to extract semantic features from a spoken sentence: action, objects, agents. %TODO Check more deeper. This is very interesting, the semantic decomposition of sentences.
+These are mapped to a set of atomic actions for their system to be able to execute the task.
+While executing the actions or interacting with the demonstrator, the robot visually follow the execution of the action in order to anticipate future actions or to learn new ones.
+Progressive benchmarking is used by the robot to learn and anticipate actions and interactions, so the robot can eventually gain confidence and take the initiative of the execution of an action.
+This approach has enabled a robot with defined primitive actions to assist a human demonstrator in the execution of a complex task, to learn new and complex tasks, and eventually to take the initiative in the execution of subtasks that are necessary to reach the final goal.
+Human interaction provides robustness for the robot understanding, first by speech recognition, but also by visual scene analysis.
+
+%Michael Karg
+Another work with a similar approach has been described in \citep{karg13expectations,karg13simultaneous,karg11towards,karg12acquisition}, here the goal is to perform a scene diagnosis and to detect abnormal situations on it.
+An expectations framework has been proposed to create internal representations of \textit{normality} for the environment.
+In accordance with the authors, expectations should be probabilistic and adaptable; their approach considers to build them by merging information from different sources.
+The approach relies on motion tracking data and a semantic map of the environment.
+With this, the authors are able to segment occurring actions and to maintain probabilistic representations of activities, which are used to detect feasible future states and in accordance with a normality metric, to detect current abnormal states.
+This system has been tested using the TUM kitchen dataset \citep{Tenorth2009_TUMKData} and simulation data.
+The authors express their interest in extending the framework to express expectations in a more probabilistic fashion.
+Also relevant, is to test the system in different scenarios (e.g. a new kitchen), where a semantic map is available and motion tracks of objects can be obtained; and to be able to segment activities properly and to detect abnormal states.
+
+% Karinne
+In \citep{ramirez14Iros}, the aim is to recognize activities by trying to minimize sensory observations (visual) and compensating this with semantic information. 
+The goal is to show that with a simple sensory approach and with enough semantic information, high level activities can be inferred and that this approach is more suitable for a robotics context, mainly because of the requirement for online functionality.
+The authors track the motion of hands from a visual input. 
+They also have 
+
 
 
 
 
 
 % Dondrup (lincoln)
-% Group at TUM
-% Karinne Ramirez
-% RoboEarth
 
-
-
-
-
-\subsubsection{Activities}
-
-The problem 
-
-\subsubsection{Objects}
-\subsubsection{}
-
-
-
-
-
-
-
+% RoboCup @Home
+% Robotic competitions have also moved their attention to service robotics 
 % Aggarwal
+
 
 \section{Answer Set Programming} % Because is one of the main contributions, I put it appart.
 
@@ -349,10 +381,6 @@ However, this does not imply that $L_i$ is believed to be false, \textit{not} $L
 
 In declarative programming, in stead of coding the method to solve a problem, the idea is to describe the problem and leave the computer to find the solution.
 
-
-
-
-
 \subsection{ASP as a knowledge representation language}
 
 ASP is well suited for modelling problems in the area of Knowledge Representation and Reasoning involving incomplete, inconsistent and changing information \citep{Schaub13_ASPBoCo}. Some of its properties, in this context, are \citep{Todorova2006_CKASP}:
@@ -370,9 +398,6 @@ Formally, ASP allows for solving all search problems in $NP$ and $NP^{NP}$ in a 
 %Hence, ASP is a\citep{Schaub13_ASPBoCo}.
 
 
-
-
-
 % Solvers
 \subsubsection{ASP implementations}
 ASP implementations work n two steps:
@@ -380,25 +405,9 @@ ASP implementations work n two steps:
 \begin{enumerate}
 \item A \textbf[grounder] builds an intermittent representation of the problem files by generating all possible values of the variables.
 \item A \textbf{solver} that reads the grounded file and generates the answer sets (solutions).
-
-
-
-
 \end{enumerate}
 
 Since the inception of the concept in the 1980s \citep{Gelf88a} many implementations of ASP have been created.
-
-
-
-
-
-
-
-
-
-
-
-
 The majority of them uses the syntax of the language \textit{Lparse}, also called \textit{AnsProlog*}. 
 However, \textit{DVL}, one of the most prominent ASP solvers uses a different syntax.
 
@@ -406,61 +415,21 @@ Here is a list of some of the more relevant toolkits available:
 
 \begin{description}
 \item[potassco] Created and maintained by the University of Potsdam, potasscobeen developed and \citep{gekakaosscsc11a}.
+\item[DLV]
 \end{description}
 
 % ASP & Robotics
-
 \subsection{ASP and robotics}
-Regarding
-
-
-
-
-
-
-
-
-
-
-
+% University of Sabanci
 
 
 %\subsection{Situations, events and fluents}
-
-
-
-
 % Group of Viena - Thomas Eiter
 % Group of Texas Tech Gelfond
 % Group of Turkey --> ROBOTICS
 % Group at ASU Charal
 
-\subsection{ASP Solvers}
-% DVL
-% ROSoClingo
 
-\section{Semantic Mapping}
+%\section{Semantic Mapping}
 % General concepts
-% Related work, and particularly to AR
-
-
-
-
-
-% 1.5 ACTIVITY RECOGNITION WITH A MOBILE ROBOT
-%A robot can be roughly conceived as a physical entity capable of sensing and performing actions in the world.
-%With this in mind, it seems clear that a robot, with sufficient sensing capabilities, is a good candidate to perform the task.
-
-%\subsection{ASP}
-
-% 2 - ANSWER SET PROGRAMMING
-% General background
-% Related work to AR
-
-
-% 3 - ASP + Robots -> ROSoClingo
-% 
-%================================================
-%================================================
-%================================================
-
+% Related work, and particularly to ARs

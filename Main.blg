@@ -4,48 +4,51 @@ The style file: abbrvnat.bst
 Database file #1: mabp_bibliography.bib.bib
 A bad cross reference---entry "Ke2007_SpTmpShapeAR"
 refers to entry "conf/cvpr/2007", which doesn't exist
+A bad cross reference---entry "BennewitzBT02"
+refers to entry "DBLP:conf/icra/2002", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/icra/2002"
 Warning--I didn't find a database entry for "conf/cvpr/2007"
 Warning--empty publisher in Gelf88a
 Warning--empty school in Moszkowski1983_RDC
-You've used 34 entries,
+You've used 51 entries,
             2773 wiz_defined-function locations,
-            872 strings with 11387 characters,
-and the built_in function-call counts, 15880 in all, are:
-= -- 1511
-> -- 672
-< -- 45
-+ -- 231
-- -- 197
-* -- 1117
-:= -- 2372
-add.period$ -- 139
-call.type$ -- 34
-change.case$ -- 156
-chr.to.int$ -- 34
-cite$ -- 70
-duplicate$ -- 839
-empty$ -- 1398
-format.name$ -- 257
-if$ -- 3498
-int.to.chr$ -- 1
+            994 strings with 15909 characters,
+and the built_in function-call counts, 25309 in all, are:
+= -- 2355
+> -- 1231
+< -- 59
++ -- 419
+- -- 367
+* -- 1885
+:= -- 3760
+add.period$ -- 208
+call.type$ -- 51
+change.case$ -- 263
+chr.to.int$ -- 50
+cite$ -- 104
+duplicate$ -- 1290
+empty$ -- 2167
+format.name$ -- 450
+if$ -- 5549
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 34
-newline$ -- 206
-num.names$ -- 146
-pop$ -- 336
+missing$ -- 50
+newline$ -- 306
+num.names$ -- 216
+pop$ -- 568
 preamble$ -- 1
-purify$ -- 130
+purify$ -- 220
 quote$ -- 0
-skip$ -- 640
+skip$ -- 984
 stack$ -- 0
-substring$ -- 601
-swap$ -- 178
-text.length$ -- 17
+substring$ -- 920
+swap$ -- 280
+text.length$ -- 26
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 349
+type$ -- 536
 warning$ -- 2
-while$ -- 150
+while$ -- 221
 width$ -- 0
-write$ -- 518
-(There was 1 error message)
+write$ -- 768
+(There were 2 error messages)
