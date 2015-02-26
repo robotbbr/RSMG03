@@ -1,0 +1,67 @@
+\documentclass[a4paper, 12pt, openany, oneside]{book}
+\input{inc/Header.tex} % Included packages located in a separate file
+\pagestyle{plain} %Page numbers on the bottom
+
+\begin{document}
+
+% Front page
+%\pagestyle{emty} %No numbers
+%\input{000_TitlePage.tex}
+%\cleardoublepage
+
+% Table of Contents
+%\newpage
+%\pagenumbering{roman}
+%\tableofcontents
+
+% Main Chapters
+\newpage
+\pagestyle{plain}
+\pagenumbering{arabic}
+% Abstract
+%\input{010_Introduction.tex} % Intro & Motivation (Open areas proposed in the literatures)
+\chapter{Introduction}
+\section{Human activity Analysis}
+\section{Test case: ``The library scenario''}
+
+
+% Outcome
+%\input{020_RelatedWork.tex} % "Related Work" Literature rev (separated areas, in my case AR + ASP + KRR(incomplete) + Semantic Map)
+\chapter{Related Work}
+\section{General antecedents - Perception in AI}
+
+\section{Activity Recognition} 
+\subsection{Single-layered approaches}
+\subsubsection{Continuous approaches} % BEFORE: Space-Time approaches
+\subsubsection{Sequential approaches} %TODO Go deeper.
+\subsection{Hierarchical approaches}
+\subsubsection{Statistical}
+\subsubsection{Syntactic}
+\subsubsection{Description-based} \label{sec_description_ap}
+\section{Description-based activity recognition and mobile robotics}
+\subsection{Description-based activity recognition}
+\subsubsection{Representation}
+\subsubsection{Reasoning}
+\subsubsection{Activity recognition from a robotics perspective}
+\section{Answer Set Programming} % Because is one of the main contributions, I put it appart.
+\subsection{ASP as a declarative problem solving technique}
+\subsection{ASP as a knowledge representation language}
+\subsubsection{ASP implementations}
+\subsection{ASP and robotics}
+% University of Sabanci
+\section{Semantic Mapping}
+
+
+%\input{030_ResearchProblem.tex} % (Mike --> Model & Methodology) % Research Problem (Analysis) (Problem Definition -> Rafee)
+\chapter{Research Problem}
+\section{Description}
+\section{Methodology}
+\section{Evaluation}
+
+\chapter{Work Plan}
+\section{Short term (6 months - 1 year)}
+\section{Long term}
+\section{Timetable}
+
+
+\end{document}

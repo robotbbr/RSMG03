@@ -1,7 +1,7 @@
 %================================================
 %================================================
 %================================================
-\chapter{Related Work}
+\chapter{Related Work} \label{ch_relatedwork}
 
 %TODO Intro to the chapter
 The general problem to study in this project is activity recognition with a mobile robot. 
@@ -331,8 +331,10 @@ Also relevant, is to test the system in different scenarios (e.g. a new kitchen)
 % Karinne
 In \citep{ramirez14Iros}, the aim is to recognize activities by trying to minimize sensory observations (visual) and compensating this with semantic information. 
 The goal is to show that with a simple sensory approach and with enough semantic information, high level activities can be inferred and that this approach is more suitable for a robotics context, mainly because of the requirement for online functionality.
-The authors track the motion of hands from a visual input. 
-They also have 
+The authors track the motion of hands and objects from a visual input. 
+The state of hands and the interaction with the objects is converted to a symbolic representation.
+They train a decision tree to generate semantic rules, which are used by a reasoning engine to generate a model of human behaviour.
+They explain the relevance of action segmentation, which is the problem of properly generating and grouping the atomic actions from the sensory data.
 
 
 
@@ -414,13 +416,18 @@ However, \textit{DVL}, one of the most prominent ASP solvers uses a different sy
 Here is a list of some of the more relevant toolkits available:
 
 \begin{description}
-\item[potassco] Created and maintained by the University of Potsdam, potasscobeen developed and \citep{gekakaosscsc11a}.
-\item[DLV]
+\item[potassco] Created and maintained by the University of Potsdam \citep{gekakaosscsc11a}.
+\item[DLV] Created and maintained by the Technical University of Vienna and the University of Calabria \citep{gekakaosscsc11a}.
 \end{description}
 
+\subsection{ASP for activity recognition}
+%Patornic
+
 % ASP & Robotics
-\subsection{ASP and robotics}
+\subsection{ASP for robotics}
 % University of Sabanci
+
+
 
 
 %\subsection{Situations, events and fluents}
@@ -433,3 +440,6 @@ Here is a list of some of the more relevant toolkits available:
 %\section{Semantic Mapping}
 % General concepts
 % Related work, and particularly to ARs
+%================================================
+%================================================
+%================================================

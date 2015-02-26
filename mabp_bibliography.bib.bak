@@ -2603,6 +2603,34 @@
   url = {http://dl.acm.org/citation.cfm?id=1864519.1864523}
 }
 
+@ARTICLE{Kostavelis2015_SemMapSurv,
+  author = {Ioannis Kostavelis and Antonios Gasteratos},
+  title = {Semantic mapping for mobile robotics tasks: A survey },
+  journal = {Robotics and Autonomous Systems },
+  year = {2015},
+  volume = {66},
+  pages = {86 - 103},
+  number = {0},
+  abstract = {Abstract The evolution of contemporary mobile robotics has given thrust
+	to a series of additional conjunct technologies. Of such is the semantic
+	mapping, which provides an abstraction of space and a means for human–robot
+	communication. The recent introduction and evolution of semantic
+	mapping motivated this survey, in which an explicit analysis of the
+	existing methods is sought. The several algorithms are categorized
+	according to their primary characteristics, namely scalability, inference
+	model, temporal coherence and topological map usage. The applications
+	involving semantic maps are also outlined in the work at hand, emphasizing
+	on human interaction, knowledge representation and planning. The
+	existence of publicly available validation datasets and benchmarking,
+	suitable for the evaluation of semantic mapping techniques is also
+	discussed in detail. Last, an attempt to address open issues and
+	questions is also made. },
+  doi = {http://dx.doi.org/10.1016/j.robot.2014.12.006},
+  issn = {0921-8890},
+  keywords = {Mobile robots},
+  url = {http://www.sciencedirect.com/science/article/pii/S0921889014003030}
+}
+
 @ARTICLE{Kowalski1986_EventCalculus,
   author = {R. Kowalski and M. Sergot},
   title = {A Logic-Based Calculus of Events},
@@ -2857,6 +2885,22 @@
   year = {2012}
 }
 
+@INPROCEEDINGS{Liao2005_LAR,
+  author = {Liao, Lin and Fox, Dieter and Kautz, Henry},
+  title = {Location-based Activity Recognition Using Relational Markov Networks},
+  booktitle = {Proceedings of the 19th International Joint Conference on Artificial
+	Intelligence},
+  year = {2005},
+  series = {IJCAI'05},
+  pages = {773--778},
+  address = {San Francisco, CA, USA},
+  publisher = {Morgan Kaufmann Publishers Inc.},
+  acmid = {1642417},
+  location = {Edinburgh, Scotland},
+  numpages = {6},
+  url = {http://dl.acm.org/citation.cfm?id=1642293.1642417}
+}
+
 @ARTICLE{Liao2007,
   author = {Lin Liao and Donald J. Patterson and Dieter Fox and Henry Kautz},
   title = {Building Personal Maps from GPS Data},
@@ -2956,6 +3000,21 @@
   number = {July},
   publisher = {Ieee},
   url = {http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=4620725}
+}
+
+@INCOLLECTION{Liu2011_BenchmarkDatasHAR,
+  author = {Liu, Haowei and Feris, Rogerio and Sun, Ming-Ting},
+  title = {Benchmarking Datasets for Human Activity Recognition},
+  booktitle = {Visual Analysis of Humans},
+  publisher = {Springer London},
+  year = {2011},
+  editor = {Moeslund, Thomas B. and Hilton, Adrian and Krüger, Volker and Sigal,
+	Leonid},
+  pages = {411-427},
+  doi = {10.1007/978-0-85729-997-0_20},
+  isbn = {978-0-85729-996-3},
+  language = {English},
+  url = {http://dx.doi.org/10.1007/978-0-85729-997-0_20}
 }
 
 @ARTICLE{Liu05_iBotGuard,
@@ -3313,6 +3372,14 @@
   pages = {1--31}
 }
 
+@MASTERSTHESIS{Partonia2015_MSc,
+  author = {Partonia, Saeed},
+  title = {Reasoning about Human Activity},
+  school = {Ume\aa University},
+  year = {2015},
+  adress = {Ume\aa, Sweden}
+}
+
 @PERIODICAL{PattersonM2,
   title = {What if Sustainability Doesn't Work Out?},
   year = {2012},
@@ -3641,6 +3708,18 @@
   publisher = {IEEE}
 }
 
+@INPROCEEDINGS{ramirez14Hum,
+  author = {Ramirez-Amaro, Karinne and Inamura, Tetsunari and Dean-Leon, Emmanuel
+	and Beetz, Michael and Cheng, Gordon},
+  title = {{Bootstrapping Humanoid Robot Skills by Extracting Semantic Representations
+	of Human-like Activities from Virtual Reality}},
+  booktitle = {{IEEE/RAS International Conference on Humanoid Robots (Humanoids)}},
+  year = {2014},
+  month = {November},
+  publisher = {IEEE},
+  location = {Madrid, Spain}
+}
+
 @INPROCEEDINGS{ramirez13Hum,
   author = {Ramirez-Amaro, Karinne and Kim, Eun-Sol and Kim, Jiseob and Zhang,
 	Byoung-Tak and Beetz, Michael and Cheng, Gordon},
@@ -3744,6 +3823,30 @@
   issn = {1063-6919},
   keywords = {Bayesian methods;Computer Society;Computer vision;Feature extraction;Hidden
 	Markov models;Humans;Logic;Pattern recognition;Pixel;Production systems}
+}
+
+@ARTICLE{Saguna2013_CAR,
+  author = {Saguna, Saguna and Zaslavsky, Arkady and Chakraborty, Dipanjan},
+  title = {Complex Activity Recognition Using Context-driven Activity Theory
+	and Activity Signatures},
+  journal = {ACM Trans. Comput.-Hum. Interact.},
+  year = {2013},
+  volume = {20},
+  pages = {32:1--32:34},
+  number = {6},
+  month = dec,
+  acmid = {2490832},
+  address = {New York, NY, USA},
+  articleno = {32},
+  doi = {10.1145/2490832},
+  issn = {1073-0516},
+  issue_date = {December 2013},
+  keywords = {Activity recognition, complex activity, concurrent activities, context-awareness,
+	context-driven activity theory, evaluation, experimentation, interleaved
+	activities, prototype, test bed},
+  numpages = {34},
+  publisher = {ACM},
+  url = {http://doi.acm.org/10.1145/2490832}
 }
 
 @INPROCEEDINGS{samperietal12,

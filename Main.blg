@@ -10,45 +10,45 @@ Warning--I didn't find a database entry for "DBLP:conf/icra/2002"
 Warning--I didn't find a database entry for "conf/cvpr/2007"
 Warning--empty publisher in Gelf88a
 Warning--empty school in Moszkowski1983_RDC
-You've used 51 entries,
+You've used 54 entries,
             2773 wiz_defined-function locations,
-            994 strings with 15909 characters,
-and the built_in function-call counts, 25309 in all, are:
-= -- 2355
-> -- 1231
-< -- 59
-+ -- 419
-- -- 367
-* -- 1885
-:= -- 3760
-add.period$ -- 208
-call.type$ -- 51
-change.case$ -- 263
-chr.to.int$ -- 50
-cite$ -- 104
-duplicate$ -- 1290
-empty$ -- 2167
-format.name$ -- 450
-if$ -- 5549
+            1024 strings with 16816 characters,
+and the built_in function-call counts, 26891 in all, are:
+= -- 2512
+> -- 1312
+< -- 61
++ -- 446
+- -- 391
+* -- 2028
+:= -- 4006
+add.period$ -- 225
+call.type$ -- 54
+change.case$ -- 280
+chr.to.int$ -- 53
+cite$ -- 110
+duplicate$ -- 1351
+empty$ -- 2291
+format.name$ -- 481
+if$ -- 5883
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 50
-newline$ -- 306
-num.names$ -- 216
-pop$ -- 568
+missing$ -- 53
+newline$ -- 329
+num.names$ -- 228
+pop$ -- 588
 preamble$ -- 1
-purify$ -- 220
+purify$ -- 234
 quote$ -- 0
-skip$ -- 984
+skip$ -- 1031
 stack$ -- 0
-substring$ -- 920
-swap$ -- 280
+substring$ -- 1002
+swap$ -- 284
 text.length$ -- 26
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 536
+type$ -- 569
 warning$ -- 2
-while$ -- 221
+while$ -- 234
 width$ -- 0
-write$ -- 768
+write$ -- 823
 (There were 2 error messages)

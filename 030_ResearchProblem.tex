@@ -1,49 +1,106 @@
 \chapter{Research Problem}
 
-The last chapter introduced activity recognition, ASP and semantic mapping.
-This chapter presents the central problem in this project: activity recognition with a mobile robot using ASP.
-Emphasis is made in handling incomplete information from the robot's sensors and in the integration of activities in a semantic map.
+The last chapter presented the state of the art in activity recognition.
+While the subject has been studied extensively in the recent years, the problem still provide a fertile research field to test different approaches.
+Activity recognition is particularly relevant for autonomous robots, which provide important benefits but also trigger new challenges.
+On the other hand, despite the main principles of ASP were stated in the late 1980s, the possibilities of this approach haven't been completely exploited and it still remains as a very active research area in the field of Logic Programming.
+We're interested in exploring the possibilities of ASP in the context of autonomous robotics.
+In general, as a tool to handle problems in the knowledge representation and reasoning areas, and in particular, within the problem of activity recognition
 
-\section{Problem}
+This chapter presents the main problem to be studied in this project: activity recognition with a mobile robot.
+It also introduces the structure of a framework to build up a solution to the problem that puts emphasis the usage of ASP, and that can be integrated with current state of the art hardware and software tools. 
+This is presented in the context of the \textit{Library scenario} (section \ref{sec_Library}) to ground the concepts to an example, and to set the path for future work.
+Finally, the approach is discussed to expose its strengths and weaknesses, and to present expected outcomes.
+
+\section{Problem Description} \label{sec_problem}
 
 % Description of the problem
+The subject of study in this project is ASP-based activity recognition with a mobile robot.
 
-The subject of study in this project is \textbf{activity recognition with a mobile robot}.
-Emphasis is put on cases with incomplete information and the integration of the results in a semantic map that can be used by a robot for cognitive purposes.
+As mentioned at the beginning of this chapter, the problem of activity recognition is relevant in the context of robotics.
+At the same time, ASP offers an interesting and novel approach to the problem.
+These three parts, Activity Recognition, Robotics and ASP, have been studied separately in extension, however, their joint possibilities are still uncovered.
+The focus of this project is to study the problem of activity recognition with an autonomous robot, and particularly how to exploit an ASP-based approach.
 
-As mentioned before, a mobile robot is an ideal platform to be used for activity recognition. 
-Mobility in an advantage for the robot, in comparison with the systems that use fixed cameras and a fixed point of view; a robot is an active observer.
-However, using a robot implies a trade-off, some new challenges arise, as motion planning, 3D perception, moving and erratic sensors, not having control of the environment, etc.
-Particularly interesting, in this project, is to face the problem of activity recognition with incomplete information.
-It is clear that a mobile robot will work win this condition most of the time, for many reasons, the environment is non deterministic, sensory data is not available (e.g. occlusions) or because the robot is not omnipresent.
-%TODO Main sentence for the problem
-
-With this in mind, the strategy is to study this problem by applying novel techniques in this context. Particularly ASP, as %TODO EXPAND
-
-The application domain will dictate the activities to be recognized, the required precision, the sensors to be used and their location (environment located or wearable), the time constraints for deliberation,
-
-
-
-%The main goal is to automatically analyse the ongoing activities from a sensory source (a video sequence in most of the cases).
-
-%Activities can be understood in physical terms (space and time), but also symbolically as they can usually be associated with a meaning and a context. 
-
-%Human activities are difficult to classify because they cover a broad range of situations and they depend on different parameters.
-%Regarding their complexity, activities can be treated as hierarchical entities because high-level activities are usually composed of simpler actions.
-Regarding the complexity of the activities, in \citep{Turaga2008_MaRecHuAcSurv}, two non-exclusive categories are used: actions and activities.
-The first one is used for simple actions performed preferably by a individual, and activities are treated as a complex sequence of actions performed by several individuals. 
-On a similar fashion, in \citep{Aggarwal11_HumanActivity}, a four layers categorization is proposed:
+Human activities can be classified in different ways and with different grade of detail.
+In \citep{Turaga2008_MaRecHuAcSurv}, two non-exclusive categories are used: actions, performed by a person, and activities, performed by many persons.
+One more descriptive categorization has been given in \citep{Aggarwal11_HumanActivity}, separating activities in four classes:
 
 \begin{description}
 \item[Gestures] Elementary movements of a person's body part, and are the atomic components describing a meaningful motion of a person. 
 E.g. `stretching an arm', `raising a leg'.
 \item[Actions] Single person activities that may be composed of multiple gestures organized temporally. 
 E.g. `walking', `waving'.
-\item[Interacions] Human activities that involve two or more persons and/or objects. 
+\item[Interactions] Human activities that involve two or more persons and/or objects. 
 E.g. `Two persons fighting', `a person eating an apple'.
 \item[Group activities] The activities performed by conceptual groups of multiple persons and/or objects. 
 E.g. `a football team playing a match', `a group of students making an exam'.
 \end{description}
+
+All of these categories require to be able to sense humans with different level of detail.
+For example, gestures require specific algorithms (e.g. hand detection, face detection, skeleton tracing, etc.) while long distant pedestrian tracking algorithms may consider persons as \textit{moving dots}.
+With this in mind, target activities should be defined within the sensory constraints of a mobile robot.
+
+The goal application is to be able to build a system on top of a robot that can be able to observe and follow the ongoing activities in a location (e.g. a library), from different points of view, but from a single one. 
+This is the way in which humans perceive, however, this also drives to a situation of incomplete information as the robot won't have enough sensory information from all the environment. 
+It is a thesis in this project that the lack of sensory information can be complemented with a stronger cognitive approach, in this case knowledge representation and reasoning capabilities.
+
+This activity information can be used in different ways, but particularly as semantic knowledge, which has a meaning and a context and that can be used for reasoning.
+This is useful for a robot to have a qualitative description of the environment, to augment its navigation capabilities and task planning, and also to bridge the gap in human-robot interaction \citep{Kostavelis2015_SemMapSurv}.
+
+Going back to the library setting described in section \ref{sec_Library}. %TODO %TODO Add example
+
+
+\section{Methodology}
+
+This section presents the proposed approach to tackle the problem.
+
+First, the target platform is an autonomous mobile robot.
+In a general fashion, a control system for a robot can be simplified as a perception-action loop. %TODO %TODO Add image Perception-Action
+An activity recognition system fits in by providing interesting features from the environment (activities) that a robot can use to improve its performance.
+
+The system requires some input, particularly observations from the environment, which are compulsory.
+Additionally to this, symbolic information is also going to be required in the form of a semantic map and domain knowledge.
+Finally, the representations of activities are also considered as an input.
+The output of the system is a set of activities and features found on the environment, within a degree of confidence.
+
+%TODO %TODO Overall image
+
+Now let's look the inside of the proposed system.
+
+\subsection{Sensing}
+
+The end target for this project are autonomous mobile robots, with this in mind, all the sensing in charge of the robot. 
+No building sensing (e.g. CCTV) or portable devices (e.g. cellphone, laptop) are allowed, this is the goal.
+We are looking forward to use state-of-the-art sensing techniques, however, as completely reliable sensing is not assured and improving sensing algorithms is beyond the scope of this project, the use of simulations and environment marks is considered for experimental purposes. %TODO Add "see next section/chapter" 
+
+The features to be sensed will depend on the type of activities to be recognized.
+By using the categorization of activities mentioned in section \ref{sec_problem}, we are interested in the mid-level activities.
+This considers single human activities and interactions with other humans and/or objects, and excludes gestures and group activities.
+So, human and object sensing are needed.
+In the same fashion, the aim is to provide a robot with some understanding of activities within a spatio-temporal conceptualization by building a semantic map, so location and mapping are also a requirement, i.e. environment sensing.
+
+All these give us a path to decompose the scene in three different categories within a 3D space: humans (detection, recognition, kinematic description, etc.), objects (detection, recognition, kinematic description, etc.) and environment (location).
+%TODO  Add Image reference and image of scene decomposition.
+
+\subsection{Qualitative Spatio-Temporal Representations}
+QSTR were introduced briefly mentioned in chapter \ref{ch_relatedwork}.
+They provide formal models to represent and reason about geometrical entities in space and time.
+Space is handled with Qualitative Spatial Relations. %TODO Expand explanation and reference.
+Time is usually modelled in events using Allen's interval algebra \ref{Allen83_MaintainingKnowledgeTemporal}. %TODO expand
+
+A qualitative approach is desired as it proofs to be more robust to dynamic and non-deterministic environments.
+It also avoids to depend on training data or parameters which are specific to a particular location, and drives the data towards a symbolic representation.
+Finally, because it is a more human-alike approach, desired for a better human-robot interaction.
+
+The idea here is to convert quantitative observations in qualitative ones by representing the relations between objects' and persons' features, and eventually environmet features too (e.g. regions of interests).
+
+%TODO Add example.
+
+\subsection{Recognizing activities}
+At this point, the system has a set of observations regarding time and space.
+While
+
 
 
 
@@ -65,7 +122,7 @@ E.g. `a football team playing a match', `a group of students making an exam'.
 
 % Test example
 
-\section{Proposal} % Or alternatives
+\section{Evaluation} % Or alternatives
 
 % Main parts of the problem
 

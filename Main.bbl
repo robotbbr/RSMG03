@@ -1,4 +1,4 @@
-\begin{thebibliography}{51}
+\begin{thebibliography}{54}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,17 @@ J.~Aggarwal and M.~S. Ryoo.
 \newblock Human activity analysis: A review.
 \newblock \emph{ACM Computing Surveys (CSUR)}, 43\penalty0 (3):\penalty0 16,
   2011.
+
+\bibitem[Aggarwal and Xia(2014)]{Aggarwal14_HumActRec3DRev}
+J.~Aggarwal and L.~Xia.
+\newblock Human activity recognition from 3d data: A review.
+\newblock \emph{Pattern Recognition Letters}, 48\penalty0 (0):\penalty0 70 --
+  80, 2014.
+\newblock ISSN 0167-8655.
+\newblock \doi{http://dx.doi.org/10.1016/j.patrec.2014.04.011}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0167865514001299}.
+\newblock Celebrating the life and work of Maria Petrou.
 
 \bibitem[Allen(1983)]{Allen83_MaintainingKnowledgeTemporal}
 J.~F. Allen.
@@ -212,6 +223,16 @@ D.~Kortenkamp, E.~Huber, and R.~P. Bonasso.
 \newblock ISBN 0-262-51091-X.
 \newblock URL \url{http://dl.acm.org/citation.cfm?id=1864519.1864523}.
 
+\bibitem[Kostavelis and Gasteratos(2015)]{Kostavelis2015_SemMapSurv}
+I.~Kostavelis and A.~Gasteratos.
+\newblock Semantic mapping for mobile robotics tasks: A survey.
+\newblock \emph{Robotics and Autonomous Systems}, 66\penalty0 (0):\penalty0 86
+  -- 103, 2015.
+\newblock ISSN 0921-8890.
+\newblock \doi{http://dx.doi.org/10.1016/j.robot.2014.12.006}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0921889014003030}.
+
 \bibitem[Lallee et~al.(2010)Lallee, Yoshida, Mallet, Nori, Natale, Metta,
   Warneken, and Dominey]{Lalle2010_HRI}
 S.~Lallee, E.~Yoshida, A.~Mallet, F.~Nori, L.~Natale, G.~Metta, F.~Warneken,
@@ -346,6 +367,14 @@ M.~Tenorth, J.~Bandouch, and M.~Beetz.
 \newblock In \emph{Computer Vision Workshops (ICCV Workshops), 2009 IEEE 12th
   International Conference on}, pages 1089--1096, Sept 2009.
 \newblock \doi{10.1109/ICCVW.2009.5457583}.
+
+\bibitem[Turaga et~al.(2008)Turaga, Chellappa, Subrahmanian, and
+  Udrea]{Turaga2008_MaRecHuAcSurv}
+P.~K. Turaga, R.~Chellappa, V.~S. Subrahmanian, and O.~Udrea.
+\newblock Machine recognition of human activities: {A} survey.
+\newblock \emph{IEEE Trans. Circuits and Systems for Video Technology},
+  18\penalty0 (11):\penalty0 1473--1488, Nov. 2008.
+\newblock URL \url{http://dx.doi.org/10.1109/TCSVT.2008.2005594}.
 
 \bibitem[Winston and Horn(1975)]{Winston1975_PsyCV}
 P.~H. Winston and B.~Horn.
