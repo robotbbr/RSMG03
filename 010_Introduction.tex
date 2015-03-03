@@ -5,27 +5,34 @@
 % > This environment is hard.
 % > Robots needs cognitive skills: understand the environment.
 One of the main goals in AI is having robots working autonomously in everyday environments. 
-A robot in this kind of situation is expected to perceive, understand and interact with his environment. 
-However, the environment is dynamic, non-structured and non-deterministic, which makes difficult for a robot to fulfil the assigned tasks. To be able to sort these obstacles, robots need to be provided with cognitive skills. %TODO Expand %glsdef_{cognition}
+In such situation, robots are expected to perceive, understand and interact with its environment. 
+However, these kind of environments are dynamic, non-structured and non-deterministic, which makes difficult for a robot to fulfil the assigned tasks. 
+To be able to sort these obstacles, robots need to be provided with cognitive skills.
+
+Human cognition refers to all mental activities associated with thinking, knowing, remembering and communicating, and how the information is processed \citep{King2014Psychology,myers2013psychology}. 
+In robotics, the concept is associated with systems that emulate these mental processes or those that \textit{sense}, \textit{plan} and \textit{act}.
+More precisely, cognition can refer to those systems that can perceive, understand \ldots and interact with their environment, and evolve in order to achieve human-like performance in activities requiring context (situation and task) specific knowledge \citep{christensen2010cognitive}.
 
 % GENERALITIES ABOUT HUMAN ACTIVITIES
 % > Activities are important part of the scenes and they are necessary to be able to understand the scene
 % > Activities are entities with a spatio-temporal & symbolic (semantic, hierarchical) characteristics
-Everyday environments have many valuable features that a robot needs to understand, among them are human activities. 
-They are a meaningful manifestation of human behaviour. %TODO Expand the definition of activity.
-They are important for a robot in order to be able to understand the role of humans in a particular environment, and the occurring interactions with objects and with the environment.
+Everyday environments have many valuable features that a robot needs to understand, in order to succeed while performing a task, among them are human activities.
+Human activities are a meaningful manifestation of human behaviour along time and space. %TODO Expand the definition of activity.
+They provide rich information about the human performing it, but also, about his/her relation with other relevant components of the environment as humans, objects and locations.
+
 
 %\section{Research Problem}
 \section{Human activity analysis with a mobile robot}
 % ACTIVITY RECOGNITION
 % > AR as a field
 % > Robot case, advantages and disadvantages of using a robot
-Activity recognition is the research field that studies the automatic detection and analysis of human activities from the information acquired from sensors \citep{Aggarwal14_HumActRec3DRev}. 
-In the AI context, it is closely related with perception and knowledge processing. 
-The problem of activity recognition has been treated from different perspectives, however, computer vision has been the most popular approach to use.
+Activity recognition is the research field that studies the automatic detection and analysis of human activities by processing the data acquired from sensors \citep{Aggarwal14_HumActRec3DRev}. 
+It is not restricted only to sensory data but it can also be complemented with other sources of information, i.e. domain knowledge.
+In the AI context, activity recognition is closely related with the areas of perception, knowledge representation and reasoning. 
+The problem of activity recognition has been treated from different perspectives, however, computer vision has been the most popular.
 
 % Robots in AR (general)
-In principle, robots with appropriate sensing capabilities can perform activity recognition. 
+In principle, robots with appropriate sensing and processing capabilities can perform activity recognition. 
 Moreover, they have some advantages over the use of fixed cameras or wearable devices as they are able to interact with the environment. 
 They are active observers, i.e. they can change their point of view on scene and be selective in the areas of the environment that are more interesting. 
 On the other hand, they have some disadvantages as well. 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{54}
+\begin{thebibliography}{60}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -97,12 +97,26 @@ W.~Burgard, A.~B. Cremers, D.~Fox, D.~Hahnel, G.~Lakemeyer, D.~Schulz,
   \url{http://www.sciencedirect.com/science/article/B6TYF-3Y0JBMM-2/2/31300334%
 1edf00f601d22930858fdc70}.
 
+\bibitem[Christensen et~al.(2010)Christensen, Kruijff, and
+  Wyatt]{christensen2010cognitive}
+H.~I. Christensen, G.-J.~M. Kruijff, and J.~L. Wyatt, editors.
+\newblock \emph{Cognitive systems}.
+\newblock Springer, Berlin London, 2010.
+\newblock ISBN 3642116930.
+
 \bibitem[Cohn and Renz(2007)]{Cohn2008_QSRR}
 A.~G. Cohn and J.~Renz.
 \newblock {Q}ualitative {S}patial {R}epresentation and {R}easoning.
 \newblock In F.~van Harmelen, V.~Lifschitz, and B.~Porter, editors,
   \emph{{H}andbook of {K}nowledge {R}epresentation}, pages 551--596.
   {E}lsevier, Oxford, 2007.
+
+\bibitem[Cycorp()]{web_OpenCyc}
+Cycorp.
+\newblock Opencyc.
+\newblock http://www.cyc.com/platform/opencyc.
+\newblock URL \url{http://www.cyc.com/platform/opencyc}.
+\newblock Last visited in February 2015.
 
 \bibitem[Darrell and Pentland(1993)]{Darrell1993_STGestures}
 T.~Darrell and A.~Pentland.
@@ -155,6 +169,13 @@ M.~Gelfond and V.~Lifschitz.
 F.~Heider and M.~Simmel.
 \newblock An experimental study of apparent behavior.
 \newblock \emph{The American Journal of Psychology}, pages 243--259, 1944.
+
+\bibitem[Herrick()]{web_WikiHow}
+J.~Herrick.
+\newblock wikihow.
+\newblock http://www.wikihow.com.
+\newblock URL \url{http://www.wikihow.com}.
+\newblock Last visited in February 2015.
 
 \bibitem[Ivanov and Bobick(2000)]{Ivanov2000_RecVisActSCFG}
 Y.~Ivanov and A.~Bobick.
@@ -273,6 +294,12 @@ B.~C. Moszkowski.
 \newblock PhD thesis, Stanford, CA, USA, 1983.
 \newblock AAI8329756.
 
+\bibitem[Myers(2013)]{myers2013psychology}
+D.~Myers.
+\newblock \emph{Psychology}.
+\newblock Worth Publishers, New York, 2013.
+\newblock ISBN 1429299908.
+
 \bibitem[Nevatia et~al.(2004)Nevatia, Hobbs, and
   Bolles]{Nevatia2004_OntoVidEvRep}
 R.~Nevatia, J.~Hobbs, and B.~Bolles.
@@ -359,6 +386,13 @@ M.~Sridhar, A.~G. Cohn, and D.~C. Hogg.
 \newblock Unsupervised learning of event classes from video.
 \newblock In \emph{Proc. AAAI}, pages 1631--1638. AAAI Press, 2010.
 
+\bibitem[Tenorth and Beetz(2009)]{Tenorth09_Knowrob}
+M.~Tenorth and M.~Beetz.
+\newblock Knowrob, knowledge processing for autonomous personal robots.
+\newblock In \emph{Intelligent Robots and Systems, 2009. IROS 2009. IEEE/RSJ
+  International Conference on}, pages 4261--4266, Oct 2009.
+\newblock \doi{10.1109/IROS.2009.5354602}.
+
 \bibitem[Tenorth et~al.(2009)Tenorth, Bandouch, and
   Beetz]{Tenorth2009_TUMKData}
 M.~Tenorth, J.~Bandouch, and M.~Beetz.
@@ -407,5 +441,16 @@ J.~Young and N.~Hawes.
   qsr-based action prediction system.
 \newblock In \emph{AAAI Spring Symposium 2014 on Qualitative Representations
   for Robots}, Stanford University in Palo Alto, California, US, March 2014.
+
+\bibitem[Zweigle et~al.(2009)Zweigle, van~de Molengraft, d'Andrea, and
+  H\"{a}ussermann]{Zweigle2009_RoboEarth}
+O.~Zweigle, R.~van~de Molengraft, R.~d'Andrea, and K.~H\"{a}ussermann.
+\newblock Roboearth: Connecting robots worldwide.
+\newblock In \emph{Proceedings of the 2Nd International Conference on
+  Interaction Sciences: Information Technology, Culture and Human}, ICIS '09,
+  pages 184--191, New York, NY, USA, 2009. ACM.
+\newblock ISBN 978-1-60558-710-3.
+\newblock \doi{10.1145/1655925.1655958}.
+\newblock URL \url{http://doi.acm.org/10.1145/1655925.1655958}.
 
 \end{thebibliography}

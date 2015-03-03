@@ -1274,6 +1274,14 @@
   timestamp = {2011.12.14}
 }
 
+@ELECTRONIC{web_OpenCyc,
+  author = {Cycorp},
+  title = {OpenCyc},
+  howpublished = {http://www.cyc.com/platform/opencyc},
+  note = {Last visited in February 2015},
+  url = {http://www.cyc.com/platform/opencyc}
+}
+
 @INPROCEEDINGS{Dai08_RobotTrackingVisionLaser,
   author = {Wen Dai and Cuhadar, A. and Liu, P.X.},
   title = {Robot tracking using vision and laser sensors},
@@ -2229,6 +2237,14 @@
   publisher = {JSTOR}
 }
 
+@ELECTRONIC{web_WikiHow,
+  author = {Jack Herrick},
+  title = {wikiHow},
+  howpublished = {http://www.wikihow.com},
+  note = {Last visited in February 2015},
+  url = {http://www.wikihow.com}
+}
+
 @INCOLLECTION{Hertzberg2008_AIReasoningChap,
   author = {Hertzberg, Joachim and Chatila, Raja},
   title = {{A}{I} Reasoning Methods for Robotics},
@@ -2748,6 +2764,47 @@
   publisher = {Taylor \& Francis Group}
 }
 
+@ARTICLE{Kuipers2000_SSH,
+  author = {Benjamin Kuipers},
+  title = {The Spatial Semantic Hierarchy },
+  journal = {Artificial Intelligence },
+  year = {2000},
+  volume = {119},
+  pages = {191 - 233},
+  number = {1–2},
+  abstract = {The Spatial Semantic Hierarchy is a model of knowledge of large-scale
+	space consisting of multiple interacting representations, both qualitative
+	and quantitative. The \{SSH\} is inspired by the properties of the
+	human cognitive map, and is intended to serve both as a model of
+	the human cognitive map and as a method for robot exploration and
+	map-building. The multiple levels of the \{SSH\} express states of
+	partial knowledge, and thus enable the human or robotic agent to
+	deal robustly with uncertainty during both learning and problem-solving.
+	The control level represents useful patterns of sensorimotor interaction
+	with the world in the form of trajectory-following and hill-climbing
+	control laws leading to locally distinctive states. Local geometric
+	maps in local frames of reference can be constructed at the control
+	level to serve as observers for control laws in particular neighborhoods.
+	The causal level abstracts continuous behavior among distinctive
+	states into a discrete model consisting of states linked by actions.
+	The topological level introduces the external ontology of places,
+	paths and regions by abduction to explain the observed pattern of
+	states and actions at the causal level. Quantitative knowledge at
+	the control, causal and topological levels supports a “patchwork
+	map” of local geometric frames of reference linked by causal and
+	topological connections. The patchwork map can be merged into a single
+	global frame of reference at the metrical level when sufficient information
+	and computational resources are available. We describe the assumptions
+	and guarantees behind the generality of the \{SSH\} across environments
+	and sensorimotor systems. Evidence is presented from several partial
+	implementations of the \{SSH\} on simulated and physical robots.
+	},
+  doi = {http://dx.doi.org/10.1016/S0004-3702(00)00017-5},
+  issn = {0004-3702},
+  keywords = {Spatial reasoning},
+  url = {http://www.sciencedirect.com/science/article/pii/S0004370200000175}
+}
+
 @INPROCEEDINGS{kunze14bootstrapping,
   author = {Lars Kunze and Chris Burbridge and Nick Hawes},
   title = {Bootstrapping Probabilistic Models of Qualitative Spatial Relations
@@ -3243,6 +3300,15 @@
   isbn = {9780486202044},
   lccn = {55013973},
   url = {http://books.google.com.mx/books?id=oDpB1eK81z8C}
+}
+
+@BOOK{myers2013psychology,
+  title = {Psychology},
+  publisher = {Worth Publishers},
+  year = {2013},
+  author = {Myers, David},
+  address = {New York},
+  isbn = {1429299908}
 }
 
 @ARTICLE{Nuchter08_TowardsSemanticMaps,
@@ -4759,12 +4825,42 @@
   publisher = {IEEE Press}
 }
 
+@INPROCEEDINGS{Zweigle2009_RoboEarth,
+  author = {Zweigle, Oliver and van de Molengraft, Ren{\'e} and d'Andrea, Raffaello
+	and H\"{a}ussermann, Kai},
+  title = {RoboEarth: Connecting Robots Worldwide},
+  booktitle = {Proceedings of the 2Nd International Conference on Interaction Sciences:
+	Information Technology, Culture and Human},
+  year = {2009},
+  series = {ICIS '09},
+  pages = {184--191},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  acmid = {1655958},
+  doi = {10.1145/1655925.1655958},
+  isbn = {978-1-60558-710-3},
+  keywords = {database, human-machine interaction, industry standards, robotics,
+	world modeling},
+  location = {Seoul, Korea},
+  numpages = {8},
+  url = {http://doi.acm.org/10.1145/1655925.1655958}
+}
+
 @PROCEEDINGS{aiib-proceedings,
   title = {Proceedings of the International Symposium on AI inspired Biology},
   year = {2010},
   editor = {Jackie Chappell and Susannah Thorpe and Nick Hawes and Aaron Sloman},
   publisher = {SSAISB: The Society for the Study of Artificial Intelligence and
 	the Simulation of Behaviour}
+}
+
+@BOOK{christensen2010cognitive,
+  title = {Cognitive systems},
+  publisher = {Springer},
+  year = {2010},
+  editor = {Christensen, H. I. and Kruijff, Geert-Jan M. and Wyatt, Jeremy L.},
+  address = {Berlin London},
+  isbn = {3642116930}
 }
 
 @PROCEEDINGS{conf/pervasive/2008,

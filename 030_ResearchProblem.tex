@@ -93,22 +93,74 @@ A qualitative approach is desired as it proofs to be more robust to dynamic and 
 It also avoids to depend on training data or parameters which are specific to a particular location, and drives the data towards a symbolic representation.
 Finally, because it is a more human-alike approach, desired for a better human-robot interaction.
 
-The idea here is to convert quantitative observations in qualitative ones by representing the relations between objects' and persons' features, and eventually environmet features too (e.g. regions of interests).
+The idea here is to convert quantitative observations to qualitative, by representing the spatio-temporal relations between objects and/or persons, and eventually, with the environment too (e.g. regions of interests).
+
+While it could be a temptation to build all possible relations between the entities of interest in a scene, this has proved to be an non-efficient approach \citep{Sridhar10_UnsupervisedLearning}, mostly because the combinatorial explosion of the amount  of possible relations. The relations to be handled have to be chosen in a more \textit{intelligent} fashion.
 
 %TODO Add example.
 
-\subsection{Recognizing activities}
-At this point, the system has a set of observations regarding time and space.
-While
+\subsection{Knowledge Base}
+Additionally to the observations, a knowledge is required, which contains symbolic information that will be used to process the 
+observations.
+First, and most importantly, the description of activities are required.
+This also will include a description from the environment (i.e. a semantic map) and other domain knowledge that can potentially be used to infer new knowledge.
+
+An important question here is about the origin of this knowledge, and in particular of the activities.
+The simplest approach is to define the activity representations manually.
+For some specific activities this can be enough, however, in general other strategies are required.
+Activities can be learnt, from a human demonstrator or by analysing data from repeated situations.
+Finally the representation of activities can be consulted in larger knowledge databases using some existing tools, e.g. wikiHow \citep{web_WikiHow}, OpenCyc \citep{web_OpenCyc}, KnowRob \citep{Tenorth09_Knowrob}, RoboEarth \citep{Zweigle2009_RoboEarth}.
+Here the focus is to share common knowledge for robots instead of learning it every time, as this takes considerable computational effort.
 
 
+%\subsection{Maintaining observations}
+
+%The qualitative observations need to be maintained, because new observations will arrive along time, and some of them will need to be updated.
+%For example, the qualitative representation of a person approaching to the entrance door may take many samples until the person is seen %crossing the door frame, and all these \textit{person-approaching-door} observations need to be merged into a single event and only the temporal relations between events may require to be updated.
+%TODO Add example "Walking person to".
 
 
+\subsection{Inferring activities}
+
+At this point, the system has a set of qualitative observations in time and space of interesting features.
+Along time, these observations should be updated or thrown to have a compact set of valid premises.
+
+Now, the problem is to map the observations into an activity representation. 
+As mentioned before, ASP provides a the techniques to solve difficult combinatorial problems. and in particular, search problem as satisfiability problems (SAT).
+This is how, the observations become a set of constraints to find definitions (of activities) that satisfy them.
+
+It should be noticed that the observations do not necessarily fulfil all the required parameters in the definition.
+However, here is where ASP shows its usability by being able to provide candidate solutions, even when there are unknown parameters.
+
+At the end we have a solution, or many possible solutions to the problem of correspondence between the observations and the defined activities.
+
+%TODO Expand and include the example.
 
 
+\subsection{Discriminate activities}
 
+If there is unique correspondence, then this can be taken as solution for the problem\footnote{Nevertheless, it should the noted that, even though the ASP premises have a logical meaning, it will be very difficult to guarantee complete certainty.}. 
+However, it is expected that this will barely be the case.
+But, there are many possibilities available to find a solution.
 
+First, additional knowledge sources can be considered.
+These are, a semantic map of the environment and domain knowledge, which can be represented in ASP.
 
+Secondly, a learning strategy can be implemented to find patterns of \textit{frequently occurring activities} in particular locations, by specific persons or with related objects. 
+This is, to maintain a knowledge base of experiences.
+
+Finally, the described system can take advantage of the fact that the robot is active.
+The robot can interact with the environment and with persons, and it can choose points of interest in the scene.
+
+For example, a robot may be watching a person in the library with an unknown object in the hands. 
+The robot can create a belief, by context and by experience, that the object is a book.
+However, he can also go closer to that person to have a better look of the object.
+Finally, interaction is also possible, and the robot can simply ask the person which object is he/she holding.
+
+One important observation should be made in the previous example, and this is, the fact that the robot should figure where to look, or what information is missing to improve its conclusions. 
+This is an advantage, but also a necessity as it is very unlikely that a robot can have complete coverage of a scene.
+In the example, the required knowledge is the identification of the object, which can be helpful to discriminate between to activities, e.g. eating and studying. 
+Knowing which parts of the missing knowledge will help to improve the conclusions, or which ones are more important, gives a path to plan an active strategy for the robot to fulfil those perception holes.
 
 % Alternatives for each part
 % > Observations
@@ -123,6 +175,23 @@ While
 % Test example
 
 \section{Evaluation} % Or alternatives
+
+Once presented the problem and the proposed solution, some remarks can be made to evaluate its advantages and its limitations, and how these can eventually be tackled.
+
+First, this project makes emphasis in the use of a robot, which has some evident limitations.
+Sensors are constrained to defined ranges and the thrown data usually presents noise.
+Actuators also present inaccuracies and time-delayed responses.
+Processing capabilities are also limited in a robot, so the amount of data collected with a robot should be minimized and processed efficiently whenever is possible.
+%This is, however, the current state in robotics and this is considered by considering sensor models, 
+
+Regarding ASP, here is used for knowledge representation and reasoning purposes. 
+It can also provide a path to plan actions for the robot.
+ASP should be used with reserve as it is used to model combinatorial NP-hard problems.
+With this in mind, should be noted that ASP implementations are limited in efficiency and the modelled problems can grow very easily.
+This is considered in this project by restricting the domain application (to a library), the amount and granularity of the descriptions for activities, objects and places.
+
+
+
 
 % Main parts of the problem
 
