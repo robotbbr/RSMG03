@@ -5,7 +5,7 @@ Database file #1: mabp_bibliography.bib.bib
 Warning--entry type for "web_OpenCyc" isn't style-file defined
 --line 1277 of file mabp_bibliography.bib.bib
 Warning--entry type for "web_WikiHow" isn't style-file defined
---line 2240 of file mabp_bibliography.bib.bib
+--line 2252 of file mabp_bibliography.bib.bib
 A bad cross reference---entry "Ke2007_SpTmpShapeAR"
 refers to entry "conf/cvpr/2007", which doesn't exist
 A bad cross reference---entry "BennewitzBT02"
@@ -16,45 +16,45 @@ Warning--empty year in web_OpenCyc
 Warning--empty publisher in Gelf88a
 Warning--empty year in web_WikiHow
 Warning--empty school in Moszkowski1983_RDC
-You've used 60 entries,
+You've used 63 entries,
             2773 wiz_defined-function locations,
-            1063 strings with 17803 characters,
-and the built_in function-call counts, 29617 in all, are:
-= -- 2770
-> -- 1433
-< -- 67
-+ -- 488
-- -- 427
-* -- 2212
-:= -- 4412
-add.period$ -- 254
-call.type$ -- 60
-change.case$ -- 308
-chr.to.int$ -- 59
-cite$ -- 124
-duplicate$ -- 1491
-empty$ -- 2533
-format.name$ -- 525
-if$ -- 6486
+            1083 strings with 18482 characters,
+and the built_in function-call counts, 31026 in all, are:
+= -- 2896
+> -- 1532
+< -- 68
++ -- 521
+- -- 457
+* -- 2333
+:= -- 4640
+add.period$ -- 266
+call.type$ -- 63
+change.case$ -- 327
+chr.to.int$ -- 62
+cite$ -- 130
+duplicate$ -- 1551
+empty$ -- 2633
+format.name$ -- 560
+if$ -- 6774
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 58
-newline$ -- 369
-num.names$ -- 253
-pop$ -- 664
+missing$ -- 61
+newline$ -- 387
+num.names$ -- 265
+pop$ -- 693
 preamble$ -- 1
-purify$ -- 258
+purify$ -- 274
 quote$ -- 0
-skip$ -- 1134
+skip$ -- 1184
 stack$ -- 0
-substring$ -- 1082
-swap$ -- 312
+substring$ -- 1107
+swap$ -- 315
 text.length$ -- 28
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 625
+type$ -- 658
 warning$ -- 4
-while$ -- 257
+while$ -- 268
 width$ -- 0
-write$ -- 920
+write$ -- 965
 (There were 2 error messages)

@@ -34,11 +34,38 @@ The problem of activity recognition has been treated from different perspectives
 % Robots in AR (general)
 In principle, robots with appropriate sensing and processing capabilities can perform activity recognition. 
 Moreover, they have some advantages over the use of fixed cameras or wearable devices as they are able to interact with the environment. 
-They are active observers, i.e. they can change their point of view on scene and be selective in the areas of the environment that are more interesting. 
+Robots are active observers, i.e. they can change their point of view on scene and be selective in the areas of the environment that are more interesting. 
 On the other hand, they have some disadvantages as well. 
-They don't have omnipresence, so they are not able to sense the environment and will loose information. 
-Also, their sensory data may be noisy or blurry due to movement, erratic hardware, changing environmental conditions, etc. 
-Finally, robots are expected to work in real-time, so online activity recognition would be desirable, however, this puts time constraints in the deliberation process.
+They don't have omnipresence, so they are not able to sense the full environment and will loose information.
+Also, their sensors have constraints, the data may be noisy or blurry due to movement, erratic hardware, changing environmental conditions, etc. 
+Finally, robots are expected to work in real-time, so online activity recognition is desirable but yet difficult to achieve.
+
+% BRIDGE TO ASP
+Activities involve knowledge.
+They associate concepts and relations between a subject and the environment.
+In general, an activity recognition system should be able to handle, not only sensory data but also symbolic representations, and be able link top level symbolic concepts to low level sensory data; this is known as the \textit{anchoring problem} \citep{Coradeschi03_AnchoringProblem}.
+With this in mind, knowledge processing and reasoning is a necessity for such systems.
+
+
+\section{Answer Set Programming for Knowledge Representation and Reasoning}
+
+There have been proposed many ideas to handle the problems of knowledge representation and reasoning (e.g. logic programming, ontologies, bayesian networks, fuzzy logic, etc.), among them is Answer Set Programming (ASP).
+ASP is form of declarative programming oriented towards difficult, primary NP-hard, search problems.
+It establish a new paradigm of logic programming that allows concepts as negation as a failure, default knowledge and non-monotonic reasoning.
+
+ASP main concepts were proposed since the late 1980s \citep{Gelf88a} and it has been used with success in many applications.
+Traditionally, ASP solvers were designed as one-shot problem solvers, so they lacked of reactive capabilities and, for example, whenever new data arrived, the system needed to be restarted.
+This has been one of the main reasons why ASP has not been fully exploited in the field of robotics, however, in recent years an important effort has been directed towards this direction by some groups \citep{AndresOSSR13_rosoclingo,Erdem2013_IntLowRTaskP}.
+
+
+\section{Research Problem}
+
+This project is based in the consideration of ASP as a solid option for robots in problems that require symbolic representations.
+The goal of this work is to study the integration of ASP in a robotic system as a tool for knowledge representation and reasoning in the context of the problem of activity recognition.
+
+ASP allows the manipulation of incomplete information and handling multiple sources of knowledge.
+The integration between observations and external knowledge appear to be a more robust approach than a single sensory based approach.
+As mentioned before, hardware adds uncertainty, is constrained and is usually difficult to process; so putting emphasis in an upper layer of knowledge representation and reasoning would enable, not to eradicate, but to complement a sensory based approach and also to minimize its charge in a system.
 
 % RESEARCH PROBLEM
 % > Talk about AR with a robot in cases with incomplete information
@@ -47,19 +74,18 @@ Finally, robots are expected to work in real-time, so online activity recognitio
 %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO
 
 %Persentation of the project
-The target problem in this project is the study of activity recognition performed with a robot. 
-Particularly in the case where there is not complete information from the environment to have a clear match between the observations and the activity patterns. 
-Here, an interpretation can still be made using previous experience and domain knowledge. 
-Even, if a totally certain interpretation of the scene is not possible, a partial one can still be done with a list of the most probable situations to be happening. 
-This also can be used by a robot to decide to perform new observations of the scene to improve its reasoning conclusions. 
-The chosen technique to do this is Answer Set Programming (ASP).
+%Particularly in the case where there is not complete information from the environment to have a clear match between the observations and %the activity patterns. 
+%Here, an interpretation can still be made using previous experience and domain knowledge. 
+%Even, if a totally certain interpretation of the scene is not possible, a partial one can still be done with a list of the most probable situations to be happening. 
+%This also can be used by a robot to decide to perform new observations of the scene to improve its reasoning conclusions. 
+%The chosen technique to do this is Answer Set Programming (ASP).
 
 %TODO Write paragraph about ASP
 %Answer Set Programming is a logical p
 
 % Quick draft of the proposal.
 
-\subsection{Test case: ``The library setting''} \label{sec_Library} %TODO Add images.
+\section{Test scenario: ``The library setting''} \label{sec_Library} %TODO Add images.
 
 The School of Computer Science at the University of Birmingham has a library, mostly used by students.
 An attendant is in charge of the book loans and retrievals, and also to assist the users.

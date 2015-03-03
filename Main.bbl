@@ -1,4 +1,4 @@
-\begin{thebibliography}{60}
+\begin{thebibliography}{63}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -36,6 +36,13 @@ E.~Amir and S.~J. Russell.
 \newblock In G.~Gottlob and T.~Walsh, editors, \emph{Proceedings of the
   Eighteenth International Joint Conference on Artificial Intelligence}, pages
   75--82, San Francisco, 2003. Morgan Kaufmann.
+
+\bibitem[Andres et~al.(2013)Andres, Obermeier, Sabuncu, Schaub, and
+  Rajaratnam]{AndresOSSR13_rosoclingo}
+B.~Andres, P.~Obermeier, O.~Sabuncu, T.~Schaub, and D.~Rajaratnam.
+\newblock {ROS}oclingo: {A} {ROS} package for {ASP}-based robot control.
+\newblock \emph{CoRR}, abs/1307.7398, 2013.
+\newblock URL \url{http://arxiv.org/abs/1307.7398}.
 
 \bibitem[Bajcsy(1988)]{Bajcsy88_ActivePerception}
 R.~Bajcsy.
@@ -111,6 +118,14 @@ A.~G. Cohn and J.~Renz.
   \emph{{H}andbook of {K}nowledge {R}epresentation}, pages 551--596.
   {E}lsevier, Oxford, 2007.
 
+\bibitem[Coradeschi and Saffiotti(2003)]{Coradeschi03_AnchoringProblem}
+S.~Coradeschi and A.~Saffiotti.
+\newblock An introduction to the anchoring problem.
+\newblock \emph{Robotics and Autonomous Systems}, 43\penalty0 (2-3):\penalty0
+  85--96, 2003.
+\newblock Special issue on perceptual anchoring. Online at
+  http://www.aass.oru.se/Agora/RAS02/.
+
 \bibitem[Cycorp()]{web_OpenCyc}
 Cycorp.
 \newblock Opencyc.
@@ -132,6 +147,13 @@ P.~Dominey, A.~Mallet, and E.~Yoshida.
 \newblock In \emph{Humanoid Robots, 2007 7th IEEE-RAS International Conference
   on}, pages 270--275, Nov 2007.
 \newblock \doi{10.1109/ICHR.2007.4813879}.
+
+\bibitem[Erdem et~al.(2013)Erdem, Patoglu, and
+  Sch{\"{u}}ller]{Erdem2013_IntLowRTaskP}
+E.~Erdem, V.~Patoglu, and P.~Sch{\"{u}}ller.
+\newblock Levels of integration between low-level reasoning and task planning.
+\newblock \emph{CoRR}, abs/1307.7461, 2013.
+\newblock URL \url{http://arxiv.org/abs/1307.7461}.
 
 \bibitem[Fisher(2008)]{Fisher2008_TempRepReas}
 M.~Fisher.
