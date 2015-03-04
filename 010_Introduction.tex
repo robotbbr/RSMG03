@@ -61,7 +61,7 @@ This has been one of the main reasons why ASP has not been fully exploited in th
 \section{Research Problem}
 
 This project is based in the consideration of ASP as a solid option for robots in problems that require symbolic representations.
-The goal of this work is to study the integration of ASP in a robotic system as a tool for knowledge representation and reasoning in the context of the problem of activity recognition.
+The goal of this work is to \textbf{study the integration of ASP in a robotic system as a tool for knowledge representation and reasoning in the context of the problem of activity recognition}.
 
 ASP allows the manipulation of incomplete information and handling multiple sources of knowledge.
 The integration between observations and external knowledge appear to be a more robust approach than a single sensory based approach.
@@ -87,22 +87,58 @@ As mentioned before, hardware adds uncertainty, is constrained and is usually di
 
 \section{Test scenario: ``The library setting''} \label{sec_Library} %TODO Add images.
 
-The School of Computer Science at the University of Birmingham has a library, mostly used by students.
+Because human activities cover a broad range o possible situations, it becomes a necessity to bound the scope of this project and look into exemplar cases that can be used to demonstrate the ideas. 
+With this in mind, it has been chosen a library as a scenario to test and explain the ideas of this project.
+
+The School of Computer Science at the University of Birmingham has a library, Fig. \ref{fig_library}.
+The physical scenario is basically a big room. 
+It has some cabinets (where bibliographic material is stored), a reception desk, some tables with chairs and a printing area. 
+It has only one entrance.
 An attendant is in charge of the book loans and retrievals, and also to assist the users.
-The physical scenario is basically a big room. It has some cabinets (where bibliographic material is stored), a reception, some tables with chairs and a printing desk. It only has one entrance.
+Most users use the facility to study, to consult material, to print, for team work, to use their laptops or simply as a rest area.
 
-Users mostly use the facility to study, to consult material, to print, to work in team, to do work in PC or simply as a rest area.
-Because of the rules of the library and nature of the scenario, the amount of activities is restricted by the domain.
-However, some other activities could appear as using a cellphone, talking, putting things inside a backpack, etc.
-The objects involved in the scenario is relatively small (books, tables, chairs, laptops, cabinets, etc.).
+%TODO Add images (1) real library, (2) Lars SemMap
+\begin{figure}[tbp]
+  \centering
+  \subfloat[Real library]{\includegraphics[width=2.5in]{fig/Library02.png}}\quad
+  \subfloat[Semantic map of the library]{\includegraphics[width=2.5in]{fig/Library01.png}}\\
+  \label{fig_library}\caption{The library setting}
+\end{figure}
 
-There are many factors that from which will depend the components and the complexity of an activity recognition system, the targeted activities is an important one.
-Within the scope of this project, a library offers an ideal stage to test an activity recognition system.
-It provides a challenging and interesting environment, while still maintain the amount of objects and activities limited.
-This last one is important, because it maintains \textit{bounded} the amount of domain knowledge that will be required in a library, compared with other more broad environments, in term of activities.
+Because of the rules of the library and the nature of the location, the amount of activities is limited.
+However, non-considered activities could eventually appear, as giving a greet, using a cellphone, talking, etc.
+The amount of objects involved in the environment is also relatively small (books, tables, chairs, laptops, cabinets, etc.).
+
+Our interest is to use this environment to test the ideas to be generated and discussed along this project.
+Starting with a simple case and then going for a more complex and general one.
+Also, as libraries tend to share some similarities, there is the possibility to replicate the experiments from this work in other locations.
+This would create landmarks for testing and comparing different approaches, and direct the research towards a more general and better system.
+
+%For the sake of simplicity and as a starting point, lets consider the following abstraction: a linear library (Fig. \ref{}).
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=\textwidth]{fig/img_Aggarwal_Taxonomy2.pdf}
+%\caption{The taxonomy of research in activity recognition described in \cite{Aggarwal11_HumanActivity}.}
+%\label{fig:taxonomy}
+%\end{figure}
 
 
-%Libraries in general are very similar, although they may vary in size (e.g. buildings or simple rooms), in target users (e.g. graduate students, children) or in other aspects. However, there are some activities that are 
+
+
+%Some interesting activities to look at are:
+
+%\begin{description}
+%\item[book loan] A person goes to the reception with a book, spend some time on it and later leaves the library with the book.
+%\item[book retrieval] A person arrives to the reception with a book and \textit{leaves} the book in the reception.
+%\item[study] A person
+%\end{description}
+
+
+%TODO Expand...
+
+
+
 
 
 

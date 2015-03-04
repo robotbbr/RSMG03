@@ -4,14 +4,19 @@
 \chapter{Related Work} \label{ch_relatedwork}
 
 %TODO Intro to the chapter
-The general problem to study in this project is activity recognition with a mobile robot. 
-In this chapter, relevant related work is reviewed.
+Activity recognition is a cognitive skill that can be considered within perception. 
+It deals with the interpretation and understanding of a scene by processing a sensory input and correlate it with domain knowledge to be able to associate it with an activity pattern.
 
-In humans, activity recognition is a cognitive skill that can be considered mainly into perception. 
-The basis to understand it relies first in Psychology, because it provides the concepts and the evidence of how the mind is constituted (\ref{ch_LitRev_Perception}). 
-The next step is to look at the possibilities to mimic a cognitive process into a machine, this problem has been studied widely in Artificial Intelligence. %TODO Add cross reference
-In particular, activity recognition has been studied in Computer Vision. %TODO Add cross reference
-Finally, the problem has to landed to a robotic stage, making emphasis on the advantages and disadvantages of a robotic platform. %TODO Add cross ref
+The fundamental concepts to understand the problem of activity recognition lies in Psychology, as this is the science that studies the mind. 
+Then, the problem that follows is to replicate this cognitive process into a machine, particularly a robot; this is the focus of study of Artificial Intelligence and Robotics.
+The aim of this project is to study the use of ASP in robotics for knowledge processing and reasoning; looking, in particular, to the problem of activity recognition with a mobile robot. 
+
+This chapter presents relevant related work.
+First the antecedents of perception in AI are traced to serve as a basis for the rest of the chapter.
+Then the problem of activity recognition is briefly reviewed to provide a general overview of the area and also, to locate this project in the \textit{map} of research in the area.
+Finally, closely related work is presented to point the current state of the area and exhibit open trends in the area where the current project has possibilities to provide continuity.
+
+
 
 % 0 - GENERALITIES
 % Perception
@@ -23,8 +28,8 @@ Finally, the problem has to landed to a robotic stage, making emphasis on the ad
 
 Perception, as a cognitive process, has been studied widely in Psychology.
 It refers to the process of organizing and interpreting sensory information so that it has a meaning \citep{King2014Psychology}.
-Part of the interest is about how sensory information is processed by the brain, and which parts of it are essential.
-Also relevant is the domain knowledge that the subject has about a particular context.
+Part of the interest lies in how sensory information is processed by the brain, and which parts of it are essential.
+Also relevant, it is the domain knowledge, previously acquired or consulted, that the subject uses to establish a meaning to the sensory input.
 Together, the sensory input and the domain knowledge are used to interpret a scene.
 
 %TODO Other interesting examples to discuss later: Plato's Cave, 5 blind men and the elephant, Flatland, Metamorfosis.
@@ -33,24 +38,31 @@ Sensory input is important for perception, however, not all the data is equally 
 In \citep{Heider1944_Experimental}, an animated film was created using only moving polygons to demonstrate how the motion of abstract entities could be interpreted by human observers in meaningful ways.
 In \citep{Johansson1973_VisualPer}, locomotion patterns of living organisms using visual marks were studied. 
 By this mean, the emphasis was put in the qualitative motion description of the marks rather than in the qualitative motion description of the moving body.
+Both works show that, even with abstract entities, the human mind is capable to create or associate concepts to them using only a limited amount of information.
+Also, that perception is a more complex mental process than just processing sensory data.
 
-In Artificial Intelligence, perception has been treated mostly by the computer vision research community.
+In Artificial Intelligence, perception has been studied principally by the computer vision community.
 Earlier works can be traced back to the 1960s, as part of the effort to mimic human-like intelligence using visual perception components. The main difference between computer vision and image processing has been the desire to recover the three-dimensional structure of the world from images, and to use this as a stepping stone towards full scene understanding \citep{Winston1975_PsyCV}. 
 
 
-One of the earlier works in 3D reconstruction from a single image is found in \citep{Roberts1963_PhDThesis}.
+One of the first works in 3D reconstruction from a single image is found in \citep{Roberts1963_PhDThesis}.
 The developed system was able to reconstruct geometrical bodies with flat surfaces by recognizing the borders of the bodies in the scene and later analysing the shades of their visible surfaces.
 %TODO Maybe include Adolfo Guzman Arenas work here. +-
-In \citep{Barrow1971_RelatDesc} object recognition was studied by decomposing an image into regions and describing the spatial relations between them, in a more qualitative, rather than the traditional quantitative, approach.
+In \citep{Barrow1971_RelatDesc} object recognition was studied by decomposing an image into regions and describing the spatial relations between them, in a more qualitative, rather than the traditional quantitative pixel-based approach.
 
 Since the early 1970s, the \textit{block's world} was used as a test scenario for intelligent systems, particularly regarding knowledge representation, reasoning and planning.
 In the block's world, an initial state $A$ and a desired state $B$  of the environment are given.
 The goal is to autonomously generate a plan to transform $A$ into $B$ by the manipulation of the blocks.
-One important characteristic of the problem is that requires a symbolic representation of the scene.
+One important characteristic of the problem is that requires a symbolic description of the scene.
 The problem was used as a test case for the robot Shakey \citep{Nilsson84_Shakey}.
 
 %Finally, during the 1980s an approach to perception with emphasis in action feedback became popular
 %TODO Complete Active Perception.
+During the late 1980s, the concept of \textit{active perception} emerged to emphasize the role of control during the sensing phase \citep{Bajcsy88_ActivePerception}.
+This is, the capacity to adapt the sensing strategy by considering the data interpretation and the goal task.
+It is clear that a robot is an active agent, so it is desirable to take advantage of active perception strategies.
+In the context of activity recognition with a mobile robot, an active perception strategy would be to close the control loop by directing the robot actions with the former results of the system, to improve the data collection and, eventually, improve the conclusions.
+
 
 %TODO Need to mention QSR.
 %TODO Need to mention KRR (ASP, DL, Ontologies, Naive Ph, etc.).
@@ -63,7 +75,7 @@ Activity recognition is an important research area in the context of automated p
 It has many applications as surveillance, inspection, verification, generation of automated reports, etc.
 The application will dictate the approach to follow and the kind on sensors that will be required.
 
-First, regarding sensing, two approaches can be followed, environmental and/or pervasive. 
+First, regarding the sensors, two approaches can be followed, environmental and/or pervasive. 
 The first one observes the scene from the distance as it happens with a CCTV camera or a robot. 
 The pervasive approach relies on wearable devices to detect the activity of a person from a first person point of view.
 
@@ -72,8 +84,8 @@ In \citep{Aggarwal11_HumanActivity} a taxonomy is proposed as shown in Fig. \ref
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{fig/img_Aggarwal_Taxonomy2.pdf}
-\caption{The taxonomy of research in activity recognition described in \cite{Aggarwal11_HumanActivity}.}
+\includegraphics[width=\textwidth]{fig/img_Aggarwal_Taxonomy3.pdf}
+\caption{The taxonomy of research in activity recognition described in \cite{Aggarwal11_HumanActivity}. It has been highlighted the branch that follows this project.}
 \label{fig:taxonomy}
 \end{figure}
 
