@@ -12,18 +12,14 @@
 \contentsline {subsection}{\numberline {2.2.2}Hierarchical approaches}{9}
 \contentsline {subsubsection}{Statistical}{9}
 \contentsline {subsubsection}{Syntactic}{10}
-\contentsline {subsubsection}{Description-based}{10}
-\contentsline {section}{\numberline {2.3}Description-based activity recognition and mobile robotics}{11}
-\contentsline {subsection}{\numberline {2.3.1}Description-based activity recognition}{11}
-\contentsline {subsubsection}{Representation}{11}
-\contentsline {subsection}{\numberline {2.3.2}Mobile robotics}{13}
-\contentsline {subsubsection}{Activity recognition from a robotics perspective}{14}
-\contentsline {section}{\numberline {2.4}Answer Set Programming}{16}
-\contentsline {subsection}{\numberline {2.4.1}ASP as a declarative problem solving technique}{17}
-\contentsline {subsection}{\numberline {2.4.2}ASP as a knowledge representation language}{17}
-\contentsline {subsubsection}{ASP implementations}{17}
-\contentsline {subsection}{\numberline {2.4.3}ASP for activity recognition}{18}
-\contentsline {subsection}{\numberline {2.4.4}ASP for robotics}{18}
+\contentsline {subsubsection}{Description-based}{11}
+\contentsline {section}{\numberline {2.3}Description-based activity recognition and robotics}{11}
+\contentsline {subsection}{\numberline {2.3.1}Description-based activity recognition}{12}
+\contentsline {subsubsection}{Representationof activities}{12}
+\contentsline {subsection}{\numberline {2.3.2}Activity recognition and robotics}{14}
+\contentsline {section}{\numberline {2.4}Answer Set Programming}{17}
+\contentsline {subsection}{\numberline {2.4.1}ASP as a knowledge representation language}{17}
+\contentsline {subsubsection}{ASP implementations}{18}
 \contentsline {chapter}{\numberline {3}Research Problem}{19}
 \contentsline {section}{\numberline {3.1}Problem Description}{19}
 \contentsline {section}{\numberline {3.2}Methodology}{21}

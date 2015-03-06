@@ -61,7 +61,7 @@ The problem was used as a test case for the robot Shakey \citep{Nilsson84_Shakey
 During the late 1980s, the concept of \textit{active perception} emerged to emphasize the role of control during the sensing phase \citep{Bajcsy88_ActivePerception}.
 This is, the capacity to adapt the sensing strategy by considering the data interpretation and the goal task.
 It is clear that a robot is an active agent, so it is desirable to take advantage of active perception strategies.
-In the context of activity recognition with a mobile robot, an active perception strategy would be to close the control loop by directing the robot actions with the former results of the system, to improve the data collection and, eventually, improve the conclusions.
+In the context of activity recognition with a mobile robot, an active perception strategy would be to close the control loop by directing the robot actions with the former results of the activity recognition system, to improve the data collection and, eventually, improve current and future conclusions.
 
 
 %TODO Need to mention QSR.
@@ -75,7 +75,7 @@ Activity recognition is an important research area in the context of automated p
 It has many applications as surveillance, inspection, verification, generation of automated reports, etc.
 The application will dictate the approach to follow and the kind on sensors that will be required.
 
-First, regarding the sensors, two approaches can be followed, environmental and/or pervasive. 
+First, regarding the sensors, two approaches can be followed, distant or pervasive. 
 The first one observes the scene from the distance as it happens with a CCTV camera or a robot. 
 The pervasive approach relies on wearable devices to detect the activity of a person from a first person point of view.
 
@@ -99,8 +99,9 @@ However, they can be included too the activities are represented in terms of raw
 
 Single-layered approaches are suitable to recognize short-term and simple activities as gestures, movements of the body or simple interactions with objects. 
 This is mainly because the amount of sensory data grows very easily and long-term activities would require to process larger amounts of data. 
-Also, because activities are not always performed in the same way, even by the same individual; the shorter the activity, the more accuracy that will be attained.
-An finally, because they are dependant on the sensors and on the environmental conditions (e.g. lighting, point of view).
+Also, because activities are not always performed in the same way, even by the same individual.
+The shorter the activity, the more accuracy that will be attained.
+Finally, this approach is very sensitive to the input sensory data as this will depend on the environmental conditions (e.g. lighting, point of view).
 
 
 \subsubsection{Continuous approaches\footnote{`Space-time approaches' in \citep{Aggarwal11_HumanActivity}}} % BEFORE: Space-Time approaches
@@ -113,60 +114,68 @@ The dimension of the data will depend on the sensing capabilities of the system;
 The sensory input is compared with the activity patterns to measure similarity.
 If a threshold is fulfilled, then the activity is labelled.
 
-The advantages of this approach is that it is relatively fast and doesn't require domain knowledge. 
-However, it is very dependant of the sensory input, the continuity of the data, how the activity is performed and of the point of view where the scene is being observed. %TODO HOMEWORK: What about interpolating the data in incomplete situations.
+The advantages of this approach is that it is relatively fast and doesn't require domain knowledge.
+On the other hand, these methods have a big dependence of the training data and they are sensitive of the environmental conditions, different sampling rates, discontinuity of the data, the manner in which the activity is performed and the observation point of view. %TODO HOMEWORK: What about interpolating the data in incomplete situations, sometimes seems fair, but in other seems unlikely... again adaptable policies looks interesting.
 
 There are many examples of this approach.
-In \citep{Bobick2001_RecHuMovTemp} a video stream of aerobics exercises was analysed by attaching to every pixel a vector indicating the presence and recency of motion. 
-Then the stream was compared online with previously described activities to look for matching. 
+In \citep{Bobick2001_RecHuMovTemp} a video stream of aerobics exercises is analysed by attaching to every pixel a vector indicating the presence and recency of motion. 
+Then, the stream was compared online with previously described activities to look for matching. 
 In \citep{Ke2007_SpTmpShapeAR}, volumes were built by attaching similar regions of adjacent frames.
 Then, the problem was transformed in an object matching problem by comparing the shapes of the volumes (sensory stream and activity patterns).
 
 \subsubsection{Sequential approaches} %TODO Go deeper.
 
 Sequential approaches represent activities as a sequence of states. 
-A state is a vector of features observed in the scene in a specific time.
+A state is a vector of features observed in the scene in a specific instant.
 Finally, the sequence is analysed depending on the activity representation.
-There are two approaches: exemplar-based and model-based.
+There are two types of methodologies adopted in sequential approaches: exemplar-based and model-based.
 
-In exemplar-based approaches, activities, or a class of them, are represented as a sequence of states. 
+In exemplar-based methods, activities, or a class of them, are represented as a sequence of states. 
 Then the sensory input is compared in similarity with the patterns.
 An example can be found in \citep{Darrell1993_STGestures}, where states are built from view models.
 Templates of activities are from sequences of states associated with a physical change (e.g. rotation and scale).
 The dynamics of articulated objects in scene were recognized using the dynamic time warping algorithm (DTW) to the sequence of states.
 
-In model based approaches, the sequence of states is compared with a set of probabilistic models of activities. The models are built assuming a temporal dependence between the states, so the transitions are modelled probabilistically using hidden Markov models (HMM) or dynamic bayesian networks (DBN).
+In model based approaches, the sequence of states is compared with a set of probabilistic models of activities. The models are built assuming a temporal dependence between the states, so the transitions are modelled statistically using hidden Markov models (HMM), dynamic bayesian networks (DBN), conditional random fields (CRF), etc.
 
 The first work to use HMM to recognize activities was \citep{Yamato1992_RecHA_HMM}. They transformed a video stream into a sequence of vectors of image features. Then every vector was transformed to a symbol using vector quantization. Finally, a set of HMMs were created to model the activities, and their parameters were optimized. 
 
 
 \subsection{Hierarchical approaches}
-Hierarchical approaches for activity recognition refer to those where complex activities are represented in terms of simpler ones. 
-Multiple layers are defined to represent activities in different levels of complexity.
-Low level activities can be recognized using single-layered approaches. 
+Hierarchical approaches of activity recognition refer to those where complex activities are represented in terms of simpler ones. 
+This kind of representation organizes the activities in multiple layers of complexity and creates, by this mean, a hierarchical structure.
+In the lower level, atomic (or primitive) actions are represented which are indivisibles; they are usually recognized using single-layered approaches.
 
-Hierarchical approaches are also adequate to represent activities symbolically by using the multi-layered organization to describe semantic relations.
-By these means, hierarchical approaches are less dependant to training data and they can integrate domain knowledge more easily.
+Hierarchical approaches are also adequate to represent activities symbolically, by taking advantage of the multi-layered organization, it is possible to describe describe semantic relations.
+By these means, they are less dependant to training data and they can integrate domain knowledge more easily.
 
-Hierarchical approaches can be categorized, regarding the applied methodology for recognition as statistical, syntactical and description-based. %TODO Expand.
+Hierarchical approaches can be categorized, by the used methodology for recognition, in: statistical, syntactical and description-based. %TODO Expand.
 
 
 \subsubsection{Statistical}
-They are based in the hierarchical construction of statistical state-based models, such as HMMs or DBNs.
+They are based in the hierarchical construction of statistical state-based models, such as HMMs, DBNs or CRFs.
 
-First the set of activities to work with is defined and organized hierarchically.
-Complex activities are defined in terms of simpler ones and so on until everything can be synthesized to atomic actions.
-In this way, many layers are created, from atomic actions to complex activities.
-In the bottom level, atomic actions are recognized from sensory data using single-layered sequential approaches. 
-As a result, a sequence of feature vectors is transformed into a sequence of atomic actions.
-This sequence is the input for the next layer, which now will be treated as a new sequence of observations, and the same approach to recognize atomic actions from the first layer will be applied in the second one, and so on.
+First, the activities are defined and organized hierarchically.
+In the bottom level, atomic actions defined in terms of feature vectors which are obtained from sensory data.
+The sequence of feature vectors is analysed statistically to be able to recognize, this is performed in the same fashion as in single-layered sequential approaches. 
+Then, the sequence of atomic actions is considered to be the input observations to recognize the next layer of activities, and the same statistical methods can be used to recognize the second layer of activities.
+The procedure is repeated in every layer.
+
+Some disadvantages of the statistical approaches are their difficulty to model the temporal structure of events (e.g. $A$ occurred `during'/`before'/`after' $B$) and also, because of their sequential nature, it becomes harder to handle multiple concurrent tasks.
 
 In \citep{Oliver2002_LayRepHumActRec}, the authors present layered hidden Markov models (LHMMs) for online activity recognition using data from video, sound and keyboard data. 
-They divide their system in three layers: the first one is in charge of recognizing features from every source, the second layer trigger short events from the scene, and the last layer is used for longer activities. 
-The hierarchical approach showed an improved performance when compared to single-layered systems.
-The training data is used more efficiently and it's more easy to add more detail on specific activities.
+They divide their system in three layers: the first one is in charge of recognizing features from every source, the second layer trigger short events from the scene, and the last layer is in charge to recognize longer activities. 
+The hierarchical approach adopted showed an improved performance when compared with single-layered systems.
+The training data is used more efficiently and also, it becomes easier to add more detail on specific activities, i.e. to handle different granularities in the activity descriptions.
 
-Some disadvantages of the statistical approaches is their difficulty to model the temporal structure of events (e.g. $A$ occurred `during'/`before'/`after' $B$) and also, because of their sequential nature, is hard to handle multiple concurrent tasks.
+In \citep{Liao2007_LIT,Liao2007_HCRFGPSAR}, the authors present studies of hierarchical DBNs and CRFs applied to location-based activity recognition.
+The authors use GPS data from mobile devices and domain knowledge from locations to learn and infer routines and activities.
+As the sensory input are the spatio-temporal traces of the person, domain knowledge from the locations is considered to add significance to the events. 
+For example, a quick car stop can be part of an important activity as leaving the children at school or simply caused by a traffic light.
+First they segment spatially the traces by grouping neighbour samples that occur in the same region.
+They distinguish two major categories of activities: \textit{navigation} (e.g. walking, driving a car) and \textit{significant} (e.g. work, visit, sleep).
+Their model is built, in the lower layer, to classify the segmented tracks in activities (events), by looking at their location and the speed of the subject; and finally, in an upper layer, they use these activities to learn distinctive places (e.g. house, office, etc.).
+
 
 \subsubsection{Syntactic}
 In the syntactical approach, activities are represented symbolically as a set of production rules generating a string of atomic actions which is later recognized using parsing techniques.
@@ -178,15 +187,15 @@ One limitation of this approach is the difficulty to handle concurrent activitie
 An example can be found in \citep{Ivanov2000_RecVisActSCFG}.
 The authors aim to recognize complex activities in sequences of video.
 Two layers are defined; in the lower level, atomic actions are recognized using HMMs, and in the upper one uses SCFGs.
-The approach showed to be able to handle longer time activity constraints and more robust to uncertain detections in the lower level.
+The adopted approach showed to be able to handle longer time activity constraints and also, to be more robust regarding uncertain detections in the lower level.
 
 
 \subsubsection{Description-based} \label{sec_description_ap}
 This approach represent activities as a hierarchy of events, making emphasis in their spatial, temporal and logical structures.
 
 A complex activity is modelled from de occurrence of its sub-events that satisfies certain relations.
-The temporal relation between sub-events is also considered in the representation, Allen's calculus is frequently used for this \citep{Allen83_MaintainingKnowledgeTemporal}.
-Atomic actions are obtained from sensory data and summarized. %TODO Check out!
+The temporal relation between sub-events is also considered in the representation, Allen's interval algebra is frequently used for this \citep{Allen83_MaintainingKnowledgeTemporal}.
+Atomic actions are obtained from sensory data and summarized. %TODO Check
 
 Now to recognize activities the problem becomes a \textit{constraint satisfaction problem}, which is NP-hard.
 This approach allows a good integration of additional knowledge sources. 
@@ -196,11 +205,10 @@ There are many possibilities to treat the problem. In \citep{Nevatia2004_OntoVid
 In \citep{Sridhar10_UnsupervisedLearning}, relevant features from the scene are extracted and their behaviour is represented using qualitative spatio-temporal relations (QSTR), then patterns of activities are learnt using Markov chains.
 
 
+\section{Description-based activity recognition and robotics}
 
-\section{Description-based activity recognition and mobile robotics}
-
-In this project, the selected approach to follow is a description-based one. 
-This section presents relevant related work in this line, and in the Answer Set Programming (ASP) paradigm for 
+In this project, the chosen approach to follow is a description-based methodology. 
+This section presents relevant related work in this line, and sin the Answer Set Programming (ASP) paradigm for 
 Also, here are presented the precedents of activity recognition with mobile robots.
 
 \subsection{Description-based activity recognition}
@@ -209,7 +217,7 @@ As mentioned in section \ref{sec_description_ap}, description-based approaches r
 The representation should also make emphasis in the spatial, temporal and logical structures.
 The recognition is performed by obtaining features from scene (spatial, temporal, logical) and creating a scene description as a \textit{list} of facts, then the problem becomes a constraint satisfaction problem, to find the best activity match for these set of observations. 
 
-\subsubsection{Representation}
+\subsubsection{Representationof activities}
 
 %Regarding the representation of activities, there are many desired characteristics. 
 An activity is represented as a set of \textit{facts} that needs to be fulfilled with the observations.
@@ -220,19 +228,26 @@ The execution of an activity depends on the subject, and even a particular subje
 This is the reason why activities are usually defined in qualitative terms, i.e. in a symbolic more human-like manner.
 Quantitative descriptions of activities are still interesting, however, they are restricted to specific domains as rehabilitation or sports.
 
-Regarding the temporal dimension, time can be represented as an instant $t$ or as an interval $(t_1,t_2)$. 
+Regarding space, Qualitative Spatial Representations (QSR) are a set of calculus which allow a machine to represent and reason about spatial geometrical entities \citep{Cohn2008_QSRR}, e.g. lines, dots, regions, etc.
+They are usually combined with a temporal representation to represent the dynamics of behaviours.
+
+Time can be represented as an instant $t$ or as an interval $(t_1,t_2)$. 
 For the instants, simple temporal logic can be used to represent these kind of statements. 
-Intervals have been typically treated with two aproaches \citep{Fisher2008_TempRepReas}: Interval temporal logics \citep{Moszkowski1983_RDC} and Allen's interval algebra \citep{Allen83_MaintainingKnowledgeTemporal}.
+Intervals have been typically treated with two approaches \citep{Fisher2008_TempRepReas}: Interval temporal logics \citep{Moszkowski1983_RDC} and Allen's interval algebra \citep{Allen83_MaintainingKnowledgeTemporal}.
 
 %Interval temporal logics have been typically used in the description of computer, particularly hardware and protocols.
 %TODO EXPAND Check the article by Allen
 
-Allen's interval algebra was introduced as a calculus for temporal reasoning.
-It defines 13 possible relations between intervals, and provides a composition table that can be used for reasoning about temporal descriptions of events.
+Allen's interval algebra is a calculus for temporal reasoning.
+It defines 13 possible relations between intervals, and provides a composition table that can be used for reasoning about temporal descriptions of events \ref{fig:allen}.
 
-Qualitative spatial representations are the focus of study of Qualitative Spatial Representations (QSR).
-These are a set of calculi which allow a machine to represent and reason about spatial entities \citep{Cohn2008_QSRR}, e.g. lines, dots, regions, etc.
-They are usually combined with a temporal representation (e.g. Allen's interval algebra) to represent behaviour dynamics.
+\begin{figure}[h]
+\centering
+\includegraphics[width=4in]{fig/allen_interval.png}
+\caption{Temporal relations of events in Allen's interval algebra}
+\label{fig:allen}
+\end{figure}
+
 
 %Tony Cohn
 In \citep{Sridhar10_PhD_UnsupervisedLearningEvent}, activities are learnt, in an unsupervised fashion, and recognized from video sequences by reasoning under qualitative spatio-temporal representations (QSTR). 
@@ -242,60 +257,49 @@ This work shows an example of unsupervised learning of activities, using simulat
 The qualitative approach (QSTR) is robust to changes in the execution of actions and to sensory errors.
 Finally, the categorization of activities showed to be reliable in learning functional object categories which provides semantic information from the scene.
 On the other hand, some limitations of this work are a fixed point of view and a posterior analysis.
-The analysis is performed only in short video sequences, and in short activities.
-The search space grows very easily as the scene becomes more complex.
+First, the analysis is performed only in short video sequences, and in short activities.
+Also, the search space grows very easily as the scene becomes more complex.
 
 %Jay Young
 In \citep{Young13_PredcitingSituatedBehaviour,Young14_EffectsTraining}, QSTR are applied to the analysis of multi-agent behaviour in the RoboCup simulation league, particularly in estimating future behaviours. 
-Positions, trajectories and orientation of the agents in scene are represented using region connection calculus (RCC), qualitative trajectory calculus (QTC) and the Star calculus respectively. 
+Positions, trajectories and orientation of the agents in the scene are described using region connection calculus (RCC), qualitative trajectory calculus (QTC) and the Star calculus respectively. 
 Other agent's behaviours are learnt by using a HMM, which is fed with the current observations and a window of previous ones. 
 As not all the data is relevant, this is first filtered. 
 This work presents a study of activity prediction.
-The results show that qualitative representations are more easy to treat general cases of activities and require less training data. 
-Some drawbacks are that the system posses global information from the environment, and the domain is restricted.
+The results show that qualitative representations are more easy to treat general cases of activities and require less training data.
+Some drawbacks are that the system posses global information from the environment, and the application domain is restricted.
 
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
 
 %\subsubsection{Reasoning}
 
 % Mohan Sridharan & JL Wyatt
 % Shiqui Zhang
 
-% Alessandro Saffiotti 
+% Alessandro Saffiotti
 % (Cirillo, Pecora, Coradeschi)
 
 % Siskind
 % Event recognition
 
-% Henry Kautz
 % Benjamin Kuipers
 
 
-\subsection{Mobile robotics}
+\subsection{Activity recognition and robotics}
 A robot is an ideal system to perform activity recognition. 
 This is, indeed, a desirable skill for an autonomous robot that will share an environment with people.
 The robot needs to be \textit{aware} of the surrounding humans.
-As described in section \ref{ch_LitRev_Perception}, even though AI, robotics and computer vision are relatively recent research fields, the interest in perception and particularly in automatic human analysis have been there since the very beginning.
 
-Activity recognition with a mobile robot offers many potential advantages compared with other systems, however, there are some limitations and challenges to be considered too.
-The range of action for a robotic system in this context will depend on many factors as sensing and processing capacities, knowledge accessibility, etc.
-Positively, the mobility of a robot can potentially help to improve its perception capacity by participating in the scene, taking data from different points of view and interacting with the environment, this has been stated as \textit{active perception}. \citep{Bajcsy88_ActivePerception}.
+Some important challenges to consider with a robot are:
 
-On the other hand, some challenges arise by using a mobile robot:
 \begin{description}
 \item[sensing] Sensing data is usually corrupted because of hardware limitations, presence of statistical noise, discretization by the digitalization process, unstable or moving sensors, unpredictable environment conditions, etc.
 The collected data is restricted by the location of robot (there is no omni-presence) and as a consequence the robot will only gather information from the visible parts of the environment, loosing the rest of it.
 \item[storage and processing] %Depending on the problem and the followed approach, activity recognition can become a demanding processing task.
 Sensory data can grow very easily and its storage and processing becomes a challenge.
-Knowledge bases may grow very easily too, the massive amount of possible instances, relations and categories forces to restrict the scope of knowledge bases to specific domains. %\citep{Panton2006Cyc20yrs}.
-The algorithms' complexity is usually high for the required techniques (e.g. pattern recognition, logic programming, etc.). 
+Domain knowledge is usually restricted to the field of application, as general knowledge sources are too big to be portable and are only available by online consult.
+The algorithms' complexity is usually big in the required problems to solve (e.g. pattern recognition, logic programming, etc.). 
 \item[time] Time constraints are relevant in robotic systems as, for many interesting applications, the data cannot be post-processed, i.e. real-time response is required.
 \end{description}
-
-This section presents some previous robotic systems that are relevant to the scope of this project.
-
-\subsubsection{Activity recognition from a robotics perspective}
 
 During the early years of robotics, much of the effort in the field was put in designing reliable motion planning and control techniques, e.g. \citep{Moravec1983_StanfordCMUCarts,brook-1985:robuslayer:TR}. 
 Meanwhile, new advances were also made in fields as computer vision (e.g. optical flow, visual tracking, etc.), knowledge representation and reasoning (e.g. qualitative reasoning, frame languages), and machine learning (e.g. HMMs, decision trees, etc.).
@@ -316,7 +320,7 @@ In future work, the same group studied the problem of human tracking from a mobi
 The authors point interesting research open areas in group tracking (instead of individual tracking), particularly the necessity of a flexible approach to handle individual and group tracks of humans and objects at the same time.
 Also, as motion patterns have been learnt in a particular environment, an interesting problem is to be able to reuse this knowledge in different scenarios where people show similar behaviours, i.e. a portable gait recognition system.
 
-Human activity recognition also plays a central role in the problem of human robot cooperation.
+Human activity recognition also plays a central role in the problem of human-robotic cooperation.
 In this context, to achieve cooperation, a robot needs to  be aware of its human partner and integrate itself to the common task in a non-obstructive way.
 With this in mind, a robot needs to be able to observe and also to communicate with his human partner.
 This requires a sensory approach of activity recognition, but also a high level treatment of the problem, to integrate the context of speech to the task execution.
@@ -348,16 +352,8 @@ The state of hands and the interaction with the objects is converted to a symbol
 They train a decision tree to generate semantic rules, which are used by a reasoning engine to generate a model of human behaviour.
 They explain the relevance of action segmentation, which is the problem of properly generating and grouping the atomic actions from the sensory data.
 
-
-
-
-
-
 % Dondrup (lincoln)
-
 % RoboCup @Home
-% Robotic competitions have also moved their attention to service robotics 
-% Aggarwal
 
 
 \section{Answer Set Programming} % Because is one of the main contributions, I put it appart.
@@ -366,11 +362,11 @@ Answer set programming (ASP) is form of declarative programming oriented towards
 As an outgrowth of research on the use of non-monotonic reasoning in knowledge representation, it is particularly useful in knowledge intensive applications \citep{Lifschitz2008_WhatASP}. 
 
 %It combines a rich and simple modelling language with high performance solving capacities. 
-It has its roots in deductive databases, logic programming (with negation), logic-based knowledge representation and (non-monotonic) reasoning, and constraint solving (satisfiability testing).
+In declarative programming, in stead of coding the method to solve a problem, the idea is to describe the problem and leave the computer to find the solution.
+ASP has its roots in deductive databases, logic programming (with negation), logic-based knowledge representation, non-monotonic reasoning and constraint solving (satisfiability testing).
 
 The basic idea in ASP is to express a problem in a logical format so that the models of its representation provide solutions to the original problem. 
 The resulting models are referred as \textit{answer sets} \citep{Gebser2013_ASP}. 
-
 
 %TODO add diagram declarative problem solving.
 
@@ -391,9 +387,7 @@ It is clear, that this is a desired property, in a logic system, to handle uncer
 Negation as a failure symbol \textit{not} $L_i$ it is often read as ``it is not believed that $L_i$ is true". 
 However, this does not imply that $L_i$ is believed to be false, \textit{not} $L_i$ is a statement about belief \citep{Gelfond2014_KRRbook}.
 
-\subsection{ASP as a declarative problem solving technique}
 
-In declarative programming, in stead of coding the method to solve a problem, the idea is to describe the problem and leave the computer to find the solution.
 
 \subsection{ASP as a knowledge representation language}
 
@@ -422,21 +416,23 @@ ASP implementations work n two steps:
 \end{enumerate}
 
 Since the inception of the concept in the 1980s \citep{Gelf88a} many implementations of ASP have been created.
-The majority of them uses the syntax of the language \textit{Lparse}, also called \textit{AnsProlog*}. 
-However, \textit{DVL}, one of the most prominent ASP solvers uses a different syntax.
+The majority of them uses the syntax of the language \textit{Lparse}, also called \textit{AnsProlog*}.
 
-Here is a list of some of the more relevant toolkits available:
+Some of the most popular ASP frameworks are \textit{potasso} \citep{gekakaosscsc11a}, \textit{DVL} \citep{gekakaosscsc11a} and \textit{Smodels} \citep{Niemela2000_Smodels}.
+Potassco is the only current framework that includes a module specifically designed for robotics: \textit{ROSoClingo} \citep{AndresOSSR13_rosoclingo}.
+ROSoClingo is a module built for the standard robotics framework ROS \citep{Quigley09_ROS} that allows connection with the \textit{clingo} ASP-solver and grounder and extends the traditional ASP paradigm by enabling the possibility to handle incoming data, e.g. robot observations.
 
-\begin{description}
-\item[potassco] Created and maintained by the University of Potsdam \citep{gekakaosscsc11a}.
-\item[DLV] Created and maintained by the Technical University of Vienna and the University of Calabria \citep{gekakaosscsc11a}.
-\end{description}
 
-\subsection{ASP for activity recognition}
+
+%TODO %TODO %TODO
+%\subsection{ASP in activity recognition}
+%In \citeGelfondL98_AL
+
 %Patornic
 
+%TODO %TODO %TODO
 % ASP & Robotics
-\subsection{ASP for robotics}
+%\subsection{ASP in robotics}
 % University of Sabanci
 
 

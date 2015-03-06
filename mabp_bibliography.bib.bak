@@ -310,24 +310,6 @@
   url = {http://www.springerlink.com/index/K3X004G773QJ80KG}
 }
 
-@INPROCEEDINGS{patterson04,
-  author = {Donald J. Patterson and Lin Liao and Krzysztof Gajos and Michael
-	Collier and Nik Livic and Katherine Olson and Shiaokai Wang and Dieter
-	Fox and Henry Kautz},
-  title = {Opportunity Knocks: a System to Provide Cognitive Assistance with
-	Transportation Services},
-  pages = {433-450},
-  annote = {Acceptance Rate: 18%},
-  bdsk-file-1 = {YnBsaXN0MDDUAQIDBAUIJidUJHRvcFgkb2JqZWN0c1gkdmVyc2lvblkkYXJjaGl2ZXLRBgdUcm9vdIABqAkKFRYXGyIjVSRudWxs0wsMDQ4RElpOUy5vYmplY3RzViRjbGFzc1dOUy5rZXlzog8QgASABoAHohMUgAKAA1lhbGlhc0RhdGFccmVsYXRpdmVQYXRo0hgMGRpXTlMuZGF0YU8RAcIAAAAAAcIAAgAAEkNvZGV4IFBlcmR1Y3R1bSBIRAAAAAAAAAAAAMl5JahIKwAAABqUzQZPSy5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJUbvxAlzwgAAAAAAAAAAAAsABAAACSAAAAAAAAAAAAAAAAAAAAAOQmliRGVza01hbmFnZWQAEAAIAADJeZYoAAAAEQAIAADECdYyAAAAAQAYABqUzQAalL4AGo92AAm79gAJu+kAAJftAAIAVUNvZGV4IFBlcmR1Y3R1bSBIRDpVc2VyczoAZGpwMzoARG9jdW1lbnRzOgBSZWZlcmVuY2U6AGxpYnJhcnk6AEJpYkRlc2tNYW5hZ2VkOgBPSy5wZGYAAA4ADgAGAE8ASwAuAHAAZABmAA8AJgASAEMAbwBkAGUAeAAgAFAAZQByAGQAdQBjAHQAdQBtACAASABEABIAPFVzZXJzL2RqcDMvRG9jdW1lbnRzL1JlZmVyZW5jZS9saWJyYXJ5L0JpYkRlc2tNYW5hZ2VkL09LLnBkZgATAAEvAAAVAAIAC///AACABdIcHR4fWCRjbGFzc2VzWiRjbGFzc25hbWWjHyAhXU5TTXV0YWJsZURhdGFWTlNEYXRhWE5TT2JqZWN0XxBILi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vUmVmZXJlbmNlL2xpYnJhcnkvQmliRGVza01hbmFnZWQvT0sucGRm0hwdJCWiJSFcTlNEaWN0aW9uYXJ5EgABhqBfEA9OU0tleWVkQXJjaGl2ZXIACAARABYAHwAoADIANQA6ADwARQBLAFIAXQBkAGwAbwBxAHMAdQB4AHoAfACGAJMAmACgAmYCaAJtAnYCgQKFApMCmgKjAu4C8wL2AwMDCAAAAAAAAAIBAAAAAAAAACgAAAAAAAAAAAAAAAAAAAMa},
-  bdsk-url-1 = {http://www.springerlink.com/link.asp?id=xh22c1262bny1fly},
-  crossref = {conf/ubicomp/2004},
-  date-modified = {2012-09-17 23:14:23 +0000},
-  keywords = {djp3_AIJ_paper,ubicomp reading list,djp3_All_Conference,djp3_All_Publications,
-	djp3_GPS,djp3_CR_005},
-  local-url = {file://localhost/Users/djp3/Documents/Reference/library/BibDeskManaged/OK.pdf},
-  url = {http://www.springerlink.com/link.asp?id=xh22c1262bny1fly}
-}
-
 @INPROCEEDINGS{perkowitz04,
   author = {Mike Perkowitz and Matthai Philipose and Kenneth P. Fishkin and Donald
 	J. Patterson},
@@ -1516,6 +1498,18 @@
   number = {2}
 }
 
+@ARTICLE{Erdem2013_IntLowRTaskP,
+  author = {Esra Erdem and Volkan Patoglu and Peter Sch{\"{u}}ller},
+  title = {Levels of Integration between Low-Level Reasoning and Task Planning},
+  journal = {CoRR},
+  year = {2013},
+  volume = {abs/1307.7461},
+  bibsource = {dblp computer science bibliography, http://dblp.org},
+  biburl = {http://dblp.uni-trier.de/rec/bib/journals/corr/ErdemPS13},
+  timestamp = {Sat, 13 Feb 4427926 07:51:44 +},
+  url = {http://arxiv.org/abs/1307.7461}
+}
+
 @INPROCEEDINGS{FeilSeifer05_DefiningSocially,
   author = {David FeilSeifer and Maja J. Mataric},
   title = {Defining socially assistive robotics},
@@ -1688,6 +1682,19 @@
   author = {Gelfond, Michael},
   address = {New York, NY},
   isbn = {1107029562}
+}
+
+@ARTICLE{GelfondL98_AL,
+  author = {Michael Gelfond and Vladimir Lifschitz},
+  title = {Action Languages},
+  journal = {Electron. Trans. Artif. Intell.},
+  year = {1998},
+  volume = {2},
+  pages = {193--210},
+  bibsource = {dblp computer science bibliography, http://dblp.org},
+  biburl = {http://dblp.uni-trier.de/rec/bib/journals/etai/GelfondL98},
+  timestamp = {Tue, 26 Jul 4447740 01:51:28 +.},
+  url = {http://www.ep.liu.se/ej/etai/1998/007/}
 }
 
 @INCOLLECTION{Gelf88a,
@@ -2862,10 +2869,7 @@
   volume = {264},
   series = {Studies in Computational Intelligence},
   pages = {491-536},
-  doi = {10.1007/978-3-642-05181-4_21},
-  isbn = {978-3-642-05180-7},
-  language = {English},
-  url = {http://dx.doi.org/10.1007/978-3-642-05181-4_21}
+  language = {English}
 }
 
 @INPROCEEDINGS{Lang2014_SemanticMapsRobotics,
@@ -2942,6 +2946,22 @@
   year = {2012}
 }
 
+@INCOLLECTION{Liao2007_HCRFGPSAR,
+  author = {Liao, Lin and Fox, Dieter and Kautz, Henry},
+  title = {Hierarchical Conditional Random Fields for GPS-Based Activity Recognition},
+  booktitle = {Robotics Research},
+  publisher = {Springer Berlin Heidelberg},
+  year = {2007},
+  editor = {Thrun, Sebastian and Brooks, Rodney and Durrant-Whyte, Hugh},
+  volume = {28},
+  series = {Springer Tracts in Advanced Robotics},
+  pages = {487-506},
+  doi = {10.1007/978-3-540-48113-3_41},
+  isbn = {978-3-540-48110-2},
+  language = {English},
+  url = {http://dx.doi.org/10.1007/978-3-540-48113-3_41}
+}
+
 @INPROCEEDINGS{Liao2005_LAR,
   author = {Liao, Lin and Fox, Dieter and Kautz, Henry},
   title = {Location-based Activity Recognition Using Relational Markov Networks},
@@ -2974,6 +2994,27 @@
   date-modified = {2012-09-18 00:51:27 +0000},
   keywords = {djp3_JR_004,djp3_All_Publications,djp3_All_Journal, djp3_GPS},
   url = {http://dx.doi.org/10.1196/annals.1382.017}
+}
+
+@ARTICLE{Liao2007_LIT,
+  author = {Liao, Lin and Patterson, Donald J. and Fox, Dieter and Kautz, Henry},
+  title = {Learning and Inferring Transportation Routines},
+  journal = {Artif. Intell.},
+  year = {2007},
+  volume = {171},
+  pages = {311--331},
+  number = {5-6},
+  month = apr,
+  acmid = {1238288},
+  address = {Essex, UK},
+  doi = {10.1016/j.artint.2007.01.006},
+  issn = {0004-3702},
+  issue_date = {April, 2007},
+  keywords = {Activity recognition, Hierarchical Markov model, Location tracking,
+	Novelty detection, Rao--Blackwellized particle filters},
+  numpages = {21},
+  publisher = {Elsevier Science Publishers Ltd.},
+  url = {http://dx.doi.org/10.1016/j.artint.2007.01.006}
 }
 
 @ARTICLE{Lin2007,
@@ -3359,6 +3400,18 @@
 	languages;Ontologies;Research and development;Taxonomy;Video surveillance}
 }
 
+@ARTICLE{Niemela2000_Smodels,
+  author = {Ilkka Niemel{\"{a}} and Patrik Simons and Tommi Syrj{\"{a}}nen},
+  title = {Smodels: {A} System for Answer Set Programming},
+  journal = {CoRR},
+  year = {2000},
+  volume = {cs.AI/0003033},
+  bibsource = {dblp computer science bibliography, http://dblp.org},
+  biburl = {http://dblp.uni-trier.de/rec/bib/journals/corr/cs-AI-0003033},
+  timestamp = {Fri, 21 Aug 4445367 07:09:20 +},
+  url = {http://arxiv.org/abs/cs.AI/0003033}
+}
+
 @TECHREPORT{Nilsson84_Shakey,
   author = {Nils Nilsson},
   title = {Shakey the Robot},
@@ -3444,6 +3497,25 @@
   school = {Ume\aa University},
   year = {2015},
   adress = {Ume\aa, Sweden}
+}
+
+@INPROCEEDINGS{patterson04,
+  author = {Patterson, DonaldJ. and Liao, Lin and Gajos, Krzysztof and Collier,
+	Michael and Livic, Nik and Olson, Katherine and Wang, Shiaokai and
+	Fox, Dieter and Kautz, Henry},
+  title = {Opportunity Knocks: A System to Provide Cognitive Assistance with
+	Transportation Services},
+  booktitle = {UbiComp 2004: Ubiquitous Computing},
+  year = {2004},
+  editor = {Davies, Nigel and Mynatt, ElizabethD. and Siio, Itiro},
+  volume = {3205},
+  series = {Lecture Notes in Computer Science},
+  pages = {433-450},
+  publisher = {Springer Berlin Heidelberg},
+  doi = {10.1007/978-3-540-30119-6_26},
+  isbn = {978-3-540-22955-1},
+  language = {English},
+  url = {http://dx.doi.org/10.1007/978-3-540-30119-6_26}
 }
 
 @PERIODICAL{PattersonM2,
@@ -3750,17 +3822,22 @@
   url = {http://www.ros.org}
 }
 
-@INBOOK{Quigley09_ROS,
-  pages = {1--8},
+@CONFERENCE{Quigley09_ROS,
+  author = {Morgan Quigley and Ken Conley and Brian P. Gerkey and Josh Faust
+	and Tully Foote and Jeremy Leibs and Rob Wheeler and Andrew Y. Ng},
   title = {ROS: an open-source Robot Operating System},
-  publisher = {IEEE},
+  booktitle = {ICRA Workshop on Open Source Software},
   year = {2009},
-  author = {Quigley, Morgan and Gerkey, Brian and Conley, Ken and Faust, Josh
-	and Foote, Tully and Leibs, Jeremy and Berger, Eric and Wheeler,
-	Rob and Ng, Andrew},
-  number = {Figure 1},
-  booktitle = {Program},
-  url = {http://pub1.willowgarage.com/~konolige/cs225B/docs/quigley-icra2009-ros.pdf}
+  attachments = {http://www.willowgarage.com/sites/default/files/icraoss09-ROS.pdf}
+}
+
+@CONFERENCE{Quigley2009_ROS,
+  author = {Morgan Quigley and Ken Conley and Brian P. Gerkey and Josh Faust
+	and Tully Foote and Jeremy Leibs and Rob Wheeler and Andrew Y. Ng},
+  title = {ROS: an open-source Robot Operating System},
+  booktitle = {ICRA Workshop on Open Source Software},
+  year = {2009},
+  attachments = {http://www.willowgarage.com/sites/default/files/icraoss09-ROS.pdf}
 }
 
 @INPROCEEDINGS{ramirez14Iros,
