@@ -1,54 +1,47 @@
 \chapter{Research Problem}
 
-The last chapter presented the state of the art in activity recognition.
+The last chapter presented the state of the art in activity recognition, in general and within the perspective of robotics.
 While the subject has been studied extensively in the recent years, the problem still provide a fertile research field to test different approaches.
-Activity recognition is particularly relevant for autonomous robots, which provide important benefits but also trigger new challenges.
-On the other hand, despite the main principles of ASP were stated in the late 1980s, the possibilities of this approach haven't been completely exploited and it still remains as a very active research area in the field of Logic Programming.
-We're interested in exploring the possibilities of ASP in the context of autonomous robotics.
-In general, as a tool to handle problems in the knowledge representation and reasoning areas, and in particular, within the problem of activity recognition
+Activity recognition is particularly relevant for autonomous robots.
+It provides valuable knowledge from the environment necessary tu understand a situation, interact with people and learn from their actions. 
 
-This chapter presents the main problem to be studied in this project: activity recognition with a mobile robot.
-It also introduces the structure of a framework to build up a solution to the problem that puts emphasis the usage of ASP, and that can be integrated with current state of the art hardware and software tools. 
-This is presented in the context of the \textit{Library scenario} (section \ref{sec_Library}) to ground the concepts to an example, and to set the path for future work.
-Finally, the approach is discussed to expose its strengths and weaknesses, and to present expected outcomes.
+Also, ASP was presented as a methodology to treat problems of knowledge representation and reasoning.
+Despite the main concepts of ASP were stated in the late 1980s, this approach of problem solving haven't been completely exploited, particularly in robotics, and still remains as a very active research area within the field of Logic Programming.
+
+We are interested in exploring the possibilities of ASP in the context of autonomous robotics.
+In general, as a tool to handle problems that require knowledge representation and reasoning, and in particular, related to the problem of activity recognition.
+
+This chapter presents the main problem to be studied in this project: activity recognition with a mobile robot with an ASP-based approach.
+It also introduces the structure of a framework to build a solution to the problem, putting special emphasis in the usage of ASP.
+This framework can be built and integrated with current state of the art hardware and software tools. 
+The \textit{Library setting} (section \ref{sec_Library}) is used as a case to explain the ideas and as a potential environment for experimentation, necessary to set the path of future work.
+Finally, the approach is discussed to expose its strengths, its weaknesses, and the present expected outcome.
+
 
 \section{Problem Description} \label{sec_problem}
 
 % Description of the problem
-The subject of study in this project is ASP-based activity recognition with a mobile robot.
+The subject of study in this project is \textbf{ASP-based activity recognition with a mobile robot}.
 
-As mentioned at the beginning of this chapter, the problem of activity recognition is relevant in the context of robotics.
-At the same time, ASP offers an interesting and novel approach to the problem.
-These three parts, Activity Recognition, Robotics and ASP, have been studied separately in extension, however, their joint possibilities are still uncovered.
-The focus of this project is to study the problem of activity recognition with an autonomous robot, and particularly how to exploit an ASP-based approach.
+The problem of activity recognition is relevant for robots, particularly for those that share their environment with humans.
+At the same time, ASP offers an interesting and novel approach for problems that require knowledge representation and reasoning.
+These three parts: \textit{Activity Recognition} as a problem, \textit{Robotics} as a system platform, and \textit{ASP} as a set of techniques to treat problems that require knowledge representation and reasoning, they have been studied widely separately, but their integration still remains as an open field with particular challenges and potential solutions. 
+This joint integration is the focus for this project.
 
-Human activities can be classified in different ways and with different grade of detail.
-In \citep{Turaga2008_MaRecHuAcSurv}, two non-exclusive categories are used: actions, performed by a person, and activities, performed by many persons.
-One more descriptive categorization has been given in \citep{Aggarwal11_HumanActivity}, separating activities in four classes:
+ASP has not been fully exploited in robotic applications.
+In a traditional logic programming approach for problem solving, a set of facts and rules is collected first to perform later an analysis \textit{a posteriori} (e.g. making questions).
+But in robotics, new data is arriving continuously, and the knowledge that the robot has about the environment will need to be updated as soon as possible; some rules may not be valid any more, and also there is the need to handle unknown and uncertain statements.
+Logic programming allows updates by adding and/or erasing premises and resetting the whole system, but in some ASP extensions this can be done online, e.g. ROSoClingo \ref{AndresOSSR13_rosoclingo}.
 
-\begin{description}
-\item[Gestures] Elementary movements of a person's body part, and are the atomic components describing a meaningful motion of a person. 
-E.g. `stretching an arm', `raising a leg'.
-\item[Actions] Single person activities that may be composed of multiple gestures organized temporally. 
-E.g. `walking', `waving'.
-\item[Interactions] Human activities that involve two or more persons and/or objects. 
-E.g. `Two persons fighting', `a person eating an apple'.
-\item[Group activities] The activities performed by conceptual groups of multiple persons and/or objects. 
-E.g. `a football team playing a match', `a group of students making an exam'.
-\end{description}
+The target application is to be able to build a system, on top of a robot, that can be able to observe actively and annotate the ongoing activities in a location (e.g. a library). 
+By using a robot, human perception is partially emulated, however, this will drive to situations with incomplete information, because most of the times, the robot won't be able to sense all the environment. 
+It is an hypothesis for this project that the lack of sensory information can be complemented with a stronger cognitive approach, in this case, by considering domain knowledge.
 
-All of these categories require to be able to sense humans with different level of detail.
-For example, gestures require specific algorithms (e.g. hand detection, face detection, skeleton tracing, etc.) while long distant pedestrian tracking algorithms may consider persons as \textit{moving dots}.
-With this in mind, target activities should be defined within the sensory constraints of a mobile robot.
+The results of the system (recognized activities) can be used in different ways, but particularly as semantic knowledge, which has a meaning, a context and can be used for reasoning.
+In this particular problem, activities have a spatial and temporal significance, that is the reason why they can be stored in a semantic map.
+This, can eventually be useful for a robot to have a qualitative description of the environment, to augment its navigation capabilities and task planning, and also, to bridge the gap in human-robot interaction \citep{Kostavelis2015_SemMapSurv}.
 
-The goal application is to be able to build a system on top of a robot that can be able to observe and follow the ongoing activities in a location (e.g. a library), from different points of view, but from a single one. 
-This is the way in which humans perceive, however, this also drives to a situation of incomplete information as the robot won't have enough sensory information from all the environment. 
-It is a thesis in this project that the lack of sensory information can be complemented with a stronger cognitive approach, in this case knowledge representation and reasoning capabilities.
-
-This activity information can be used in different ways, but particularly as semantic knowledge, which has a meaning and a context and that can be used for reasoning.
-This is useful for a robot to have a qualitative description of the environment, to augment its navigation capabilities and task planning, and also to bridge the gap in human-robot interaction \citep{Kostavelis2015_SemMapSurv}.
-
-Going back to the library setting described in section \ref{sec_Library}. %TODO %TODO Add example
+%Going back to the library setting described in section \ref{sec_Library}. %TODO %TODO Add example
 
 
 \section{Methodology}
@@ -59,20 +52,26 @@ First, the target platform is an autonomous mobile robot.
 In a general fashion, a control system for a robot can be simplified as a perception-action loop. %TODO %TODO Add image Perception-Action
 An activity recognition system fits in by providing interesting features from the environment (activities) that a robot can use to improve its performance.
 
-The system requires some input, particularly observations from the environment, which are compulsory.
-Additionally to this, symbolic information is also going to be required in the form of a semantic map and domain knowledge.
-Finally, the representations of activities are also considered as an input.
+The figure \ref{fig:structure} presents the structure of the overall system.
+The principal input are observations from the environment in the form of recognized features, e.g. humans, objects, etc.
+Real-world data is mandatory.
+Additionally to this, symbolic information will also be used in the form of a semantic map, domain knowledge (e.g. ontologies), previous experiences and finally, the activity representations.
 The output of the system is a set of activities and features found on the environment, within a degree of confidence.
 
-%TODO %TODO Overall image
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{fig/img_structure.pdf}
+\caption{Model for the ASP-based activity recognition system with a robot.}
+\label{fig:structure}
+\end{figure}
 
-Now let's look the inside of the proposed system.
 
-\subsection{Sensing}
+\subsection{Sensing and feature extraction}
 
-The end target for this project are autonomous mobile robots, with this in mind, all the sensing in charge of the robot. 
+The end target for this project are autonomous mobile robots, with this in mind, all the sensing is in charge of the robot. 
 No building sensing (e.g. CCTV) or portable devices (e.g. cellphone, laptop) are allowed, this is the goal.
-We are looking forward to use state-of-the-art sensing techniques, however, as completely reliable sensing is not assured and improving sensing algorithms is beyond the scope of this project, the use of simulations and environment marks is considered for experimental purposes. %TODO Add "see next section/chapter" 
+We are looking forward to use state-of-the-art sensing techniques, however, completely reliable sensing is not assured and improving sensing algorithms is beyond the scope of this project, the use of simulations and environment marks is considered for experimental purposes. 
+%TODO Add "see next section/chapter" 
 
 The features to be sensed will depend on the type of activities to be recognized.
 By using the categorization of activities mentioned in section \ref{sec_problem}, we are interested in the mid-level activities.
@@ -80,7 +79,20 @@ This considers single human activities and interactions with other humans and/or
 So, human and object sensing are needed.
 In the same fashion, the aim is to provide a robot with some understanding of activities within a spatio-temporal conceptualization by building a semantic map, so location and mapping are also a requirement, i.e. environment sensing.
 
-All these give us a path to decompose the scene in three different categories within a 3D space: humans (detection, recognition, kinematic description, etc.), objects (detection, recognition, kinematic description, etc.) and environment (location).
+All these give us a path to decompose the scene in three different categories within a 3D space \ref{fig:decomposition}: 
+\begin{description}
+\item[humans] detection, recognition, kinematic description, etc.
+\item[objects] detection, recognition, kinematic description, etc.
+\item[environment] localization, grid and topological maps, etc.
+\end{description}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{fig/scene_dec.pdf}
+\caption{Sensing will be targeting relevant features from humans, objects and from the environment.}
+\label{fig:decomposition}
+\end{figure}
+
 %TODO  Add Image reference and image of scene decomposition.
 
 \subsection{Qualitative Spatio-Temporal Representations}
@@ -174,32 +186,3 @@ Knowing which parts of the missing knowledge will help to improve the conclusion
 
 % Test example
 
-\section{Evaluation} % Or alternatives
-
-Once presented the problem and the proposed solution, some remarks can be made to evaluate its advantages and its limitations, and how these can eventually be tackled.
-
-First, this project makes emphasis in the use of a robot, which has some evident limitations.
-Sensors are constrained to defined ranges and the thrown data usually presents noise.
-Actuators also present inaccuracies and time-delayed responses.
-Processing capabilities are also limited in a robot, so the amount of data collected with a robot should be minimized and processed efficiently whenever is possible.
-%This is, however, the current state in robotics and this is considered by considering sensor models, 
-
-Regarding ASP, here is used for knowledge representation and reasoning purposes. 
-It can also provide a path to plan actions for the robot.
-ASP should be used with reserve as it is used to model combinatorial NP-hard problems.
-With this in mind, should be noted that ASP implementations are limited in efficiency and the modelled problems can grow very easily.
-This is considered in this project by restricting the domain application (to a library), the amount and granularity of the descriptions for activities, objects and places.
-
-
-
-
-% Main parts of the problem
-
-% A - Scene decomposition (locations, objects, persons)
-%   > from observations to scene reconstruction
-
-% B - 
-
-% B - Representation 
-% Modelling in space (QSR)
-% Modelling in time (QSTR)

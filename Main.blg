@@ -1,60 +1,47 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: Main.aux
 The style file: my_plainnat.bst.bst
+I found no \citation commands---while reading file Main.aux
 Database file #1: mabp_bibliography.bib.bib
-Warning--entry type for "web_OpenCyc" isn't style-file defined
---line 1259 of file mabp_bibliography.bib.bib
-Warning--entry type for "web_WikiHow" isn't style-file defined
---line 2247 of file mabp_bibliography.bib.bib
-A bad cross reference---entry "Ke2007_SpTmpShapeAR"
-refers to entry "conf/cvpr/2007", which doesn't exist
-A bad cross reference---entry "BennewitzBT02"
-refers to entry "DBLP:conf/icra/2002", which doesn't exist
-Warning--I didn't find a database entry for "DBLP:conf/icra/2002"
-Warning--I didn't find a database entry for "conf/cvpr/2007"
-Warning--empty year in web_OpenCyc
-Warning--empty publisher in Gelf88a
-Warning--empty year in web_WikiHow
-Warning--empty school in Moszkowski1983_RDC
-You've used 67 entries,
+You've used 0 entries,
             2757 wiz_defined-function locations,
-            1112 strings with 19744 characters,
-and the built_in function-call counts, 32605 in all, are:
-= -- 2917
-> -- 1717
-< -- 70
-+ -- 583
-- -- 514
-* -- 2457
-:= -- 4832
-add.period$ -- 221
-call.type$ -- 67
-change.case$ -- 357
-chr.to.int$ -- 65
-cite$ -- 138
-duplicate$ -- 1651
-empty$ -- 2802
-format.name$ -- 621
-if$ -- 7095
-int.to.chr$ -- 3
+            588 strings with 4824 characters,
+and the built_in function-call counts, 33 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 10
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 65
-newline$ -- 349
-num.names$ -- 283
-pop$ -- 813
+missing$ -- 0
+newline$ -- 8
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
-purify$ -- 300
+purify$ -- 0
 quote$ -- 0
-skip$ -- 1258
+skip$ -- 1
 stack$ -- 0
-substring$ -- 1168
-swap$ -- 334
-text.length$ -- 30
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 702
-warning$ -- 4
-while$ -- 285
+type$ -- 0
+warning$ -- 0
+while$ -- 0
 width$ -- 0
-write$ -- 902
-(There were 2 error messages)
+write$ -- 7
+(There was 1 error message)

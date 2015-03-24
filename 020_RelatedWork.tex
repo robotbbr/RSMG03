@@ -75,6 +75,27 @@ Activity recognition is an important research area in the context of automated p
 It has many applications as surveillance, inspection, verification, generation of automated reports, etc.
 The application will dictate the approach to follow and the kind on sensors that will be required.
 
+Human activities can be classified in different ways.
+In \citep{Turaga2008_MaRecHuAcSurv}, two non-exclusive categories are used: actions (performed by a person) and activities (performed by many persons).
+One more descriptive categorization has been given in \citep{Aggarwal11_HumanActivity}, separating activities in four classes:
+
+\begin{description}
+\item[Gestures] Elementary movements of a person's body part, and are the atomic components describing a meaningful motion of a person. 
+E.g. `stretching an arm', `raising a leg'.
+\item[Actions] Single person activities that may be composed of multiple gestures organized temporally. 
+E.g. `walking', `waving'.
+\item[Interactions] Human activities that involve two or more persons and/or objects. 
+E.g. `Two persons fighting', `a person eating an apple'.
+\item[Group activities] The activities performed by conceptual groups of multiple persons and/or objects. 
+E.g. `a football team playing a match', `a group of students making an exam'.
+\end{description}
+
+All of these categories require to be able to sense humans with different level of detail.
+For example, gestures require specific algorithms (e.g. hand detection, face detection, skeleton tracing, etc.) while long distant pedestrian tracking algorithms may consider persons as \textit{moving dots}.
+The type of activities to be recognized will dictate the required algorithms.
+
+In the same fashion, activity recognition approaches can be classified in basis of different factors.
+
 First, regarding the sensors, two approaches can be followed, distant or pervasive. 
 The first one observes the scene from the distance as it happens with a CCTV camera or a robot. 
 The pervasive approach relies on wearable devices to detect the activity of a person from a first person point of view.
@@ -123,7 +144,8 @@ Then, the stream was compared online with previously described activities to loo
 In \citep{Ke2007_SpTmpShapeAR}, volumes were built by attaching similar regions of adjacent frames.
 Then, the problem was transformed in an object matching problem by comparing the shapes of the volumes (sensory stream and activity patterns).
 
-\subsubsection{Sequential approaches} %TODO Go deeper.
+\subsubsection{Sequential approaches} 
+%TODO Go deeper.
 
 Sequential approaches represent activities as a sequence of states. 
 A state is a vector of features observed in the scene in a specific instant.
@@ -139,7 +161,6 @@ The dynamics of articulated objects in scene were recognized using the dynamic t
 In model based approaches, the sequence of states is compared with a set of probabilistic models of activities. The models are built assuming a temporal dependence between the states, so the transitions are modelled statistically using hidden Markov models (HMM), dynamic bayesian networks (DBN), conditional random fields (CRF), etc.
 
 The first work to use HMM to recognize activities was \citep{Yamato1992_RecHA_HMM}. They transformed a video stream into a sequence of vectors of image features. Then every vector was transformed to a symbol using vector quantization. Finally, a set of HMMs were created to model the activities, and their parameters were optimized. 
-
 
 \subsection{Hierarchical approaches}
 Hierarchical approaches of activity recognition refer to those where complex activities are represented in terms of simpler ones. 
@@ -411,7 +432,7 @@ Formally, ASP allows for solving all search problems in $NP$ and $NP^{NP}$ in a 
 ASP implementations work n two steps:
 
 \begin{enumerate}
-\item A \textbf[grounder] builds an intermittent representation of the problem files by generating all possible values of the variables.
+\item A \textbf{grounder} builds an intermittent representation of the problem files by generating all possible values of the variables.
 \item A \textbf{solver} that reads the grounded file and generates the answer sets (solutions).
 \end{enumerate}
 
