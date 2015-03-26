@@ -91,7 +91,7 @@ E.g. `a football team playing a match', `a group of students making an exam'.
 \end{description}
 
 All of these categories require to be able to sense humans with different level of detail.
-For example, gestures require specific algorithms (e.g. hand detection, face detection, skeleton tracing, etc.) while long distant pedestrian tracking algorithms may consider persons as \textit{moving dots}.
+For example, gestures require specific algorithms (e.g. hand detection, face detection, skeleton tracing, etc.), while long distant pedestrian tracking algorithms may consider persons as \textit{moving dots}.
 The type of activities to be recognized will dictate the required algorithms.
 
 In the same fashion, activity recognition approaches can be classified in basis of different factors.
@@ -111,7 +111,8 @@ In \citep{Aggarwal11_HumanActivity} a taxonomy is proposed as shown in Fig. \ref
 \end{figure}
 
 \subsection{Single-layered approaches}
-They represent activities in terms of raw sensory data\footnote{The original survey \citep{Aggarwal11_HumanActivity} describes single layered approaches as image-based approaches, but it leaves out the systems with other sensing capabilities (e.g. 3D sensors, sonars, GPS, etc.).
+
+They represent activities in terms of raw sensory data\footnote{The original survey \citep{Aggarwal11_HumanActivity} describes single layered approaches as image-based approaches, but it leaves out the systems with other sensing capabilities (e.g. 3D sensors, sonar, GPS, etc.).
 However, they can be included too the activities are represented in terms of raw sensory data patterns.}, because of this, the activity descriptions are trained from datasets.
 
 %Sensory data is processed to obtain particular descriptive features of the scene which are compared with known activity patterns. 
@@ -125,9 +126,9 @@ The shorter the activity, the more accuracy that will be attained.
 Finally, this approach is very sensitive to the input sensory data as this will depend on the environmental conditions (e.g. lighting, point of view).
 
 
-\subsubsection{Continuous approaches\footnote{`Space-time approaches' in \citep{Aggarwal11_HumanActivity}}} % BEFORE: Space-Time approaches
+\subsubsection{Continuous approaches} % BEFORE: Space-Time approaches
 
-The activities are recognized by analysing continuous sensory data and compare it with an activity pattern.
+In continuous approaches\footnote{`Space-time approaches' in \citep{Aggarwal11_HumanActivity}} the activities are recognized by analysing continuous sensory data and compare it with an activity pattern.
 
 An activity is represented as a block of data along time where the activity was performed, and it is considered as a whole.
 A volume (or hyper-volume) is built by concatenating the sensor readings in time.
@@ -226,7 +227,7 @@ There are many possibilities to treat the problem. In \citep{Nevatia2004_OntoVid
 In \citep{Sridhar10_UnsupervisedLearning}, relevant features from the scene are extracted and their behaviour is represented using qualitative spatio-temporal relations (QSTR), then patterns of activities are learnt using Markov chains.
 
 
-\section{Description-based activity recognition and robotics}
+\section{Description-based activity recognition and robotics} \label{sec_DBROB}
 
 In this project, the chosen approach to follow is a description-based methodology. 
 This section presents relevant related work in this line, and sin the Answer Set Programming (ASP) paradigm for 
@@ -238,7 +239,7 @@ As mentioned in section \ref{sec_description_ap}, description-based approaches r
 The representation should also make emphasis in the spatial, temporal and logical structures.
 The recognition is performed by obtaining features from scene (spatial, temporal, logical) and creating a scene description as a \textit{list} of facts, then the problem becomes a constraint satisfaction problem, to find the best activity match for these set of observations. 
 
-\subsubsection{Representationof activities}
+\subsubsection{Representation of activities}
 
 %Regarding the representation of activities, there are many desired characteristics. 
 An activity is represented as a set of \textit{facts} that needs to be fulfilled with the observations.
@@ -305,7 +306,7 @@ Some drawbacks are that the system posses global information from the environmen
 % Benjamin Kuipers
 
 
-\subsection{Activity recognition and robotics}
+\subsection{Activity recognition and robotics} \label{sec_ASP}
 A robot is an ideal system to perform activity recognition. 
 This is, indeed, a desirable skill for an autonomous robot that will share an environment with people.
 The robot needs to be \textit{aware} of the surrounding humans.
@@ -324,7 +325,7 @@ The algorithms' complexity is usually big in the required problems to solve (e.g
 
 During the early years of robotics, much of the effort in the field was put in designing reliable motion planning and control techniques, e.g. \citep{Moravec1983_StanfordCMUCarts,brook-1985:robuslayer:TR}. 
 Meanwhile, new advances were also made in fields as computer vision (e.g. optical flow, visual tracking, etc.), knowledge representation and reasoning (e.g. qualitative reasoning, frame languages), and machine learning (e.g. HMMs, decision trees, etc.).
-It was until the late 80's and early 90's that robots started facing realistic and non-controlled environments.
+It was until the late 80s and early 90s that robots started facing realistic and non-controlled environments.
 
 One of the first works in activity recognition with a mobile robot can be found in \citep{Kortenkamp1996_RIG,Bonasso96recognizingand}. 
 The authors used a monochromatic stereo-vision system mounted on top of a mobile robot for gesture recognition.
@@ -422,7 +423,7 @@ ASP is well suited for modelling problems in the area of Knowledge Representatio
 \end{description}
 
 ASP has been particularly applied to reasoning satisfiability problems.
-However, other problems can be treated too by ASP, as: model enumeration, intersection or unioning, as well as multi-criteria and -objective optimization. 
+However, other problems can be treated too by ASP, as: model enumeration, intersection or union, as well as multi-criteria and multi-objective optimization. 
 Formally, ASP allows for solving all search problems in $NP$ and $NP^{NP}$ in a uniform way. 
 %Hence, ASP is a\citep{Schaub13_ASPBoCo}.
 
@@ -439,17 +440,28 @@ ASP implementations work n two steps:
 Since the inception of the concept in the 1980s \citep{Gelf88a} many implementations of ASP have been created.
 The majority of them uses the syntax of the language \textit{Lparse}, also called \textit{AnsProlog*}.
 
-Some of the most popular ASP frameworks are \textit{potasso} \citep{gekakaosscsc11a}, \textit{DVL} \citep{gekakaosscsc11a} and \textit{Smodels} \citep{Niemela2000_Smodels}.
+Some of the most popular ASP frameworks are \textit{potassco} \citep{gekakaosscsc11a}, \textit{DVL} \citep{gekakaosscsc11a} and \textit{Smodels} \citep{Niemela2000_Smodels}.
 Potassco is the only current framework that includes a module specifically designed for robotics: \textit{ROSoClingo} \citep{AndresOSSR13_rosoclingo}.
 ROSoClingo is a module built for the standard robotics framework ROS \citep{Quigley09_ROS} that allows connection with the \textit{clingo} ASP-solver and grounder and extends the traditional ASP paradigm by enabling the possibility to handle incoming data, e.g. robot observations.
 
 
 
 %TODO %TODO %TODO
-%\subsection{ASP in activity recognition}
-%In \citeGelfondL98_AL
+\subsection{ASP in activity recognition}
+%
+ASP, as a declarative problem solving technique, can be used to model problems with a dynamic or sequential representations. 
+Activities dynamic entities, and time and sequencing needs to be considered.
+In this case, ASP allows to work with existing formalisms as the Situation Calculus, Fluent Calculus and Event Calculus. 
 
-%Patornic
+An example of this, can be found in \citep{Partonia2015_MSc}.
+The authors use action languages \citep{GelfondL98_AL}, which enable to describe dynamic systems and consider the consequences of events.
+In this work, the action language $C_{TAID}$ is used jointly with ASP for activity recognition to model and obtain an explanation on the execution of the activity.
+Activities are considered as a sequence of states and a probability value is attached to the recognized activities as a parameter of confidence.
+The focus was, not only to show which activity occurred, but also how it was performed and how certain is the occurrence of the labelled activity.
+The authors present their methodology and experiments about it.
+
+
+
 
 %TODO %TODO %TODO
 % ASP & Robotics

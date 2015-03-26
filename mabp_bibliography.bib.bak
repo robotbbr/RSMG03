@@ -1820,6 +1820,14 @@
   year = {2010}
 }
 
+@UNPUBLISHED{Hawes2013_STRANDS,
+  author = {Nick Hawes},
+  title = {Project Proposal},
+  note = {STRANDS - Spatial-Temporal Representations and Activities For Cognitive
+	Control in Long-Term Scenarios},
+  year = {2013}
+}
+
 @ARTICLE{Hawes2011,
   author = {Nick Hawes},
   title = {A survey of motivation frameworks for intelligent systems},
@@ -3823,15 +3831,6 @@
 }
 
 @CONFERENCE{Quigley09_ROS,
-  author = {Morgan Quigley and Ken Conley and Brian P. Gerkey and Josh Faust
-	and Tully Foote and Jeremy Leibs and Rob Wheeler and Andrew Y. Ng},
-  title = {ROS: an open-source Robot Operating System},
-  booktitle = {ICRA Workshop on Open Source Software},
-  year = {2009},
-  attachments = {http://www.willowgarage.com/sites/default/files/icraoss09-ROS.pdf}
-}
-
-@CONFERENCE{Quigley2009_ROS,
   author = {Morgan Quigley and Ken Conley and Brian P. Gerkey and Josh Faust
 	and Tully Foote and Jeremy Leibs and Rob Wheeler and Andrew Y. Ng},
   title = {ROS: an open-source Robot Operating System},

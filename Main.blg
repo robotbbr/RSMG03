@@ -1,47 +1,60 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: Main.aux
 The style file: my_plainnat.bst.bst
-I found no \citation commands---while reading file Main.aux
 Database file #1: mabp_bibliography.bib.bib
-You've used 0 entries,
+Warning--entry type for "web_OpenCyc" isn't style-file defined
+--line 1259 of file mabp_bibliography.bib.bib
+Warning--entry type for "web_WikiHow" isn't style-file defined
+--line 2255 of file mabp_bibliography.bib.bib
+A bad cross reference---entry "Ke2007_SpTmpShapeAR"
+refers to entry "conf/cvpr/2007", which doesn't exist
+A bad cross reference---entry "BennewitzBT02"
+refers to entry "DBLP:conf/icra/2002", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/icra/2002"
+Warning--I didn't find a database entry for "conf/cvpr/2007"
+Warning--empty year in web_OpenCyc
+Warning--empty publisher in Gelf88a
+Warning--empty year in web_WikiHow
+Warning--empty school in Moszkowski1983_RDC
+You've used 71 entries,
             2757 wiz_defined-function locations,
-            588 strings with 4824 characters,
-and the built_in function-call counts, 33 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 10
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
-int.to.chr$ -- 1
+            1141 strings with 20525 characters,
+and the built_in function-call counts, 34279 in all, are:
+= -- 3074
+> -- 1802
+< -- 74
++ -- 612
+- -- 539
+* -- 2574
+:= -- 5099
+add.period$ -- 234
+call.type$ -- 71
+change.case$ -- 376
+chr.to.int$ -- 69
+cite$ -- 146
+duplicate$ -- 1733
+empty$ -- 2937
+format.name$ -- 652
+if$ -- 7450
+int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 0
-newline$ -- 8
-num.names$ -- 0
-pop$ -- 0
+missing$ -- 67
+newline$ -- 369
+num.names$ -- 301
+pop$ -- 846
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 315
 quote$ -- 0
-skip$ -- 1
+skip$ -- 1323
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 1229
+swap$ -- 345
+text.length$ -- 31
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
+type$ -- 746
+warning$ -- 4
+while$ -- 302
 width$ -- 0
-write$ -- 7
-(There was 1 error message)
+write$ -- 954
+(There were 2 error messages)

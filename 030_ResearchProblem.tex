@@ -1,4 +1,4 @@
-\chapter{Research Problem}
+\chapter{Research Problem} \label{ch_research_problem}
 
 The last chapter presented the state of the art in activity recognition, in general and within the perspective of robotics.
 While the subject has been studied extensively in the recent years, the problem still provide a fertile research field to test different approaches.
@@ -14,14 +14,15 @@ In general, as a tool to handle problems that require knowledge representation a
 This chapter presents the main problem to be studied in this project: activity recognition with a mobile robot with an ASP-based approach.
 It also introduces the structure of a framework to build a solution to the problem, putting special emphasis in the usage of ASP.
 This framework can be built and integrated with current state of the art hardware and software tools. 
-The \textit{Library setting} (section \ref{sec_Library}) is used as a case to explain the ideas and as a potential environment for experimentation, necessary to set the path of future work.
-Finally, the approach is discussed to expose its strengths, its weaknesses, and the present expected outcome.
+%The \textit{Library setting} (section \ref{sec_Library}) is used as a case to explain the ideas and as a potential environment for experimentation, necessary to set the path of future work.
+%Finally, the approach is discussed to expose its strengths, its weaknesses, and the present expected outcome.
 
 
 \section{Problem Description} \label{sec_problem}
 
 % Description of the problem
 The subject of study in this project is \textbf{ASP-based activity recognition with a mobile robot}.
+The interest lies in the spatio-temporal relations that exist between activities and the environment, and how these can be obtained, handled and used by a mobile robot.
 
 The problem of activity recognition is relevant for robots, particularly for those that share their environment with humans.
 At the same time, ASP offers an interesting and novel approach for problems that require knowledge representation and reasoning.
@@ -44,7 +45,7 @@ This, can eventually be useful for a robot to have a qualitative description of 
 %Going back to the library setting described in section \ref{sec_Library}. %TODO %TODO Add example
 
 
-\section{Methodology}
+\section{Methodology} \label{sec_methodology}
 
 This section presents the proposed approach to tackle the problem.
 
@@ -54,7 +55,7 @@ An activity recognition system fits in by providing interesting features from th
 
 The figure \ref{fig:structure} presents the structure of the overall system.
 The principal input are observations from the environment in the form of recognized features, e.g. humans, objects, etc.
-Real-world data is mandatory.
+Observations of the world are needed, in order to have a starting point to process.
 Additionally to this, symbolic information will also be used in the form of a semantic map, domain knowledge (e.g. ontologies), previous experiences and finally, the activity representations.
 The output of the system is a set of activities and features found on the environment, within a degree of confidence.
 
@@ -122,7 +123,7 @@ The simplest approach is to define the activity representations manually.
 For some specific activities this can be enough, however, in general other strategies are required.
 Activities can be learnt, from a human demonstrator or by analysing data from repeated situations.
 Finally the representation of activities can be consulted in larger knowledge databases using some existing tools, e.g. wikiHow \citep{web_WikiHow}, OpenCyc \citep{web_OpenCyc}, KnowRob \citep{Tenorth09_Knowrob}, RoboEarth \citep{Zweigle2009_RoboEarth}.
-Here the focus is to share common knowledge for robots instead of learning it every time, as this takes considerable computational effort.
+Here the focus is to share knowledge between robotic system instead of learning it every time as this will take considerable computational effort.
 
 
 %\subsection{Maintaining observations}
@@ -173,6 +174,15 @@ One important observation should be made in the previous example, and this is, t
 This is an advantage, but also a necessity as it is very unlikely that a robot can have complete coverage of a scene.
 In the example, the required knowledge is the identification of the object, which can be helpful to discriminate between to activities, e.g. eating and studying. 
 Knowing which parts of the missing knowledge will help to improve the conclusions, or which ones are more important, gives a path to plan an active strategy for the robot to fulfil those perception holes.
+
+
+\subsection{Robot Action}
+
+Up to this point, the robot has created an internal model of a scene, regarding activities.
+This model should be used, and could be incomplete.
+The forward step is to close the loop and use activeness of the robot to improve the process of activity recognition. This can be done by implementing a plan that takes in consideration priorities as looking for missing information, surface coverage of a location, amount of collected information, points of interest, etc.
+
+
 
 % Alternatives for each part
 % > Observations

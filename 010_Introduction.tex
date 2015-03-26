@@ -4,6 +4,7 @@
 % > Robots in everyday environments are important.
 % > This environment is hard.
 % > Robots needs cognitive skills: understand the environment.
+\section{Introduction}
 One of the main goals in AI is having robots working autonomously in everyday environments. 
 In such situation, robots are expected to perceive, understand and interact with its environment. 
 However, these kind of environments are dynamic, non-structured and non-deterministic, which makes difficult for a robot to fulfil the assigned tasks. 
@@ -22,7 +23,7 @@ They provide rich information about the human performing it, but also, about his
 
 
 %\section{Research Problem}
-\section{Human activity analysis with a mobile robot}
+\subsection{Human activity analysis with a mobile robot}
 % ACTIVITY RECOGNITION
 % > AR as a field
 % > Robot case, advantages and disadvantages of using a robot
@@ -47,7 +48,7 @@ In general, an activity recognition system should be able to handle, not only se
 With this in mind, knowledge processing and reasoning is a necessity for such systems.
 
 
-\section{Answer Set Programming for Knowledge Representation and Reasoning}
+\subsection{Answer Set Programming for Knowledge Representation and Reasoning}
 
 There have been proposed many ideas to handle the problems of knowledge representation and reasoning (e.g. logic programming, ontologies, bayesian networks, fuzzy logic, etc.), among them is Answer Set Programming (ASP).
 ASP is form of declarative programming oriented towards difficult, primary NP-hard, search problems.
@@ -61,11 +62,25 @@ This has been one of the main reasons why ASP has not been fully exploited in th
 \section{Research Problem}
 
 This project is based in the consideration of ASP as a solid option for robots in problems that require symbolic representations.
-The goal of this work is to \textbf{study the integration of ASP in a robotic system as a tool for knowledge representation and reasoning in the context of the problem of activity recognition}.
+The focus of this project is to study \textbf{ASP-based activity recognition with a mobile robot}. The interest lies  in the spatio-temporal relation between human activities and the environment and how a robot can acquire, handle and use this knowledge.
 
 ASP allows the manipulation of incomplete information and handling multiple sources of knowledge.
 The integration between observations and external knowledge appear to be a more robust approach than a single sensory based approach.
-As mentioned before, hardware adds uncertainty, is constrained and is usually difficult to process; so putting emphasis in an upper layer of knowledge representation and reasoning would enable, not to eradicate, but to complement a sensory based approach and also to minimize its charge in a system.
+Hardware adds uncertainty via noise, is constrained by its specification and the outcome data is usually difficult to process.
+This uncertainty cannot be eradicated in robots, but the treatment of some problems as activity recognition can be boosted by emphasizing a more cognitive approach. 
+%(via) the it can be  by emphasizing cognitive mechanisms By putting emphasis in the cognitive essence of the problem of activity recognition, the uncertainty in the cognitionemphasizing aputting emphasis in athe upper layer of knowledge representation and reasoning in solving problems that require cognition, the system would rely totally onenable, not to eradicate, but to complement a sensory based approach and also to minimize its charge in a system.
+
+\subsection{Expected outcome}
+
+The expected outcome will be a systematic analysis of ASP-based activity recognition and its use with a mobile robotic platform.
+
+First, the problem of activity recognition will be treated via ASP and compared with other state-of-the-art approaches.
+
+Experience acquisition will be studied via semantic mapping to progressively create a knowledge source for a robot regarding the activities occurring in a particular location and that can be used by the robot for future inferences.
+
+Finally, we are interested in taking advantage of the activeness of the robot to improve the perception and knowledge acquisition processes in the context of activity recognition; e.g. looking for missing information, the ability to get information from the environment more efficiently, etc.
+
+
 
 % RESEARCH PROBLEM
 % > Talk about AR with a robot in cases with incomplete information
@@ -109,10 +124,10 @@ Because of the rules of the library and the nature of the location, the amount o
 However, non-considered activities could eventually appear, as giving a greet, using a cellphone, talking, etc.
 The amount of objects involved in the environment is also relatively small (books, tables, chairs, laptops, cabinets, etc.).
 
-Our interest is to use this environment to test the ideas to be generated and discussed along this project.
-Starting with a simple case and then going for a more complex and general one.
-Also, as libraries tend to share some similarities, there is the possibility to replicate the experiments from this work in other locations.
-This would create landmarks for testing and comparing different approaches, and direct the research towards a more general and better system.
+Our interest is to use this library setting as a test for activity recognition with a mobile robot, and moreover
+The problem can be analysed with simple examples via simulation to build the core of a testing system, and later use real data and eventually a mobile robot.
+%Libraries tend to share some similarities, there is the possibility to replicate the experiments from this work in other locations.
+%This would create landmarks for testing and comparing different approaches, and direct the research towards a more general and better system.
 
 %For the sake of simplicity and as a starting point, lets consider the following abstraction: a linear library (Fig. \ref{}).
 
@@ -136,7 +151,21 @@ This would create landmarks for testing and comparing different approaches, and 
 
 
 %TODO %TODO %TODO
-%\section{Expected outcome}
+
+\section{Document organization}
+
+The rest of the document is organized in the following manner.
+
+Chapter \ref{ch_relatedwork} presents related literature to the problem and discusses the results and limitations of previous approaches. The chapter starts with a brief historic presentation of perception in Artificial Intelligence and goes towards the problem of activity recognition. Section\ref{} presents a summary of how the problem of activity recognition has been treated before, and particularly regarding hierarchical description-based approaches, in which ASP is an alternative. In section \ref{sec_DBROB}, some previous works that integrate activity recognition and robotics are reviewed. Finally, in section \ref{sec_DBROB}, ASP is presented as an alternative for solving problems that require knowledge representation and reasoning.
+
+Chapter \ref{ch_research_problem} presents the problem (section \ref{sec_problem}) and the proposed methodology (section \ref{sec_methodology}) to treat it. 
+
+Chapter \ref{ch_eva} presents an experimental approach to evaluate the methodology proposed within this project. By using variations of the library setting environment (section \ref{sec_Library}), the problem can be studied gradually and the main components of an ASP-based approach can be remarked.
+
+Chapter \ref{ch_conc} presents the conclusions final comments regarding this project and about the developed ideas.
+
+Finally Chapter \ref{ch_wp} presents a work plan for the rest of the project duration (2 years) and proposes goals and tasks to achieve them. 
+
 
 
 

@@ -1,7 +1,7 @@
-\chapter{Work Plan}
+\chapter{Work Plan}\label{ch_wp}
 
 The main goal of this project is to present a concise study of the integration of ASP and robotics to treat the problem of activity recognition.
-By this mean, a work plan should be submitted as a guide line to direct future activities and to measure the progress in the the project. In the following sections, two plans are are presented, short-term (6 months) and long-term (2 years). The proposed goals are distributed in three groups:
+By this mean, a work plan should be submitted as a guide line to direct future activities and to measure the progress in the the project. In the following section a plan is presented for the next 2 years. The proposed work plan has been created considering three classes of goals: project goals, research goals and academic responsibilities.
 
 First \textit{project goals} are those which moves forward the research project. 
 As the direction of research is now clear (ASP-based activity recognition with a mobile robot), and the literature review is considerably up to date, these goals are in the sense of the implementation, testing and analysis of the proposed methodology, to find the paths that conduce to better results. 
@@ -10,16 +10,11 @@ In the final stages, the tasks will be driving the project towards more realisti
 
 \textit{Research goals} are those which serve for research training purposes and those enable the participation of the current project in activities within the research community, e.g. conferences, research school meetings, presentations, academic writing, etc.
 
-Finally, the \textit{academic responsibilities} are conformed with those tasks that are mandatory for PhD students within an academic program.
+Finally, \textit{academic responsibilities} are conformed with those tasks that are mandatory for PhD students within an academic program.
 
+\section{Work Distribution}
 
-\section{Long-term Plan}
-
-%In the long-term, the main goal is the proper completion of the project by the fulfilment of minor goals. 
-
-\subsection{Project Goals}
-
-\subsubsection*{T1 - Library Setting 01: Terminal simulation}
+\subsection*{T01 - Terminal Simulation}
 \paragraph{Objectives}
 \begin{itemize}
 \item Start the implementation of an activity recognition system using the 2D library setting.
@@ -27,8 +22,8 @@ Finally, the \textit{academic responsibilities} are conformed with those tasks t
 \item Get familiar with ASP tools (Clingo, ROSoClingo).
 \end{itemize}
 \paragraph{Tasks}
-\begin{enumerate}
-\item The implementation of a simple (terminal) activity recognition system using ASP tools (Potassco).
+\begin{enumerate}[label= T01-\Alph*:]
+\item The implementation of a simple (terminal) activity recognition system using ASP tools (potassco).
 \item Test different representations of activities based on the interaction between spaces (regions) and humans (positions).
 \item Test sequential representation of activities, i.e. a human visiting different locations.
 \item Consider objects in scene and within the activity representations.
@@ -37,138 +32,193 @@ Finally, the \textit{academic responsibilities} are conformed with those tasks t
 \end{enumerate}
 
 
-\subsubsection*{T2 - Library Setting 02: MORSE Simulation}
+\subsection*{T02 - MORSE Simulation}
 \paragraph{Objectives}
 \begin{itemize}
 \item Implement a more realistic 3D simulation of the library setting.
 \item Integrate ROS, Potassco and MORSE in a system.
-\item Extend the representation of activities to a 3D environment; i.e. start considering geometrical entities as regions, trajectories, etc.
+\item Extend the representations of activities to a 3D environment; i.e. start considering geometrical entities as regions, trajectories, etc.
 \end{itemize}
 \paragraph{Tasks}
-\begin{enumerate}
-\item Create the library setting in MORSE and attack one robot to the environment.
+\begin{enumerate}[label= T02-\Alph*:]
+\item Create the library setting in MORSE and attach one robot to the environment.
 \item Integrate ROS and Potassco (via ROSoClingo) with the MORSE simulation.
-\item Explore spatial
+\item Create interfaces, in ROS, to extract and describe important spatial entities as regions, trajectories, etc.
+\item Extend the representation of activities for a 3D environment.
 \end{enumerate}
 
 
-\subsection{Research Goals}
-
-\subsection{Academic Goals}
-
-
-
-
-
-
-
-\section{Short-term plan - 6 months}
-
-In the short term, the goals will be focused in an introductory p, implementation and experimentation of the proposed methodology.
-Proper mastery of ASP is desired to make a proper use of its capabilities.
-
-The work will be oriented with two purposes.
-
+\subsection*{T03 - Qualitative description}
+\paragraph{Objectives}
 \begin{itemize}
-\item Get a deeper understanding of ASP, and particularly in the context of robotics.
-\item Board the problem of activity recognition with simple cases.
+\item Implement qualitative spatial representations between the entities on scene.
+\item Implement qualitative temporal representations between events.
+\item Enable the representations of activities to use QSTR.
 \end{itemize}
+\paragraph{Tasks}
+\begin{enumerate}[label= T03-\Alph*:]
+\item Implement RCC and QTC, use regions in the map, human bounding boxes, human trajectories, objects bounding boxes, etc.
+\item Implement Allen's Interval Algebra between events. 
+\item Enable and expand the representation of activities to integrate QSTR\footnote{The desired goal would be to have only qualitative representations. However, a proper balance between qualitative and quantitative approaches is an important topic to study more carefully.}.
+\end{enumerate}
+
+\subsection*{T04 - Knowledge Base}
+\paragraph{Objectives}
+\begin{itemize}
+\item Integrate a knowledge base from different sources, e.g. activity representations, semantic maps, ontologies, online knowledge sources, etc.
+\end{itemize}
+\paragraph{Tasks}
+\begin{enumerate}[label= T04-\Alph*:]
+\item Implement a Knowledge Base from different sources with the capacity to be gradually enlarged and consulted via ASP. The minimum integration would consider the activity representations and the semantic maps.
+\item Implement the proper consult mechanisms via ASP.
+\item Implement a \textit{reporting} module to analyse the conclusions of the activity recognition system (ASP) to \textbf{report missing data}. Is important for the system to be aware of which data is missing and also, which part of it is more relevant to get more confident results.
+\item Explore the capacity to generate new rules from experience.s
+\end{enumerate}
+
+\subsection*{T05 - Semantic Mapping}
+\paragraph{Objectives}
+\begin{itemize}
+\item Implement semantic mapping of activities within the system.
+\item Spatial and temporal analysis.
+\end{itemize}
+\paragraph{Tasks}
+\begin{enumerate}[label= T05-\Alph*:]
+\item Extract relevant features from the environment, e.g. objects, humans and entities from the environment (regions, corridors, doors, etc.). First, at the simulation stage this can be done by explicitly getting this information, then later this can be done using markers, and finally by using non-invasive sensing methods.
+\item Implement the capacity to make maps of activities. Static maps first and then dynamic ones.
+\item Integrate pattern recognition techniques to the generation of maps.
+\item Integrate the semantic maps into the Knowledge Base and implement mechanisms to generate ASP rules from it.
+\end{enumerate}
+
+\subsection*{T06 - Active Perception}
+\paragraph{Objectives}
+\begin{itemize}
+\item Restrict the perception of the robot and implement active strategies (planning, control) to improve the activity recognition process with the mobile robot.
+\end{itemize}
+\paragraph{Tasks}
+\begin{enumerate}[label= T06-\Alph*:]
+\item Implement plans of action for the robot, e.g. maximize surface coverage, maximize human sensing data collection, look for specific data in the environment (missing data), etc.
+\item Design experiments (simulated scene) and compare the designed active strategies.
+\end{enumerate}
+
+\subsection*{T07 - Real data collection and testing of the ASP-based activity recognition system}
+\paragraph{Objectives}
+\begin{itemize}
+\item Collect real data, and or use standard datasets for activity recognition system.
+\item Use this data to compare the proposed ASP-based activity recognition with other state-of-the-art approaches.
+\end{itemize}
+\paragraph{Tasks}
+\begin{enumerate}[label= T07-\Alph*:]
+\item Get real data to analyse. This can be done by using standard datasets \citep{Tenorth2009_TUMKData,Liu2011_BenchmarkDatasHAR}, by using collected data from the project STRANDS \citep{Hawes2013_STRANDS} or by collecting it from a controlled environment.
+\item Integrate a ROS based system to be able to use the collected data, particularly, proper object recognition and human sensing techniques.
+\item Analysis and comparison of the results.
+\end{enumerate}
+
+\subsection*{T08 - Robot testing}
+\paragraph{Objectives}
+\begin{itemize}
+\item Test the activity recognition system with a robot in a real environment and with an active participation of it.
+\end{itemize}
+\paragraph{Tasks}
+\begin{enumerate}[label= T08-\Alph*:]
+\item Design experiments to run.
+\item Integrate system within a robotic platform. 
+\item Run experiments.
+\item Analysis.
+\end{enumerate}
+
+\subsection*{T09 - Reporting progress and results}
+\paragraph{Objectives}
+\begin{itemize}
+\item Report the advances within the project.
+\item Research training in writing and oral presentation.
+\end{itemize}
+\paragraph{Tasks}
+\begin{enumerate}[label= T09-\Alph*:]
+\item Write RSMG reports and prepare thesis group meetings.
+\item Participation in activities in the University to present the project.
+\item Write thesis.
+\end{enumerate}
+
+\subsection*{T10 - Publishing, Conferences and Workshops}
+\paragraph{Objectives}
+\begin{itemize}
+\item Present results to the research community.
+\item Submit work for external judgement and receive feedback.
+\item Interact with other researchers in the field.
+\item Research training in academic writing, oral presentation.
+\end{itemize}
+\paragraph{Tasks}
+\begin{enumerate}[label= T10-\Alph*:]
+\item Prepare and submit work in top conferences in the area (\textit{Goal: Get work accepted for two conferences.}).
+\begin{itemize}
+\item ICRA - International Conference on Robotics and Automation
+\item IROS - International Conference on Intelligent Robots and Systems 
+\item AAAI - National Conference on Artificial Intelligence
+\item IJCAI - International Joint Conference on Artificial Intelligence
+\item RSS - Robotics Science and Systems
+\item SMC - IEEE International Conference on Systems, Man, and Cybernetics
+\item LPNMR - Logic Programming and Non-monotonic Reasoning
+\end{itemize}
+\item Prepare and submit work for a top journal in the area (\textit{Goal: Get one article accepted for publication}).
+\begin{itemize}
+\item International Journal of Robotics Research (IJRR)
+\item IEEE Transactions on Robotics (TRO)
+\item IEEE Robotics and Automation Magazine (RAM)
+\item Autonomous Robots (AURO)
+\item Robotics and Autonomous Systems
+\item Journal of Intelligent & Robotic Systems
+\end{itemize}
+\end{enumerate}
 
 
+\section{Time table}
 
-The first point is mentioned because ASP has a central role in this project, is important to complete a proper analysis from insight about the possibilities and requirements to achieve the goal.
-This includes the possible synergy with ASP and other techniques (e.g. probabilistic approaches) to improve the possibilities of an overall system.
+The proposed time table is shown in Fig. \ref{fig_gantt}.
 
-Regarding the second point, activity recognition is the problem to treated.
-A simple solution should be built, in order to have a platform for testing and also build more complex implementations.
-
-\subsection{Short-term table}
 
 \begin{landscape}
+
+\begin{figure}[ftbp]
+\begin{center}
 
 \begin{ganttchart}[hgrid,
 %vgrid={*1{blue, ultra thick}, dotted},
 vgrid,
-x unit=7mm,time slot format=isodate, compress calendar]{2015-04-02}{2017-06-31}
+x unit=7mm, y unit title=7mm, y unit chart=7mm, bar/.style={fill=gray!50},
+incomplete/.style={fill=white},
+progress label text={},
+bar height=0.7,time slot format=isodate, compress calendar]{2015-04-01}{2017-06-31}
 \gantttitlecalendar{year, month} \\
 %\gantttitlecalendar{year, month } \\
 %\ganttgroup{Absences}{2015-04-02}{2015-04-06} \\
-\ganttbar{}{2015-04-06}{2015-01-31}
+\ganttbar{T01}{2015-04-01}{2015-04-30}\\ % Terminal simulation
+\ganttbar{T02}{2015-05-01}{2015-06-30}\\ % MORSE simulation
+\ganttbar{T03}{2015-07-01}{2015-07-30}\\ % Qualitative description
+\ganttbar{T04}{2015-08-01}{2015-10-31}\\ % Knowledge Base
+\ganttbar{T05}{2015-09-01}{2015-11-31}\\ % Semantic Mapping
+\ganttbar{T06}{2015-12-01}{2016-02-29}\\ % Active Perception
+\ganttbar{T07}{2016-03-01}{2016-06-30}\\ % Real data 
+\ganttbar{T08}{2016-07-01}{2016-10-30}\\ % Robot testing
+\ganttbar{T09}{2016-11-01}{2017-04-30}\\ % Reporting Progress
+\ganttmilestone{RSMG}{2015-05-01}
+\ganttmilestone{}{2015-11-01}
+\ganttmilestone{}{2016-05-01}
+\ganttmilestone{}{2016-11-01}
+\ganttmilestone{}{2017-05-01}
+\\
+\ganttbar{T10}{2015-11-01}{2015-12-31}   % Conferences
+\ganttbar{T10}{2017-01-01}{2017-02-28}
+\ganttbar{T10}{2016-06-01}{2016-07-30}
 \end{ganttchart}
 
 
-
-%\ganttset{%
-%calendar week text={W~\currentweek}
-%}
-%\begin{ganttchart}[hgrid,vgrid,x unit=4mm,time slot format=isodate]{2015-04-02}{2015-10-02}
-%\gantttitlecalendar{year, month=shortname, week} \\
-%%\gantttitlecalendar{year, month } \\
-%\ganttbar{}{2015-04-06}{2015-07-02}
-%\end{ganttchart}
-
-
-
-%\begin{ganttchart}{1}{12}
-%\gantttitle{2015}{12} \\
-%\gantttitlelist{1,...,12}{1} \\
-%\ganttgroup{Group 1}{1}{7} \\
-%\ganttbar{Task 1}{1}{2} \\
-%%\ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-%%\ganttmilestone{Milestone}{7} \ganttnewline
-%%\ganttbar{Final Task}{8}{12}
-%%\ganttlink{elem2}{elem3}
-%%\ganttlink{elem3}{elem4}
-%\end{ganttchart}
-
-
-
-
-%\begin{ganttchart}{1}{12}
-%\gantttitle{2015}{12} \\
-%\gantttitlelist{1,...,12}{1} \\
-%\ganttgroup{Group 1}{1}{7} \\
-%\ganttbar{Task 1}{1}{2} \\
-%\ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-%\ganttmilestone{Milestone}{7} \ganttnewline
-%\ganttbar{Final Task}{8}{12}
-%\ganttlink{elem2}{elem3}
-%\ganttlink{elem3}{elem4}
-%\end{ganttchart}
-
-
-
-
-%\newpage
+\end{center}
+\caption{Long-term time table} \label{fig_gantt}
+\end{figure}
 
 \end{landscape}
 
 
-
-
-\begin{verbatim}
-1 - Mini-World Simulation
-
-2 - Library 3D Simulation
-
-3 - Library Datasets (actors & controlled environment)
-
-4 - Library (real environment)
-\end{verbatim}
-
-
-%\begin{itemize}
-%\item Experiments 1 - Proof of concept
-% \begin{itemize}
-% \item Simulation - Simple ASP console example
-% \item Simulation - Morse
-% \end{itemize}
-%\item Experiments 2 - Improve first experimental phase
-% \begin{itemize}
-% \item Expand activity representation and repertoire to handle more complicated cases
-% \item Implement approach
-% \end{itemize}
-%\end{itemize}
 
 
 
