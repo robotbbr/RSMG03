@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2015.3.11)  26 MAR 2015 22:45
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2015.3.11)  27 MAR 2015 09:22
 entering extended mode
  %&-line parsing enabled.
 **Main.tex
@@ -610,10 +610,6 @@ ersion <1.5>, but at most version <1.4> allowed
 <fig/scene_dec.pdf, id=180, 908.99004pt x 661.67201pt>
 File: fig/scene_dec.pdf Graphic file (type pdf)
  <use fig/scene_dec.pdf>
-
-LaTeX Warning: Reference `Allen83_MaintainingKnowledgeTemporal' on page 24 unde
-fined on input line 103.
-
 [24 <./fig/scene_dec.pdf>] [25] [26]) (./050_Evaluation.tex [27]
 Chapter 4.
 
@@ -679,10 +675,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 13838 strings out of 493848
- 264930 string characters out of 1152823
+ 13837 strings out of 493848
+ 264892 string characters out of 1152823
  320635 words of memory out of 3000000
- 16826 multiletter control sequences out of 15000+50000
+ 16825 multiletter control sequences out of 15000+50000
  13757 words of font info for 52 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  65i,9n,88p,865b,905s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -696,7 +692,7 @@ cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb
 texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type
 1/public/amsfonts/cm/cmti12.pfb>
-Output written on Main.pdf (51 pages, 13128262 bytes).
+Output written on Main.pdf (51 pages, 13128246 bytes).
 PDF statistics:
  388 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
